@@ -1,6 +1,6 @@
 function GenerateReports() {
     return (
-        <div style={{margin:"200px"}}>
+        <div>
             helloo
         </div>
     )
