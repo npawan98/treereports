@@ -1,0 +1,12 @@
+.Btn__component{
+    background: green;
+    color: white;
+    padding:15px 30px;
+    max-width: 200px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin:5px;
+}
+.Btn__component:hover{
+    opacity: 0.8;
+}

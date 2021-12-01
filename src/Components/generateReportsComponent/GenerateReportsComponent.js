@@ -10,9 +10,15 @@ function GenerateReportsComponent() {
             </div>
 
             <div className="Generate__report--container--main">
-                <Button btn_text="All Reports"/>
+                <div>
+                    <div>
+                        <Button btn_text="All Reports"/>
+                    </div>
+                    <div>
+                        <Button btn_text="All Reports"/>
+                    </div>
+                </div>
             </div>
-            
         </div>
     )
 }

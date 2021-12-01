@@ -154,7 +154,7 @@ export default function Sidebar() {
               <ListItemIcon>
                 <AssessmentIcon/>
               </ListItemIcon>
-              <ListItemText  primary="Renerate Reports"/>
+              <ListItemText  primary="Generate Reports"/>
             </ListItem>
             </Link>
 
