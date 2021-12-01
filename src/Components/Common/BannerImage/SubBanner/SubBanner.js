@@ -1,5 +1,5 @@
 import './SubBanner.scss'
-function SubBanner({imgURL,Title}) {
+function SubBanner({imgURL,Title,subTitle}) {
     return (
         <div className="SubBanner__image">
             <div>
@@ -7,7 +7,7 @@ function SubBanner({imgURL,Title}) {
             </div>
             <div className="SubBanner--text">
                     <h4>{Title}</h4>
-                    <h1>By Zone</h1>
+                    <h1>{subTitle}</h1>
             </div>
         </div>
     )
