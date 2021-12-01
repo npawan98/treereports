@@ -1,7 +1,9 @@
+import GenerateReportsComponent from "../Components/generateReportsComponent/GenerateReportsComponent"
+
 function GenerateReports() {
     return (
         <div>
-            helloo
+            <GenerateReportsComponent/>
         </div>
     )
 }
