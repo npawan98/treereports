@@ -20,6 +20,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import DataThresholdingIcon from '@mui/icons-material/DataThresholding';
 import AssessmentIcon from '@mui/icons-material/Assessment';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -88,7 +89,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-export default function MiniDrawer() {
+export default function Sidebar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -144,12 +145,14 @@ export default function MiniDrawer() {
               <ListItemText  primary="TreeData"/>
             </ListItem>
 
-            <ListItem button>
+            <Link to="/generate" style={{textDecoration:"none"}}>
+            <ListItem>
               <ListItemIcon>
                 <AssessmentIcon/>
               </ListItemIcon>
               <ListItemText  primary="Renerate Reports"/>
             </ListItem>
+            </Link>
 
         </List>
       </Drawer>
