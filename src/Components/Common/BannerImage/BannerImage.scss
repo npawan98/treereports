@@ -5,3 +5,12 @@
         object-fit: cover;
     }
 }
+.Banner--text{
+    margin: 15px;
+    transform: translateY(-150px);
+    color: #ffff;
+    h1{
+        font-weight: bold !important;
+    }
+
+}

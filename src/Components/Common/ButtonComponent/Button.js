@@ -1,8 +1,8 @@
 import './Button.scss'
-function Button() {
+function Button({btn_text}) {
     return (
-        <div>
-            
+        <div className="Btn__component">
+            <h4>{btn_text}</h4>
         </div>
     )
 }

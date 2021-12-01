@@ -1,9 +1,15 @@
 import './BannerImage.scss'
-function BannerImage({imgURL}) {
+function BannerImage({imgURL,Title}) {
     return (
         <div className="Banner__image">
-            <img src={imgURL}/>
+            <div>
+                <img src={imgURL}/>
+            </div>
+            <div className="Banner--text">
+                <h1>{Title}</h1>
+            </div>
         </div>
+
     )
 }
 
