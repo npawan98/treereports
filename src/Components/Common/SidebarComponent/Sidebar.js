@@ -131,19 +131,23 @@ export default function Sidebar() {
         </DrawerHeader>
         <Divider />
         <List>
+          <Link to="/" style={{textDecoration:"none"}}>
             <ListItem button>
               <ListItemIcon>
                 <DashboardIcon/>
               </ListItemIcon>
               <ListItemText  primary="Dashboard"/>
             </ListItem>
+            </Link>
 
+            <Link to="/" style={{textDecoration:"none"}}>
             <ListItem button>
               <ListItemIcon>
                 <DataThresholdingIcon/>
               </ListItemIcon>
               <ListItemText  primary="TreeData"/>
             </ListItem>
+            </Link>
 
             <Link to="/generate" style={{textDecoration:"none"}}>
             <ListItem>
