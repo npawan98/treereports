@@ -1,0 +1,15 @@
+.SubBanner__image{
+    img{
+        width:100vw;
+        height:35vh;
+        object-fit: cover;
+    }
+}
+.SubBanner--text{
+    transform: translateY(-150px);
+    margin-left: 150px;
+    color: #ffff;
+    h1{
+        font-size:54px;
+    }
+}
