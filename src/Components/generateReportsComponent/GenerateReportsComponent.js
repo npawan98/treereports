@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import BannerImage from '../Common/BannerImage/BannerImage'
 import Button from '../Common/ButtonComponent/Button'
 import './GenerateReportsComponent.scss'
@@ -14,9 +15,11 @@ function GenerateReportsComponent() {
                     <div>
                         <Button btn_text="All Reports"/>
                     </div>
+                    <Link to="/generate_by_zone" style={{textDecoration:"none"}}>
                     <div>
-                        <Button btn_text="All Reports"/>
+                        <Button btn_text="By Zone"/>
                     </div>
+                    </Link>
                 </div>
             </div>
         </div>

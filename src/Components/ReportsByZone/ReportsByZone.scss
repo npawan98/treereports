@@ -1,0 +1,29 @@
+.zone__select{
+    width:200px;
+    background: #e5e5e5;
+    padding: 10px;
+    border-radius: 15px;
+}
+select{
+    width:175px;
+    background: #e5e5e5;
+    border: none;
+    font-weight: bold;
+
+    &:focus{
+        box-shadow: none;
+        outline: none;
+    }
+}
+.reports__zone--main{
+    display: grid;
+    place-items: center;
+}
+.zone__btn{
+    background:green;
+    width:100px;
+    padding: 10px 30px;
+    border-radius: 15px;
+    color: #ffff;
+    margin:5px;
+}
