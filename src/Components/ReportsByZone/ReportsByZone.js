@@ -1,7 +1,17 @@
 import './ReportsByZone.scss'
 import SubBanner from '../Common/BannerImage/SubBanner/SubBanner'
 import Button from '../Common/ButtonComponent/Button'
+import zones from '../../json/zones'
+import { useState } from 'react';
 function ReportsByZone() {
+
+    const [zone,setZone] = useState("");
+
+
+    const linkHandler = () =>{
+        window.location.assign(`/${zone}`)
+    }
+
     return (
         <div className="reports__zone">
              <div>
@@ -11,19 +21,24 @@ function ReportsByZone() {
             <div className="reports__zone--main">
                 <div>
                     <div className="zone__select">
-                    <select>
-                        <option>Zone1</option>
-                        <option>Zone2</option>
-                        <option>Zone3</option>
+                    <select onChange={(e)=>{
+                        setZone(e.target.value)
+                    }}>
+                        <option disabled selected>Select</option>
+                        {
+                            zones.map((item)=>{
+                                return <option value={item.value} key={item.zone}>{item.zone}</option>;
+                            })
+                        }
                     </select>
                     </div>
-
                     <div className="zone__btn--container">
                         <center>
-                        <div className="zone__btn">
+                        <div className="zone__btn" onClick={()=>{linkHandler()}}>
                             <h4>Fetch</h4>
                         </div>
                         </center>
+                        {/* {zone} */}
                     </div>
                 </div>
             </div>
