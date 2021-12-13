@@ -3,7 +3,7 @@ import DashboardComponents from "../Components/DashbaordComponents/DashboardComp
 function Dashboard() {
     return (
         <div>
-            <DashboardComponents/>
+            <DashboardComponents title="hello" values={[1,2,44,55,66]}/>
         </div>
     )
 }
