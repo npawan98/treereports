@@ -1,7 +1,8 @@
 import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
+import styles from './DonutChart.module.css';
 
-function DonutChat({title,values,labels}) {
+function DonutChart({title,values,labels}) {
 
     const [series,setSeries] = useState(values);
     const [options,setOptions] = useState({
@@ -25,11 +26,11 @@ function DonutChat({title,values,labels}) {
 
     return (
         <div>
-            <div id="chart">
+            <div id="chart" className={styles.dountChart__component}>
                     <ReactApexChart options={options} series={series} type="donut" />
             </div>
         </div>
     )
 }
 
-export default DonutChat
+export default DonutChart

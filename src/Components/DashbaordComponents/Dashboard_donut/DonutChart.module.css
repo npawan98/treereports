@@ -1,0 +1,7 @@
+.dountChart__component{
+    /* display: none; */
+    height:450px;
+    width: 450px;
+    object-fit: contain;
+    margin:30px;
+}
