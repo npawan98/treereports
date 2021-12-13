@@ -4,7 +4,7 @@ import styles from './DonutChart.module.css';
 
 function DonutChart({title,values,labels}) {
 
-    const [series,setSeries] = useState(values);
+    // const [series,setSeries] = useState(values);
     const [options,setOptions] = useState({
         chart: {
           type: 'donut',
@@ -27,7 +27,7 @@ function DonutChart({title,values,labels}) {
     return (
         <div>
             <div id="chart" className={styles.dountChart__component}>
-                    <ReactApexChart options={options} series={series} type="donut" />
+                    <ReactApexChart options={options} series={values} type="donut" />
             </div>
         </div>
     )
