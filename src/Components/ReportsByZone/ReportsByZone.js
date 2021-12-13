@@ -9,7 +9,7 @@ function ReportsByZone() {
 
 
     const linkHandler = () =>{
-        window.location.assign(`/${zone}`)
+        window.location.assign(`/Zone_Park/${zone}`)
     }
 
     return (

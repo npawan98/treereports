@@ -1,11 +1,11 @@
 const zones = [
     {
         zone:'Dog Park',
-        value:'Dog_Park'
+        value:'dog'
     },
     {
         zone:'Snake Park',
-        value:'Snake_Park'
+        value:'snake'
     }
 ];
 export default zones;

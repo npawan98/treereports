@@ -10,7 +10,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
-function DogTable() {
+function MuiTable({selTable}) {
 
     const [dogData,setDogData] = useState([]);
     const [dogEvergreen,setDogEvergreen] = useState([]);
@@ -21,7 +21,7 @@ function DogTable() {
     const[dogEndangered,setDogEndangered] = useState([]);
 
     useEffect(()=>{
-        axios.get("http://localhost:8081/dogEvergreen").then(res=> {
+        axios.get(`http://localhost:8081/${selTable}Evergreen`).then(res=> {
         console.log(res.data)
         setDogEvergreen(res.data)
         
@@ -85,4 +85,4 @@ function DogTable() {
   );
 }
 
-export default DogTable;
+export default MuiTable;
