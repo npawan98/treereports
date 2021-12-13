@@ -42,7 +42,7 @@ function DogTable() {
         console.log(res.data)
         setDogExotic(res.data)
     })
-    axios.get("http://localhost:8081/dogExotic").then(res=> {
+    axios.get("http://localhost:8081/dogEndangered").then(res=> {
         console.log(res.data)
         setDogEndangered(res.data)
     })
