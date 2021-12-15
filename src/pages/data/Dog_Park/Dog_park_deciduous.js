@@ -1,6 +1,6 @@
-import SubBanner from "../../Components/Common/BannerImage/SubBanner/SubBanner"
-import DogTable from "../../Components/Common/MUI-table/table"
-import Table_dog_deciduous from "../../Components/Common/MUI-table/Table_dog_deciduous"
+
+import SubBanner from "../../../Components/Common/BannerImage/SubBanner/SubBanner"
+import Table_dog_deciduous from "../../../Components/Common/MUI-table/dogPark/Table_dog_deciduous"
 
 function Dog_park_deciduous() {
     return (

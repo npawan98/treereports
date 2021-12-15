@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import SubBanner from "../../Components/Common/BannerImage/SubBanner/SubBanner"
-import DogTable from "../../Components/Common/MUI-table/table"
+import SubBanner from "../../../Components/Common/BannerImage/SubBanner/SubBanner"
+import DogTable from "../../../Components/Common/MUI-table/dogPark/DogTable"
 
 function Dog_Park() {
     return (

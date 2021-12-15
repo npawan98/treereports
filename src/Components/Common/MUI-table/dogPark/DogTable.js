@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -59,7 +60,7 @@ function DogTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-        <TableRow>
+        <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen</TableCell>
             <TableCell align="right">{dogEvergreen.length}</TableCell>
           </TableRow>
