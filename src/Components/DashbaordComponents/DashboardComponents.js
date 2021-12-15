@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Sidebar from "../Common/SidebarComponent/Sidebar";
 import "./DashboardComponents.scss";
 import { useEffect, useState } from "react";
@@ -12,7 +13,20 @@ function DashboardComponents() {
   const [dogIndigenous, setDogIndigenous] = useState([]);
   const [dogExotic, setDogExotic] = useState([]);
   const [dogEndangered, setDogEndangered] = useState([]);
+
   const arrDog = [];
+  // snake Park
+
+  const [snakeEvergreen, setSnakeEvergreen] = useState([]);
+  const [snakeDeciduous, setSnakeDeciduous] = useState([]);
+  const [snakeEndemic, setSnakeEndemic] = useState([]);
+  const [snakeIndigenous, setSnakeIndigenous] = useState([]);
+  const [snakeExotic, setSnakeExotic] = useState([]);
+  const [snakeEndangered, setSnakeEndangered] = useState([]);
+
+  const arrSnake = [];
+
+
 
   useEffect(() => {
     axios.get("http://localhost:8081/dogEvergreen").then((res) => {
@@ -39,6 +53,35 @@ function DashboardComponents() {
       console.log(res.data.length);
       setDogEndangered(res.data.length);
     });
+
+    // snakepark
+
+    axios.get("http://localhost:8081/snakeEvergreen").then((res) => {
+      console.log(res.data.length);
+      setSnakeEvergreen([res.data.length]);
+    });
+    axios.get("http://localhost:8081/snakeDeciduous").then((res) => {
+      console.log(res.data.length);
+      setSnakeDeciduous(res.data.length);
+    });
+    axios.get("http://localhost:8081/snakeEndemic").then((res) => {
+      console.log(res.data.length);
+      setSnakeEndemic(res.data.length);
+    });
+    axios.get("http://localhost:8081/snakeIndigenous").then((res) => {
+      console.log(res.data.length);
+      setSnakeIndigenous(res.data.length);
+    });
+    axios.get("http://localhost:8081/snakeExotic").then((res) => {
+      console.log(res.data.length);
+      setSnakeExotic(res.data.length);
+    });
+    axios.get("http://localhost:8081/snakeEndangered").then((res) => {
+      console.log(res.data.length);
+      setSnakeEndangered(res.data.length);
+    });
+
+
   }, []);
 
   arrDog.push(
@@ -49,6 +92,16 @@ function DashboardComponents() {
     parseInt(dogExotic),
     parseInt(dogEndangered)
   );
+  // snake Park
+  arrSnake.push(
+    parseInt(snakeEvergreen),
+    parseInt(snakeDeciduous),
+    parseInt(snakeEndemic),
+    parseInt(snakeIndigenous),
+    parseInt(snakeExotic),
+    parseInt(snakeEndangered)
+  );
+
   console.log("values", arrDog);
   return (
     <div className="dashboard__component">
@@ -74,8 +127,15 @@ function DashboardComponents() {
         <div>
           <DonutChart
             title="Snake Park"
-            values={[10, 50, 0, 0, 0, 0]}
-            labels={["hello", "good"]}
+            values={arrSnake}
+            labels={[
+              "Evergreen",
+              "Deciduous",
+              "Endemic",
+              "Indigenous",
+              "Exotic",
+              "Endangered",
+            ]}
           />
         </div>
       </div>
