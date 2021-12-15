@@ -12,7 +12,7 @@ function DashboardComponents() {
   const [dogIndigenous, setDogIndigenous] = useState([]);
   const [dogExotic, setDogExotic] = useState([]);
   const [dogEndangered, setDogEndangered] = useState([]);
-  const arr = [];
+  const arrDog = [];
 
   useEffect(() => {
     axios.get("http://localhost:8081/dogEvergreen").then((res) => {
@@ -41,7 +41,7 @@ function DashboardComponents() {
     });
   }, []);
 
-  arr.push(
+  arrDog.push(
     parseInt(dogEvergreen),
     parseInt(dogDeciduous),
     parseInt(dogEndemic),
@@ -49,7 +49,7 @@ function DashboardComponents() {
     parseInt(dogExotic),
     parseInt(dogEndangered)
   );
-  console.log("values", arr);
+  console.log("values", arrDog);
   return (
     <div className="dashboard__component">
       <center>
@@ -60,7 +60,7 @@ function DashboardComponents() {
           {/* {console.log(dogEvergreen,dogDeciduous,dogEndemic,dogIndigenous,dogExotic,dogEndangered)} */}
           <DonutChart
             title="Dog Park"
-            values={arr}
+            values={arrDog}
             labels={[
               "Evergreen",
               "Deciduous",
