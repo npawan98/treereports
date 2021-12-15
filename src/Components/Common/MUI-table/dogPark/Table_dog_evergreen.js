@@ -7,7 +7,7 @@ function Table_dog_evergreen() {
     const[dogEvergreen,setDogEvergreen] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/dogEvergreen").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEvergreen").then(res=> {
         console.log(res.data)
         setDogEvergreen(res.data)
     })

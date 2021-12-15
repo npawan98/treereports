@@ -29,54 +29,54 @@ function DashboardComponents() {
 
 
   useEffect(() => {
-    axios.get("http://localhost:8081/dogEvergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEvergreen").then((res) => {
       console.log(res.data.length);
       setDogEvergreen([res.data.length]);
     });
-    axios.get("http://localhost:8081/dogDeciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogDeciduous").then((res) => {
       console.log(res.data.length);
       setDogDeciduous(res.data.length);
     });
-    axios.get("http://localhost:8081/dogEndemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEndemic").then((res) => {
       console.log(res.data.length);
       setDogEndemic(res.data.length);
     });
-    axios.get("http://localhost:8081/dogIndigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogIndigenous").then((res) => {
       console.log(res.data.length);
       setDogIndigenous(res.data.length);
     });
-    axios.get("http://localhost:8081/dogExotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogExotic").then((res) => {
       console.log(res.data.length);
       setDogExotic(res.data.length);
     });
-    axios.get("http://localhost:8081/dogEndangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEndangered").then((res) => {
       console.log(res.data.length);
       setDogEndangered(res.data.length);
     });
 
     // snakepark
 
-    axios.get("http://localhost:8081/snakeEvergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEvergreen").then((res) => {
       console.log(res.data.length);
       setSnakeEvergreen([res.data.length]);
     });
-    axios.get("http://localhost:8081/snakeDeciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeDeciduous").then((res) => {
       console.log(res.data.length);
       setSnakeDeciduous(res.data.length);
     });
-    axios.get("http://localhost:8081/snakeEndemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEndemic").then((res) => {
       console.log(res.data.length);
       setSnakeEndemic(res.data.length);
     });
-    axios.get("http://localhost:8081/snakeIndigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeIndigenous").then((res) => {
       console.log(res.data.length);
       setSnakeIndigenous(res.data.length);
     });
-    axios.get("http://localhost:8081/snakeExotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeExotic").then((res) => {
       console.log(res.data.length);
       setSnakeExotic(res.data.length);
     });
-    axios.get("http://localhost:8081/snakeEndangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEndangered").then((res) => {
       console.log(res.data.length);
       setSnakeEndangered(res.data.length);
     });

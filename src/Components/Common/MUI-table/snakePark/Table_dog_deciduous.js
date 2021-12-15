@@ -7,7 +7,7 @@ function Table_snake_deciduous() {
     const[snakeDeciduous,setSnakeDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/snakeDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeDeciduous").then(res=> {
         console.log(res.data)
         setSnakeDeciduous(res.data)
     })

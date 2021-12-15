@@ -7,7 +7,7 @@ function Table_snake_evergreen() {
     const[snakeEvergreen,setSnakeEvergreen] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/snakeEvergreen").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEvergreen").then(res=> {
         console.log(res.data)
         setSnakeEvergreen(res.data)
     })

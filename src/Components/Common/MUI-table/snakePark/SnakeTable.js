@@ -22,28 +22,28 @@ function SnakeTable() {
     const[snakeEndangered,setSnakeEndangered] = useState([]);
   
     useEffect(()=>{
-        axios.get("http://localhost:8081/snakeEvergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEvergreen").then(res=> {
         console.log(res.data)
         setSnakeEvergreen(res.data)
         
       })
-      axios.get("http://localhost:8081/snakeDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeDeciduous").then(res=> {
         console.log(res.data)
         setSnakeDeciduous(res.data)
     })
-    axios.get("http://localhost:8081/snakeEndemic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEndemic").then(res=> {
         console.log(res.data)
         setSnakeEndemic(res.data)
     })
-    axios.get("http://localhost:8081/snakeIndigenous").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeIndigenous").then(res=> {
         console.log(res.data)
         setSnakeIndigenous(res.data)
     })
-    axios.get("http://localhost:8081/snakeExotic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeExotic").then(res=> {
         console.log(res.data)
         setSnakeExotic(res.data)
     })
-    axios.get("http://localhost:8081/snakeEndangered").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEndangered").then(res=> {
         console.log(res.data)
         setSnakeEndangered(res.data)
     })

@@ -22,28 +22,28 @@ function DogTable() {
     const[dogEndangered,setDogEndangered] = useState([]);
 
     useEffect(()=>{
-        axios.get("http://localhost:8081/dogEvergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEvergreen").then(res=> {
         console.log(res.data)
         setDogEvergreen(res.data)
         
       })
-      axios.get("http://localhost:8081/dogDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/dogDeciduous").then(res=> {
         console.log(res.data)
         setDogDeciduous(res.data)
     })
-    axios.get("http://localhost:8081/dogEndemic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEndemic").then(res=> {
         console.log(res.data)
         setDogEndemic(res.data)
     })
-    axios.get("http://localhost:8081/dogIndigenous").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogIndigenous").then(res=> {
         console.log(res.data)
         setDogIndigenous(res.data)
     })
-    axios.get("http://localhost:8081/dogExotic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogExotic").then(res=> {
         console.log(res.data)
         setDogExotic(res.data)
     })
-    axios.get("http://localhost:8081/dogEndangered").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEndangered").then(res=> {
         console.log(res.data)
         setDogEndangered(res.data)
     })

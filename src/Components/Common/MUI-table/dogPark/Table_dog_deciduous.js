@@ -7,7 +7,7 @@ function Table_dog_deciduous() {
     const[dogDeciduous,setDogDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/dogDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/dogDeciduous").then(res=> {
         console.log(res.data)
         setDogDeciduous(res.data)
     })
