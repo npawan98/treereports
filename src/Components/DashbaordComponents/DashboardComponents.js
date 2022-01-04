@@ -26,7 +26,7 @@ function DashboardComponents() {
 
   const arrSnake = [];
 
-    // snake Park
+    // rose Park
 
     const [roseEvergreen, setRoseEvergreen] = useState([]);
     const [roseDeciduous, setRoseDeciduous] = useState([]);
@@ -37,7 +37,18 @@ function DashboardComponents() {
   
     const arrRose = [];
 
-    console.warn(arrRose)
+    // console.warn(arrRose)
+
+    // triangular Park
+
+    const [triangularEvergreen, setTriangularEvergreen] = useState([]);
+    const [triangularDeciduous, setTriangularDeciduous] = useState([]);
+    const [triangularEndemic, setTriangularEndemic] = useState([]);
+    const [triangularIndigenous, setTriangularIndigenous] = useState([]);
+    const [triangularExotic, setTriangularExotic] = useState([]);
+    const [triangularEndangered, setTriangularEndangered] = useState([]);
+  
+    const arrTriangular = [];
 
 
   useEffect(() => {
@@ -120,6 +131,33 @@ function DashboardComponents() {
       setRoseEndangered(res.data.length);
     });
 
+    // Triangular park
+
+    axios.get("http://localhost:8081/triangularEvergreen").then((res) => {
+      console.log(res.data.length);
+      setTriangularEvergreen([res.data.length]);
+    });
+    axios.get("http://localhost:8081/triangularDeciduous").then((res) => {
+      console.log(res.data.length);
+      setTriangularDeciduous(res.data.length);
+    });
+    axios.get("http://localhost:8081/triangularEndemic").then((res) => {
+      console.log(res.data.length);
+      setTriangularEndemic(res.data.length);
+    });
+    axios.get("http://localhost:8081/triangularIndigenous").then((res) => {
+      console.log(res.data.length);
+      setTriangularIndigenous(res.data.length);
+    });
+    axios.get("http://localhost:8081/triangularExotic").then((res) => {
+      console.log(res.data.length);
+      setTriangularExotic(res.data.length);
+    });
+    axios.get("http://localhost:8081/triangularEndangered").then((res) => {
+      console.log(res.data.length);
+      setTriangularEndangered(res.data.length);
+    });
+
   }, []);
 
   arrDog.push(
@@ -147,6 +185,15 @@ function DashboardComponents() {
     parseInt(roseIndigenous),
     parseInt(roseExotic),
     parseInt(roseEndangered)
+  );
+   //  Triangular Park
+   arrTriangular.push(
+    parseInt(triangularEvergreen),
+    parseInt(triangularDeciduous),
+    parseInt(triangularEndemic),
+    parseInt(triangularIndigenous),
+    parseInt(triangularExotic),
+    parseInt(triangularEndangered)
   );
   
 
@@ -190,6 +237,20 @@ function DashboardComponents() {
           <DonutChart
             title="Rose Park"
             values={arrRose}
+            labels={[
+              "Evergreen",
+              "Deciduous",
+              "Endemic",
+              "Indigenous",
+              "Exotic",
+              "Endangered",
+            ]}
+          />
+        </div>
+        <div>
+          <DonutChart
+            title="Triangular Park"
+            values={arrTriangular}
             labels={[
               "Evergreen",
               "Deciduous",
