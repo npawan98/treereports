@@ -50,6 +50,17 @@ function DashboardComponents() {
   
     const arrTriangular = [];
 
+    // Circular Park
+
+    const [circularEvergreen, setCircularEvergreen] = useState([]);
+    const [circularDeciduous, setCircularDeciduous] = useState([]);
+    const [circularEndemic, setCircularEndemic] = useState([]);
+    const [circularIndigenous, setCircularIndigenous] = useState([]);
+    const [circularExotic, setCircularExotic] = useState([]);
+    const [circularEndangered, setCircularEndangered] = useState([]);
+  
+    const arrCircular = [];
+
 
   useEffect(() => {
     axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEvergreen").then((res) => {
@@ -158,6 +169,33 @@ function DashboardComponents() {
       setTriangularEndangered(res.data.length);
     });
 
+    // Circular park
+
+    axios.get("http://localhost:8081/circularEvergreen").then((res) => {
+      console.log(res.data.length);
+      setCircularEvergreen([res.data.length]);
+    });
+    axios.get("http://localhost:8081/circularDeciduous").then((res) => {
+      console.log(res.data.length);
+      setCircularDeciduous(res.data.length);
+    });
+    axios.get("http://localhost:8081/circularEndemic").then((res) => {
+      console.log(res.data.length);
+      setCircularEndemic(res.data.length);
+    });
+    axios.get("http://localhost:8081/circularIndigenous").then((res) => {
+      console.log(res.data.length);
+      setCircularIndigenous(res.data.length);
+    });
+    axios.get("http://localhost:8081/circularExotic").then((res) => {
+      console.log(res.data.length);
+      setCircularExotic(res.data.length);
+    });
+    axios.get("http://localhost:8081/circularEndangered").then((res) => {
+      console.log(res.data.length);
+      setCircularEndangered(res.data.length);
+    });
+
   }, []);
 
   arrDog.push(
@@ -194,6 +232,16 @@ function DashboardComponents() {
     parseInt(triangularIndigenous),
     parseInt(triangularExotic),
     parseInt(triangularEndangered)
+  );
+
+  //  Triangular Park
+  arrCircular.push(
+    parseInt(circularEvergreen),
+    parseInt(circularDeciduous),
+    parseInt(circularEndemic),
+    parseInt(circularIndigenous),
+    parseInt(circularExotic),
+    parseInt(circularEndangered)
   );
   
 
@@ -251,6 +299,20 @@ function DashboardComponents() {
           <DonutChart
             title="Triangular Park"
             values={arrTriangular}
+            labels={[
+              "Evergreen",
+              "Deciduous",
+              "Endemic",
+              "Indigenous",
+              "Exotic",
+              "Endangered",
+            ]}
+          />
+        </div>
+        <div>
+          <DonutChart
+            title="Circular Park"
+            values={arrCircular}
             labels={[
               "Evergreen",
               "Deciduous",
