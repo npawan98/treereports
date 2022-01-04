@@ -26,6 +26,18 @@ function DashboardComponents() {
 
   const arrSnake = [];
 
+    // snake Park
+
+    const [roseEvergreen, setRoseEvergreen] = useState([]);
+    const [roseDeciduous, setRoseDeciduous] = useState([]);
+    const [roseEndemic, setRoseEndemic] = useState([]);
+    const [roseIndigenous, setRoseIndigenous] = useState([]);
+    const [roseExotic, setRoseExotic] = useState([]);
+    const [roseEndangered, setRoseEndangered] = useState([]);
+  
+    const arrRose = [];
+
+    console.warn(arrRose)
 
 
   useEffect(() => {
@@ -81,6 +93,32 @@ function DashboardComponents() {
       setSnakeEndangered(res.data.length);
     });
 
+    // rosepark
+
+    axios.get("http://localhost:8081/roseEvergreen").then((res) => {
+      console.log(res.data.length);
+      setRoseEvergreen([res.data.length]);
+    });
+    axios.get("http://localhost:8081/roseDeciduous").then((res) => {
+      console.log(res.data.length);
+      setRoseDeciduous(res.data.length);
+    });
+    axios.get("http://localhost:8081/roseEndemic").then((res) => {
+      console.log(res.data.length);
+      setRoseEndemic(res.data.length);
+    });
+    axios.get("http://localhost:8081/roseIndigenous").then((res) => {
+      console.log(res.data.length);
+      setRoseIndigenous(res.data.length);
+    });
+    axios.get("http://localhost:8081/roseExotic").then((res) => {
+      console.log(res.data.length);
+      setRoseExotic(res.data.length);
+    });
+    axios.get("http://localhost:8081/roseEndangered").then((res) => {
+      console.log(res.data.length);
+      setRoseEndangered(res.data.length);
+    });
 
   }, []);
 
@@ -101,6 +139,16 @@ function DashboardComponents() {
     parseInt(snakeExotic),
     parseInt(snakeEndangered)
   );
+  // rose Park
+  arrRose.push(
+    parseInt(roseEvergreen),
+    parseInt(roseDeciduous),
+    parseInt(roseEndemic),
+    parseInt(roseIndigenous),
+    parseInt(roseExotic),
+    parseInt(roseEndangered)
+  );
+  
 
   console.log("values", arrDog);
   return (
@@ -128,6 +176,20 @@ function DashboardComponents() {
           <DonutChart
             title="Snake Park"
             values={arrSnake}
+            labels={[
+              "Evergreen",
+              "Deciduous",
+              "Endemic",
+              "Indigenous",
+              "Exotic",
+              "Endangered",
+            ]}
+          />
+        </div>
+        <div>
+          <DonutChart
+            title="Rose Park"
+            values={arrRose}
             labels={[
               "Evergreen",
               "Deciduous",
