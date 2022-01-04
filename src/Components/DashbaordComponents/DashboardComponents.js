@@ -61,6 +61,18 @@ function DashboardComponents() {
   
     const arrCircular = [];
 
+    // Workers Park
+
+    const [workersEvergreen, setWorkersEvergreen] = useState([]);
+    const [workersDeciduous, setWorkersDeciduous] = useState([]);
+    const [workersEndemic, setWorkersEndemic] = useState([]);
+    const [workersIndigenous, setWorkersIndigenous] = useState([]);
+    const [workersExotic, setWorkersExotic] = useState([]);
+    const [workersEndangered, setWorkersEndangered] = useState([]);
+  
+    const arrWorkers = [];
+
+    console.log("helloooo",arrWorkers)
 
   useEffect(() => {
     axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEvergreen").then((res) => {
@@ -196,6 +208,33 @@ function DashboardComponents() {
       setCircularEndangered(res.data.length);
     });
 
+    // Workers park
+
+    axios.get("http://localhost:8081/workersEvergreen").then((res) => {
+      console.log(res.data.length);
+      setWorkersEvergreen([res.data.length]);
+    });
+    axios.get("http://localhost:8081/workersDeciduous").then((res) => {
+      console.log(res.data.length);
+      setWorkersDeciduous(res.data.length);
+    });
+    axios.get("http://localhost:8081/workersEndemic").then((res) => {
+      console.log(res.data.length);
+      setWorkersEndemic(res.data.length);
+    });
+    axios.get("http://localhost:8081/workersIndigenous").then((res) => {
+      console.log(res.data.length);
+      setWorkersIndigenous(res.data.length);
+    });
+    axios.get("http://localhost:8081/workersExotic").then((res) => {
+      console.log(res.data.length);
+      setWorkersExotic(res.data.length);
+    });
+    axios.get("http://localhost:8081/workersEndangered").then((res) => {
+      console.log(res.data.length);
+      setWorkersEndangered(res.data.length);
+    });
+
   }, []);
 
   arrDog.push(
@@ -234,7 +273,7 @@ function DashboardComponents() {
     parseInt(triangularEndangered)
   );
 
-  //  Triangular Park
+  //  Circular Park
   arrCircular.push(
     parseInt(circularEvergreen),
     parseInt(circularDeciduous),
@@ -244,6 +283,15 @@ function DashboardComponents() {
     parseInt(circularEndangered)
   );
   
+  //  Workers Park
+  arrWorkers.push(
+    parseInt(workersEvergreen),
+    parseInt(workersDeciduous),
+    parseInt(workersEndemic),
+    parseInt(workersIndigenous),
+    parseInt(workersExotic),
+    parseInt(workersEndangered)
+  );
 
   console.log("values", arrDog);
   return (
@@ -313,6 +361,20 @@ function DashboardComponents() {
           <DonutChart
             title="Circular Park"
             values={arrCircular}
+            labels={[
+              "Evergreen",
+              "Deciduous",
+              "Endemic",
+              "Indigenous",
+              "Exotic",
+              "Endangered",
+            ]}
+          />
+        </div>
+        <div>
+          <DonutChart
+            title="Workers Park"
+            values={arrWorkers}
             labels={[
               "Evergreen",
               "Deciduous",
