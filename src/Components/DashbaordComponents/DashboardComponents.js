@@ -94,7 +94,29 @@ function DashboardComponents() {
   
     const arrPark2 = [];
 
-    console.log("helloooo",arrWorkers)
+    // Edward
+
+    const [edwardEvergreen, setEdwardEvergreen] = useState([]);
+    const [edwardDeciduous, setEdwardDeciduous] = useState([]);
+    const [edwardEndemic, setEdwardEndemic] = useState([]);
+    const [edwardIndigenous, setEdwardIndigenous] = useState([]);
+    const [edwardExotic, setEdwardExotic] = useState([]);
+    const [edwardEndangered, setEdwardEndangered] = useState([]);
+  
+    const arrEdward = [];
+
+    // Victoria
+
+    const [victoriaEvergreen, setVictoriaEvergreen] = useState([]);
+    const [victoriaDeciduous, setVictoriaDeciduous] = useState([]);
+    const [victoriaEndemic, setVictoriaEndemic] = useState([]);
+    const [victoriaIndigenous, setVictoriaIndigenous] = useState([]);
+    const [victoriaExotic, setVictoriaExotic] = useState([]);
+    const [victoriaEndangered, setVictoriaEndangered] = useState([]);
+  
+    const arrVictoria = [];
+
+    console.log("helloooo",arrVictoria);
 
   useEffect(() => {
     axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEvergreen").then((res) => {
@@ -311,6 +333,61 @@ function DashboardComponents() {
       setPark2Endangered(res.data.length);
     });
 
+    // edward
+
+    axios.get("http://localhost:8081/edward_park_Evergreen").then((res) => {
+      console.log(res.data.length);
+      setEdwardEvergreen([res.data.length]);
+    });
+    axios.get("http://localhost:8081/edward_park_Deciduous").then((res) => {
+      console.log(res.data.length);
+      setEdwardDeciduous(res.data.length);
+    });
+    axios.get("http://localhost:8081/edward_park_Endemic").then((res) => {
+      console.log(res.data.length);
+      setEdwardEndemic(res.data.length);
+    });
+    axios.get("http://localhost:8081/edward_park_Indigenous").then((res) => {
+      console.log(res.data.length);
+      setEdwardIndigenous(res.data.length);
+    });
+    axios.get("http://localhost:8081/edward_park_Exotic").then((res) => {
+      console.log(res.data.length);
+      setEdwardExotic(res.data.length);
+    });
+    axios.get("http://localhost:8081/edward_park_Endangered").then((res) => {
+      console.log(res.data.length);
+      setEdwardEndangered(res.data.length);
+    });
+
+
+    // Victoria
+
+    axios.get("http://localhost:8081/victoria_park_Evergreen").then((res) => {
+      console.log(res.data.length);
+      setVictoriaEvergreen([res.data.length]);
+    });
+    axios.get("http://localhost:8081/victoria_park_Deciduous").then((res) => {
+      console.log(res.data.length);
+      setVictoriaDeciduous(res.data.length);
+    });
+    axios.get("http://localhost:8081/victoria_park_Endemic").then((res) => {
+      console.log(res.data.length);
+      setVictoriaEndemic(res.data.length);
+    });
+    axios.get("http://localhost:8081/victoria_park_Indigenous").then((res) => {
+      console.log(res.data.length);
+      setVictoriaIndigenous(res.data.length);
+    });
+    axios.get("http://localhost:8081/victoria_park_Exotic").then((res) => {
+      console.log(res.data.length);
+      setVictoriaExotic(res.data.length);
+    });
+    axios.get("http://localhost:8081/victoria_park_Endangered").then((res) => {
+      console.log(res.data.length);
+      setVictoriaEndangered(res.data.length);
+    });
+
   }, []);
 
   arrDog.push(
@@ -387,6 +464,26 @@ function DashboardComponents() {
     parseInt(park2Indigenous),
     parseInt(park2Exotic),
     parseInt(park2Endangered)
+  );
+
+  // edward
+  arrEdward.push(
+    parseInt(edwardEvergreen),
+    parseInt(edwardDeciduous),
+    parseInt(edwardEndemic),
+    parseInt(edwardIndigenous),
+    parseInt(edwardExotic),
+    parseInt(edwardEndangered)
+  );
+
+  // edward
+  arrVictoria.push(
+    parseInt(victoriaEvergreen),
+    parseInt(victoriaDeciduous),
+    parseInt(victoriaEndemic),
+    parseInt(victoriaIndigenous),
+    parseInt(victoriaExotic),
+    parseInt(victoriaEndangered)
   );
 
   console.log("values", arrDog);
@@ -500,6 +597,36 @@ function DashboardComponents() {
           <DonutChart
             title="Park 2"
             values={arrPark2}
+            labels={[
+              "Evergreen",
+              "Deciduous",
+              "Endemic",
+              "Indigenous",
+              "Exotic",
+              "Endangered",
+            ]}
+          />
+        </div>
+
+        <div>
+          <DonutChart
+            title="Edward Park"
+            values={arrEdward}
+            labels={[
+              "Evergreen",
+              "Deciduous",
+              "Endemic",
+              "Indigenous",
+              "Exotic",
+              "Endangered",
+            ]}
+          />
+        </div>
+
+        <div>
+          <DonutChart
+            title="victoria Park"
+            values={arrVictoria}
             labels={[
               "Evergreen",
               "Deciduous",
