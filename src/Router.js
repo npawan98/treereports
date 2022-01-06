@@ -14,8 +14,6 @@ import Snake_Park from "./pages/data/Snake_Park/Snake_Park"
 import Snake_park_deciduous from "./pages/data/Snake_Park/Snake_park_deciduous"
 import Snake_park_evergreen from "./pages/data/Snake_Park/Snake_park_evergreen"
 import GenerateReports from "./pages/GenerateReports"
-// import Hey from "./pages/hey"
-// import Temp from "./pages/temp"
 
 function Router() {
     return (
