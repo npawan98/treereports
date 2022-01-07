@@ -2,14 +2,14 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_Rose_deciduous() {
+function Table_rose_endemic() {
 
-    const[roseDeciduous,setRoseDeciduous] = useState([]);
+    const[roseEndemic,setRoseEndemic] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/roseDeciduous").then(res=> {
+      axios.get("http://localhost:8081/roseEndemic").then(res=> {
         console.log(res.data)
-        setRoseDeciduous(res.data)
+        setRoseEndemic(res.data)
     })
       },[])
 
@@ -29,7 +29,7 @@ function Table_Rose_deciduous() {
                     </TableHead>
                     <TableBody>
                         {
-                            roseDeciduous.map((item) =>{
+                            roseEndemic.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>
@@ -49,4 +49,4 @@ function Table_Rose_deciduous() {
     )
 }
 
-export default Table_Rose_deciduous
+export default Table_rose_endemic

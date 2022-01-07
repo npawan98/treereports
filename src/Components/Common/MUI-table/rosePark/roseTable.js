@@ -22,28 +22,28 @@ function RoseTable() {
     const[roseEndangered,setRoseEndangered] = useState([]);
   
     useEffect(()=>{
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseEvergreen").then(res=> {
+        axios.get("http://localhost:8081/roseEvergreen").then(res=> {
         console.log(res.data)
         setRoseEvergreen(res.data)
         
       })
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseDeciduous").then(res=> {
+      axios.get("http://localhost:8081/roseDeciduous").then(res=> {
         console.log(res.data)
         setRoseDeciduous(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseEndemic").then(res=> {
+    axios.get("http://localhost:8081/roseEndemic").then(res=> {
         console.log(res.data)
         setRoseEndemic(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseIndigenous").then(res=> {
+    axios.get("http://localhost:8081/roseIndigenous").then(res=> {
         console.log(res.data)
         setRoseIndigenous(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseExotic").then(res=> {
+    axios.get("http://localhost:8081/roseExotic").then(res=> {
         console.log(res.data)
         setRoseExotic(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseEndangered").then(res=> {
+    axios.get("http://localhost:8081/roseEndangered").then(res=> {
         console.log(res.data)
         setRoseEndangered(res.data)
     })
@@ -64,19 +64,19 @@ function RoseTable() {
             <TableCell>Number of evergreen</TableCell>
             <TableCell align="right">{roseEvergreen.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-endemic")}}>
             <TableCell>Number of endemic </TableCell>
             <TableCell align="right">{roseEndemic.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-indigenous")}}>
             <TableCell>Number of indigenous</TableCell>
             <TableCell align="right">{roseIndigenous.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-exotic")}}>
             <TableCell>Number of exotic</TableCell>
             <TableCell align="right">{roseExotic.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-endangered")}}>
             <TableCell>endangered</TableCell>
             <TableCell align="right">{roseEndangered.length}</TableCell>
           </TableRow>
