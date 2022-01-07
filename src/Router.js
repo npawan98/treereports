@@ -14,6 +14,7 @@ import Snake_Park from "./pages/data/Snake_Park/Snake_Park"
 import Snake_park_deciduous from "./pages/data/Snake_Park/Snake_park_deciduous"
 import Snake_park_evergreen from "./pages/data/Snake_Park/Snake_park_evergreen"
 import GenerateReports from "./pages/GenerateReports"
+import Species from "./pages/Species"
 
 function Router() {
     return (
@@ -22,6 +23,9 @@ function Router() {
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/generate" element={<GenerateReports />} />
                 <Route path="/generate_by_zone" element={<ReportsByZone />} />
+
+                {/* species */}
+                <Route path="/species" element={<Species />} />
                 {/* dog park */}
                 <Route path="/Dog_Park" element={<Dog_Park />} />
                 <Route path="/Dog_Park/Dog_Park-deciduous" element={<Dog_park_deciduous />} />

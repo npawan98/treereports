@@ -140,12 +140,12 @@ export default function Sidebar() {
             </ListItem>
             </Link>
 
-            <Link to="/" style={{textDecoration:"none"}}>
+            <Link to="/species" style={{textDecoration:"none"}}>
             <ListItem button>
               <ListItemIcon>
                 <DataThresholdingIcon/>
               </ListItemIcon>
-              <ListItemText  primary="TreeData"/>
+              <ListItemText  primary="Species Data"/>
             </ListItem>
             </Link>
 
