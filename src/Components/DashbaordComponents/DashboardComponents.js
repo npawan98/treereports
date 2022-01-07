@@ -627,7 +627,8 @@ function DashboardComponents() {
             ]}
           />
         </div>
-
+</div>
+<div className="dashboard__component--main">
         <div>
           <DonutChart
             title="victoria Park"
