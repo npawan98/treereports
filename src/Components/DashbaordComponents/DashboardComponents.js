@@ -536,6 +536,9 @@ function DashboardComponents() {
             ]}
           />
         </div>
+        {/* fixe */}
+        </div>
+        <div className="dashboard__component--main">
         <div>
           <DonutChart
             title="Triangular Park"
@@ -578,6 +581,8 @@ function DashboardComponents() {
             ]}
           />
         </div>
+        </div>
+        <div className="dashboard__component--main">
         <div>
           <DonutChart
             title="Park 1"
