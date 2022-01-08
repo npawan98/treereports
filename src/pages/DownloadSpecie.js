@@ -8,7 +8,7 @@ function DownloadSpecie() {
 
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:8081/search?Code=${Snum}`).then((res) => {
+    axios.get(`https://afternoon-mountain-93761.herokuapp.com/search?Code=${Snum}`).then((res) => {
       console.log("hello new", res.data);
       setData(res.data);
     });
