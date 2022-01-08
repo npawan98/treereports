@@ -33,8 +33,8 @@ function ReportTemplate({ props }) {
           </div>
         </div>
         <div className="des">
-            <h4>Description :</h4><p>{props.Description}</p><br/>
-            <h4>Uses :</h4><p>{props.Uses}</p><br/>
+            <h4>Description :</h4><br/><p>{props.Description}</p><br/>
+            <h4>Uses :</h4><br/><p>{props.Uses}</p><br/>
         </div>
       </div>
     </div>
