@@ -13,6 +13,17 @@ function DonutChart({title,values,labels}) {
             tools:{
               download: true,
             },
+            export:{
+              csv:{
+                filename: title,
+                columnDelimiter: ',',
+                headerCategory: 'category',
+                headerValue: 'value',
+                dateFormatter(timestamp) {
+                  return new Date(timestamp).toDateString()
+                }
+              }
+            }
         }},
         title:{
             text: title
