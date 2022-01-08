@@ -21,6 +21,13 @@ import Park_1_park_endemic from "./pages/data/Park_1/Park_1_park_endemic"
 import Park_1_park_evergreen from "./pages/data/Park_1/Park_1_park_evergreen"
 import Park_1_park_exotic from "./pages/data/Park_1/Park_1_park_exotic"
 import Park_1_park_indigenous from "./pages/data/Park_1/Park_1_park_indigenous"
+import Park_2_Park from "./pages/data/Park_2/Park_2_Park"
+import Park_2_park_deciduous from "./pages/data/Park_2/Park_2_park_deciduous"
+import Park_2_park_endangered from "./pages/data/Park_2/Park_2_park_endangered"
+import Park_2_park_endemic from "./pages/data/Park_2/Park_2_park_endemic"
+import Park_2_park_evergreen from "./pages/data/Park_2/Park_2_park_evergreen"
+import Park_2_park_exotic from "./pages/data/Park_2/Park_2_park_exotic"
+import Park_2_park_indigenous from "./pages/data/Park_2/Park_2_park_indigenous"
 import Rose_Park from "./pages/data/Rose_Park/Rose_Park"
 import Rose_park_deciduous from "./pages/data/Rose_Park/Rose_park_deciduous"
 import Rose_park_endangered from "./pages/data/Rose_Park/Rose_park_endangered"
@@ -112,6 +119,15 @@ function Router() {
                 <Route path="/Park_1_Park/Park_1_Park-indigenous" element={<Park_1_park_indigenous />} />
                 <Route path="/Park_1_Park/Park_1_Park-exotic" element={<Park_1_park_exotic />} />
                 <Route path="/Park_1_Park/Park_1_Park-endangered" element={<Park_1_park_endangered />} />
+
+                {/* Park_2 */}
+                <Route path="/Park_2_Park" element={<Park_2_Park />} />
+                <Route path="/Park_2_Park/Park_2_Park-deciduous" element={<Park_2_park_deciduous />} />
+                <Route path="/Park_2_Park/Park_2_Park-evergreen" element={<Park_2_park_evergreen />} />
+                <Route path="/Park_2_Park/Park_2_Park-endemic" element={<Park_2_park_endemic />} />
+                <Route path="/Park_2_Park/Park_2_Park-indigenous" element={<Park_2_park_indigenous />} />
+                <Route path="/Park_2_Park/Park_2_Park-exotic" element={<Park_2_park_exotic />} />
+                <Route path="/Park_2_Park/Park_2_Park-endangered" element={<Park_2_park_endangered />} />
 
             </Routes>
         </div>

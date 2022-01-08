@@ -29,7 +29,7 @@ const zones = [
     },
     {
         zone:'Park 2',
-        value:'Park2'
+        value:'Park_2_Park'
     },
     {
         zone:'Edward Park',
