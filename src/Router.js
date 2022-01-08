@@ -42,9 +42,6 @@ import Rose_park_endemic from "./pages/data/Rose_Park/Rose_park_endemic"
 import Rose_park_evergreen from "./pages/data/Rose_Park/Rose_park_evergreen"
 import Rose_park_exotic from "./pages/data/Rose_Park/Rose_park_exotic"
 import Rose_park_indigenous from "./pages/data/Rose_Park/Rose_park_indigenous"
-import Snake_Park from "./pages/data/Snake_Park/Snake_Park"
-import Snake_park_deciduous from "./pages/data/Snake_Park/Snake_park_deciduous"
-import Snake_park_evergreen from "./pages/data/Snake_Park/Snake_park_evergreen"
 import Traingular_Park from "./pages/data/Traingular_Park/Traingular_Park"
 import Traingular_Park_deciduous from "./pages/data/Traingular_Park/Traingular_Park_deciduous"
 import Traingular_Park_endangered from "./pages/data/Traingular_Park/Traingular_Park_endangered"
@@ -68,6 +65,13 @@ import Victoria_park_endemic from "./pages/data/Victoria_Park/Victoria_park_ende
 import Victoria_park_indigenous from "./pages/data/Victoria_Park/Victoria_park_indigenous"
 import Victoria_park_exotic from "./pages/data/Victoria_Park/Victoria_park_exotic"
 import Victoria_park_endangered from "./pages/data/Victoria_Park/Victoria_park_endangered"
+import Snake_Park from "./pages/data/Snake_Park/Snake_Park"
+import Snake_park_deciduous from "./pages/data/Snake_Park/Snake_park_deciduous"
+import Snake_park_evergreen from "./pages/data/Snake_Park/Snake_park_evergreen"
+import Snake_park_endemic from "./pages/data/Snake_Park/Snake_park_endemic"
+import Snake_park_indigenous from "./pages/data/Snake_Park/Snake_park_indigenous"
+import Snake_park_endangered from "./pages/data/Snake_Park/Snake_park_endangered"
+import Snake_park_exotic from "./pages/data/Snake_Park/Snake_park_exotic"
 
 function Router() {
     return (
@@ -88,6 +92,10 @@ function Router() {
                 <Route path="/Snake_Park" element={<Snake_Park />} />
                 <Route path="/Snake_Park/Snake_Park-deciduous" element={<Snake_park_deciduous />} />
                 <Route path="/Snake_Park/Snake_Park-evergreen" element={<Snake_park_evergreen />} />
+                <Route path="/Snake_Park/Snake_Park-endemic" element={<Snake_park_endemic />} />
+                <Route path="/Snake_Park/Snake_Park-indigenous" element={<Snake_park_indigenous />} />
+                <Route path="/Snake_Park/Snake_Park-exotic" element={<Snake_park_exotic />} />
+                <Route path="/Snake_Park/Snake_Park-endangered" element={<Snake_park_endangered />} />
                 
                 {/* Rose park */}
                 <Route path="/Rose_Park" element={<Rose_Park />} />

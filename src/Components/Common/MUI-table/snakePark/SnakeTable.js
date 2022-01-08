@@ -13,37 +13,37 @@ import { Link } from 'react-router-dom';
 
 function SnakeTable() {
 
-    const [snakeData,setSnakeData] = useState([]);
-    const [snakeEvergreen,setSnakeEvergreen] = useState([]);
-    const[snakeDeciduous,setSnakeDeciduous] = useState([]);
-    const[snakeEndemic,setSnakeEndemic] = useState([]);
-    const[snakeIndigenous,setSnakeIndigenous] = useState([]);
-    const[snakeExotic,setSnakeExotic] = useState([]);
-    const[snakeEndangered,setSnakeEndangered] = useState([]);
+    const [SnakeData,setSnakeData] = useState([]);
+    const [SnakeEvergreen,setSnakeEvergreen] = useState([]);
+    const[SnakeDeciduous,setSnakeDeciduous] = useState([]);
+    const[SnakeEndemic,setSnakeEndemic] = useState([]);
+    const[SnakeIndigenous,setSnakeIndigenous] = useState([]);
+    const[SnakeExotic,setSnakeExotic] = useState([]);
+    const[SnakeEndangered,setSnakeEndangered] = useState([]);
   
     useEffect(()=>{
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEvergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/SnakeEvergreen").then(res=> {
         console.log(res.data)
         setSnakeEvergreen(res.data)
         
       })
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/SnakeDeciduous").then(res=> {
         console.log(res.data)
         setSnakeDeciduous(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEndemic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/SnakeEndemic").then(res=> {
         console.log(res.data)
         setSnakeEndemic(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeIndigenous").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/SnakeIndigenous").then(res=> {
         console.log(res.data)
         setSnakeIndigenous(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeExotic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/SnakeExotic").then(res=> {
         console.log(res.data)
         setSnakeExotic(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEndangered").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/SnakeEndangered").then(res=> {
         console.log(res.data)
         setSnakeEndangered(res.data)
     })
@@ -56,29 +56,29 @@ function SnakeTable() {
         <TableHead>
           <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-deciduous")}} style={{cursor:"pointer"}}>
             <TableCell>Number of deciduous</TableCell>
-            <TableCell align="right">{snakeDeciduous.length}</TableCell>
+            <TableCell align="right">{SnakeDeciduous.length}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
         <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen</TableCell>
-            <TableCell align="right">{snakeEvergreen.length}</TableCell>
+            <TableCell align="right">{SnakeEvergreen.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-endemic")}}>
             <TableCell>Number of endemic </TableCell>
-            <TableCell align="right">{snakeEndemic.length}</TableCell>
+            <TableCell align="right">{SnakeEndemic.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-indigenous")}}>
             <TableCell>Number of indigenous</TableCell>
-            <TableCell align="right">{snakeIndigenous.length}</TableCell>
+            <TableCell align="right">{SnakeIndigenous.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-exotic")}}>
             <TableCell>Number of exotic</TableCell>
-            <TableCell align="right">{snakeExotic.length}</TableCell>
+            <TableCell align="right">{SnakeExotic.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-endangered")}}>
             <TableCell>endangered</TableCell>
-            <TableCell align="right">{snakeEndangered.length}</TableCell>
+            <TableCell align="right">{SnakeEndangered.length}</TableCell>
           </TableRow>
         </TableBody>
       </Table>
