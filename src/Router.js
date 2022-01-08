@@ -31,6 +31,13 @@ import Traingular_Park_endemic from "./pages/data/Traingular_Park/Traingular_Par
 import Traingular_Park_evergreen from "./pages/data/Traingular_Park/Traingular_Park_evergreen"
 import Traingular_Park_exotic from "./pages/data/Traingular_Park/Traingular_Park_exotic"
 import Traingular_Park_indigenous from "./pages/data/Traingular_Park/Traingular_Park_indigenous"
+import Workers_Park from "./pages/data/Workers_Park/Workers_Park"
+import Workers_park_deciduous from "./pages/data/Workers_Park/Workers_park_deciduous"
+import Workers_park_endangered from "./pages/data/Workers_Park/Workers_park_endangered"
+import Workers_park_endemic from "./pages/data/Workers_Park/Workers_park_endemic"
+import Workers_park_evergreen from "./pages/data/Workers_Park/Workers_park_evergreen"
+import Workers_park_exotic from "./pages/data/Workers_Park/Workers_park_exotic"
+import Workers_park_indigenous from "./pages/data/Workers_Park/Workers_park_indigenous"
 import GenerateReports from "./pages/GenerateReports"
 import Species from "./pages/Species"
 
@@ -80,6 +87,15 @@ function Router() {
                 <Route path="/Circular_Park/Circular_Park-indigenous" element={<Circular_park_indigenous />} />
                 <Route path="/Circular_Park/Circular_Park-exotic" element={<Circular_park_exotic />} />
                 <Route path="/Circular_Park/Circular_Park-endangered" element={<Circular_park_endangered />} />
+
+                {/* Workers park */}
+                <Route path="/Workers_Park" element={<Workers_Park />} />
+                <Route path="/Workers_Park/Workers_Park-deciduous" element={<Workers_park_deciduous />} />
+                <Route path="/Workers_Park/Workers_Park-evergreen" element={<Workers_park_evergreen />} />
+                <Route path="/Workers_Park/Workers_Park-endemic" element={<Workers_park_endemic />} />
+                <Route path="/Workers_Park/Workers_Park-indigenous" element={<Workers_park_indigenous />} />
+                <Route path="/Workers_Park/Workers_Park-exotic" element={<Workers_park_exotic />} />
+                <Route path="/Workers_Park/Workers_Park-endangered" element={<Workers_park_endangered />} />
 
             </Routes>
         </div>
