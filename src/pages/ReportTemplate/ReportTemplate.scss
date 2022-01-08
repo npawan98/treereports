@@ -1,0 +1,26 @@
+.header{
+    display: grid;
+    place-items: center;
+}
+.body_container{
+    display: grid;
+    place-items: center;
+    margin-top: 50px;
+}
+.report_body{
+    display: flex;
+    justify-content:space-between;
+   width: 550px;
+}
+.report__left{
+    min-width: 200px;
+}
+.report__left{
+    min-width: 200px;
+}
+.des{
+    max-width: 800px;
+    margin-left: 50px;
+    text-align: justify;
+  text-justify: inter-word;
+}

@@ -72,6 +72,7 @@ import Snake_park_endemic from "./pages/data/Snake_Park/Snake_park_endemic"
 import Snake_park_indigenous from "./pages/data/Snake_Park/Snake_park_indigenous"
 import Snake_park_endangered from "./pages/data/Snake_Park/Snake_park_endangered"
 import Snake_park_exotic from "./pages/data/Snake_Park/Snake_park_exotic"
+import DownloadSpecie from "./pages/DownloadSpecie"
 
 function Router() {
     return (
@@ -168,7 +169,8 @@ function Router() {
                 <Route path="/Victoria_Park/Victoria_Park-indigenous" element={<Victoria_park_indigenous />} />
                 <Route path="/Victoria_Park/Victoria_Park-exotic" element={<Victoria_park_exotic />} />
                 <Route path="/Victoria_Park/Victoria_Park-endangered" element={<Victoria_park_endangered />} />
-
+                
+                <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>
         </div>
     )
