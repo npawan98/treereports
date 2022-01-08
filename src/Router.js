@@ -61,6 +61,13 @@ import Workers_park_exotic from "./pages/data/Workers_Park/Workers_park_exotic"
 import Workers_park_indigenous from "./pages/data/Workers_Park/Workers_park_indigenous"
 import GenerateReports from "./pages/GenerateReports"
 import Species from "./pages/Species"
+import Victoria_Park from "./pages/data/Victoria_Park/Victoria_Park"
+import Victoria_park_deciduous from "./pages/data/Victoria_Park/Victoria_park_deciduous"
+import Victoria_park_evergreen from "./pages/data/Victoria_Park/Victoria_park_evergreen"
+import Victoria_park_endemic from "./pages/data/Victoria_Park/Victoria_park_endemic"
+import Victoria_park_indigenous from "./pages/data/Victoria_Park/Victoria_park_indigenous"
+import Victoria_park_exotic from "./pages/data/Victoria_Park/Victoria_park_exotic"
+import Victoria_park_endangered from "./pages/data/Victoria_Park/Victoria_park_endangered"
 
 function Router() {
     return (
@@ -144,6 +151,15 @@ function Router() {
                 <Route path="/Edward_Park/Edward_Park-indigenous" element={<Edward_park_indigenous />} />
                 <Route path="/Edward_Park/Edward_Park-exotic" element={<Edward_park_exotic />} />
                 <Route path="/Edward_Park/Edward_Park-endangered" element={<Edward_park_endangered />} />
+
+                {/* Park_2 */}
+                <Route path="/Victoria_Park" element={<Victoria_Park />} />
+                <Route path="/Victoria_Park/Victoria_Park-deciduous" element={<Victoria_park_deciduous />} />
+                <Route path="/Victoria_Park/Victoria_Park-evergreen" element={<Victoria_park_evergreen />} />
+                <Route path="/Victoria_Park/Victoria_Park-endemic" element={<Victoria_park_endemic />} />
+                <Route path="/Victoria_Park/Victoria_Park-indigenous" element={<Victoria_park_indigenous />} />
+                <Route path="/Victoria_Park/Victoria_Park-exotic" element={<Victoria_park_exotic />} />
+                <Route path="/Victoria_Park/Victoria_Park-endangered" element={<Victoria_park_endangered />} />
 
             </Routes>
         </div>
