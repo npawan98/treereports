@@ -4,6 +4,13 @@ import { Route, Routes } from "react-router-dom"
 import App from "./App"
 import ReportsByZone from "./Components/ReportsByZone/ReportsByZone"
 import Dashboard from "./pages/Dashboard"
+import Circular_Park from "./pages/data/Circular_Park/Circular_Park"
+import Circular_park_deciduous from "./pages/data/Circular_Park/Circular_park_deciduous"
+import Circular_park_endangered from "./pages/data/Circular_Park/Circular_park_endangered"
+import Circular_park_endemic from "./pages/data/Circular_Park/Circular_park_endemic"
+import Circular_park_evergreen from "./pages/data/Circular_Park/Circular_park_evergreen"
+import Circular_park_exotic from "./pages/data/Circular_Park/Circular_park_exotic"
+import Circular_park_indigenous from "./pages/data/Circular_Park/Circular_park_indigenous"
 import Dog_Park from "./pages/data/Dog_Park/Dog_Park"
 import Dog_park_deciduous from "./pages/data/Dog_Park/Dog_park_deciduous"
 import Dog_park_evergreen from "./pages/data/Dog_Park/Dog_park_evergreen"
@@ -56,7 +63,7 @@ function Router() {
                 <Route path="/Rose_Park/Rose_Park-exotic" element={<Rose_park_exotic />} />
                 <Route path="/Rose_Park/Rose_Park-endangered" element={<Rose_park_endangered />} />
 
-                {/* Rose park */}
+                {/* Traingular park */}
                 <Route path="/Traingular_Park" element={<Traingular_Park />} />
                 <Route path="/Traingular_Park/Traingular_Park-deciduous" element={<Traingular_Park_deciduous />} />
                 <Route path="/Traingular_Park/Traingular_Park-evergreen" element={<Traingular_Park_evergreen />} />
@@ -64,6 +71,15 @@ function Router() {
                 <Route path="/Traingular_Park/Traingular_Park-indigenous" element={<Traingular_Park_indigenous />} />
                 <Route path="/Traingular_Park/Traingular_Park-exotic" element={<Traingular_Park_exotic />} />
                 <Route path="/Traingular_Park/Traingular_Park-endangered" element={<Traingular_Park_endangered />} />
+
+                {/* Circular park */}
+                <Route path="/Circular_Park" element={<Circular_Park />} />
+                <Route path="/Circular_Park/Circular_Park-deciduous" element={<Circular_park_deciduous />} />
+                <Route path="/Circular_Park/Circular_Park-evergreen" element={<Circular_park_evergreen />} />
+                <Route path="/Circular_Park/Circular_Park-endemic" element={<Circular_park_endemic />} />
+                <Route path="/Circular_Park/Circular_Park-indigenous" element={<Circular_park_indigenous />} />
+                <Route path="/Circular_Park/Circular_Park-exotic" element={<Circular_park_exotic />} />
+                <Route path="/Circular_Park/Circular_Park-endangered" element={<Circular_park_endangered />} />
 
             </Routes>
         </div>
