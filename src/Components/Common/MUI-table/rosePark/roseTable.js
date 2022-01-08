@@ -22,28 +22,28 @@ function RoseTable() {
     const[roseEndangered,setRoseEndangered] = useState([]);
   
     useEffect(()=>{
-        axios.get("http://localhost:8081/roseEvergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEvergreen").then(res=> {
         console.log(res.data)
         setRoseEvergreen(res.data)
         
       })
-      axios.get("http://localhost:8081/roseDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseDeciduous").then(res=> {
         console.log(res.data)
         setRoseDeciduous(res.data)
     })
-    axios.get("http://localhost:8081/roseEndemic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEndemic").then(res=> {
         console.log(res.data)
         setRoseEndemic(res.data)
     })
-    axios.get("http://localhost:8081/roseIndigenous").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseIndigenous").then(res=> {
         console.log(res.data)
         setRoseIndigenous(res.data)
     })
-    axios.get("http://localhost:8081/roseExotic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseExotic").then(res=> {
         console.log(res.data)
         setRoseExotic(res.data)
     })
-    axios.get("http://localhost:8081/roseEndangered").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEndangered").then(res=> {
         console.log(res.data)
         setRoseEndangered(res.data)
     })

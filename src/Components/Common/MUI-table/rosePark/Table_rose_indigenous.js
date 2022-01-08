@@ -7,7 +7,7 @@ function Table_rose_indigenous() {
     const[roseIndigenous,setRoseIndigenous] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/roseIndigenous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseIndigenous").then(res=> {
         console.log(res.data)
         setRoseIndigenous(res.data)
     })

@@ -7,7 +7,7 @@ function SpeciesTable() {
     const[snakeDeciduous,setSnakeDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/species").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/species").then(res=> {
         console.log(res.data)
         setSnakeDeciduous(res.data)
     })

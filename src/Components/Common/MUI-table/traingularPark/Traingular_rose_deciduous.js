@@ -7,7 +7,7 @@ function Table_Rose_deciduous() {
     const[roseDeciduous,setRoseDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/roseDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseDeciduous").then(res=> {
         console.log(res.data)
         setRoseDeciduous(res.data)
     })

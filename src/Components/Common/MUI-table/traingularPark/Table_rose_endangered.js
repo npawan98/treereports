@@ -7,7 +7,7 @@ function Table_rose_endangered() {
     const[roseEndangered,setRoseEndangered] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/roseEndangered").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEndangered").then(res=> {
         console.log(res.data)
         setRoseEndangered(res.data)
     })

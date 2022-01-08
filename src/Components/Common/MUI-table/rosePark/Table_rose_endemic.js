@@ -7,7 +7,7 @@ function Table_rose_endemic() {
     const[roseEndemic,setRoseEndemic] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/roseEndemic").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEndemic").then(res=> {
         console.log(res.data)
         setRoseEndemic(res.data)
     })

@@ -7,7 +7,7 @@ function Table_rose_exotic() {
     const[roseExotic,setRoseExotic] = useState([]);
 
     useEffect(()=>{
-      axios.get("http://localhost:8081/roseExotic").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseExotic").then(res=> {
         console.log(res.data)
         setRoseExotic(res.data)
     })

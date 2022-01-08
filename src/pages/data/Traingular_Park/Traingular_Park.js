@@ -19,27 +19,27 @@ function Traingular_Park() {
     const arrTriangular = [];
 
     useEffect(()=>{
-        axios.get("http://localhost:8081/triangularEvergreen").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularEvergreen").then((res) => {
         console.log(res.data.length);
         setTriangularEvergreen([res.data.length]);
         });
-        axios.get("http://localhost:8081/triangularDeciduous").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularDeciduous").then((res) => {
         console.log(res.data.length);
         setTriangularDeciduous(res.data.length);
         });
-        axios.get("http://localhost:8081/triangularEndemic").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularEndemic").then((res) => {
         console.log(res.data.length);
         setTriangularEndemic(res.data.length);
         });
-        axios.get("http://localhost:8081/triangularIndigenous").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularIndigenous").then((res) => {
         console.log(res.data.length);
         setTriangularIndigenous(res.data.length);
         });
-        axios.get("http://localhost:8081/triangularExotic").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularExotic").then((res) => {
         console.log(res.data.length);
         setTriangularExotic(res.data.length);
         });
-        axios.get("http://localhost:8081/triangularEndangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularEndangered").then((res) => {
         console.log(res.data.length);
         setTriangularEndangered(res.data.length);
         });

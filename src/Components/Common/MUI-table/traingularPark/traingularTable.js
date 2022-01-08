@@ -22,28 +22,28 @@ function TriangularTable() {
     const[TriangularEndangered,setTriangularEndangered] = useState([]);
   
     useEffect(()=>{
-        axios.get("http://localhost:8081/TriangularEvergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularEvergreen").then(res=> {
         console.log(res.data)
         setTriangularEvergreen(res.data)
         
       })
-      axios.get("http://localhost:8081/TriangularDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularDeciduous").then(res=> {
         console.log(res.data)
         setTriangularDeciduous(res.data)
     })
-    axios.get("http://localhost:8081/TriangularEndemic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularEndemic").then(res=> {
         console.log(res.data)
         setTriangularEndemic(res.data)
     })
-    axios.get("http://localhost:8081/TriangularIndigenous").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularIndigenous").then(res=> {
         console.log(res.data)
         setTriangularIndigenous(res.data)
     })
-    axios.get("http://localhost:8081/TriangularExotic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularExotic").then(res=> {
         console.log(res.data)
         setTriangularExotic(res.data)
     })
-    axios.get("http://localhost:8081/TriangularEndangered").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularEndangered").then(res=> {
         console.log(res.data)
         setTriangularEndangered(res.data)
     })
