@@ -25,7 +25,7 @@ const zones = [
     },
     {
         zone:'Park 1',
-        value:'Park1'
+        value:'Park_1_Park'
     },
     {
         zone:'Park 2',
