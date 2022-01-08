@@ -14,6 +14,13 @@ import Circular_park_indigenous from "./pages/data/Circular_Park/Circular_park_i
 import Dog_Park from "./pages/data/Dog_Park/Dog_Park"
 import Dog_park_deciduous from "./pages/data/Dog_Park/Dog_park_deciduous"
 import Dog_park_evergreen from "./pages/data/Dog_Park/Dog_park_evergreen"
+import Edward_park_deciduous from "./pages/data/Edward_Park/Edward_park_deciduous"
+import Edward_park_endangered from "./pages/data/Edward_Park/Edward_park_endangered"
+import Edward_park_endemic from "./pages/data/Edward_Park/Edward_park_endemic"
+import Edward_park_evergreen from "./pages/data/Edward_Park/Edward_park_evergreen"
+import Edward_park_exotic from "./pages/data/Edward_Park/Edward_park_exotic"
+import Edward_park_indigenous from "./pages/data/Edward_Park/Edward_park_indigenous"
+import Edward_Park from "./pages/data/Edward_Park/Edward_Park"
 import Park_1_Park from "./pages/data/Park_1/Park_1_Park"
 import Park_1_park_deciduous from "./pages/data/Park_1/Park_1_park_deciduous"
 import Park_1_park_endangered from "./pages/data/Park_1/Park_1_park_endangered"
@@ -128,6 +135,15 @@ function Router() {
                 <Route path="/Park_2_Park/Park_2_Park-indigenous" element={<Park_2_park_indigenous />} />
                 <Route path="/Park_2_Park/Park_2_Park-exotic" element={<Park_2_park_exotic />} />
                 <Route path="/Park_2_Park/Park_2_Park-endangered" element={<Park_2_park_endangered />} />
+
+                {/* Park_2 */}
+                <Route path="/Edward_Park" element={<Edward_Park />} />
+                <Route path="/Edward_Park/Edward_Park-deciduous" element={<Edward_park_deciduous />} />
+                <Route path="/Edward_Park/Edward_Park-evergreen" element={<Edward_park_evergreen />} />
+                <Route path="/Edward_Park/Edward_Park-endemic" element={<Edward_park_endemic />} />
+                <Route path="/Edward_Park/Edward_Park-indigenous" element={<Edward_park_indigenous />} />
+                <Route path="/Edward_Park/Edward_Park-exotic" element={<Edward_park_exotic />} />
+                <Route path="/Edward_Park/Edward_Park-endangered" element={<Edward_park_endangered />} />
 
             </Routes>
         </div>
