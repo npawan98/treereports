@@ -2,7 +2,7 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_rose_indigenous() {
+function Table_Rose_indigenous() {
 
     const[roseIndigenous,setRoseIndigenous] = useState([]);
 
@@ -49,4 +49,4 @@ function Table_rose_indigenous() {
     )
 }
 
-export default Table_rose_indigenous
+export default Table_Rose_indigenous

@@ -2,14 +2,14 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_rose_endangered() {
+function Table_Triangular_indigenous() {
 
-    const[roseEndangered,setRoseEndangered] = useState([]);
+    const[TriangularIndigenous,setTriangularIndigenous] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEndangered").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularIndigenous").then(res=> {
         console.log(res.data)
-        setRoseEndangered(res.data)
+        setTriangularIndigenous(res.data)
     })
       },[])
 
@@ -29,7 +29,7 @@ function Table_rose_endangered() {
                     </TableHead>
                     <TableBody>
                         {
-                            roseEndangered.map((item) =>{
+                            TriangularIndigenous.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>
@@ -49,4 +49,4 @@ function Table_rose_endangered() {
     )
 }
 
-export default Table_rose_endangered
+export default Table_Triangular_indigenous

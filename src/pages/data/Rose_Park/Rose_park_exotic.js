@@ -1,6 +1,6 @@
 
 import SubBanner from "../../../Components/Common/BannerImage/SubBanner/SubBanner"
-import Table_Rose_exotic from "../../../Components/Common/MUI-table/rosePark/Table_rose_exotic"
+import Table_Rose_exotic from "../../../Components/Common/MUI-table/RosePark/Table_Rose_exotic"
 
 function Rose_park_exotic() {
     return (

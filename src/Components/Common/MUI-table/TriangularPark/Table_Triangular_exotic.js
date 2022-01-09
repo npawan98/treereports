@@ -2,14 +2,14 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_rose_indigenous() {
+function Table_Triangular_exotic() {
 
-    const[roseIndigenous,setRoseIndigenous] = useState([]);
+    const[TriangularExotic,setTriangularExotic] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseIndigenous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularExotic").then(res=> {
         console.log(res.data)
-        setRoseIndigenous(res.data)
+        setTriangularExotic(res.data)
     })
       },[])
 
@@ -29,7 +29,7 @@ function Table_rose_indigenous() {
                     </TableHead>
                     <TableBody>
                         {
-                            roseIndigenous.map((item) =>{
+                            TriangularExotic.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>
@@ -49,4 +49,4 @@ function Table_rose_indigenous() {
     )
 }
 
-export default Table_rose_indigenous
+export default Table_Triangular_exotic

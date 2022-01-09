@@ -13,77 +13,77 @@ import { Link } from 'react-router-dom';
 
 function RoseTable() {
 
-    const [roseData,setRoseData] = useState([]);
-    const [roseEvergreen,setRoseEvergreen] = useState([]);
-    const[roseDeciduous,setRoseDeciduous] = useState([]);
-    const[roseEndemic,setRoseEndemic] = useState([]);
-    const[roseIndigenous,setRoseIndigenous] = useState([]);
-    const[roseExotic,setRoseExotic] = useState([]);
-    const[roseEndangered,setRoseEndangered] = useState([]);
-  
+    const [RoseData,setRoseData] = useState([]);
+    const [RoseEvergreen,setRoseEvergreen] = useState([]);
+    const[RoseDeciduous,setRoseDeciduous] = useState([]);
+    const[RoseEndemic,setRoseEndemic] = useState([]);
+    const[RoseIndigenous,setRoseIndigenous] = useState([]);
+    const[RoseExotic,setRoseExotic] = useState([]);
+    const[RoseEndangered,setRoseEndangered] = useState([]);
+
     useEffect(()=>{
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEvergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/RoseEvergreen").then(res=> {
         console.log(res.data)
         setRoseEvergreen(res.data)
         
       })
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/RoseDeciduous").then(res=> {
         console.log(res.data)
         setRoseDeciduous(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEndemic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseEndemic").then(res=> {
         console.log(res.data)
         setRoseEndemic(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseIndigenous").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseIndigenous").then(res=> {
         console.log(res.data)
         setRoseIndigenous(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseExotic").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseExotic").then(res=> {
         console.log(res.data)
         setRoseExotic(res.data)
     })
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEndangered").then(res=> {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseEndangered").then(res=> {
         console.log(res.data)
         setRoseEndangered(res.data)
     })
       },[])
-  
-  
+
+
   return (
     <TableContainer component={Paper} style={{maxWidth:'650px'}}>
       <Table sx={{ maxWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-deciduous")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of deciduous</TableCell>
-            <TableCell align="right">{roseDeciduous.length}</TableCell>
+            <TableCell>Number of deciduous (Phenology)</TableCell>
+            <TableCell align="right">{RoseDeciduous.length}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
         <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-evergreen")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of evergreen</TableCell>
-            <TableCell align="right">{roseEvergreen.length}</TableCell>
+            <TableCell>Number of evergreen (Phenology)</TableCell>
+            <TableCell align="right">{RoseEvergreen.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-endemic")}}>
+          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
-            <TableCell align="right">{roseEndemic.length}</TableCell>
+            <TableCell align="right">{RoseEndemic.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-indigenous")}}>
+          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-indigenous")}} style={{cursor:"pointer"}}>
             <TableCell>Number of indigenous</TableCell>
-            <TableCell align="right">{roseIndigenous.length}</TableCell>
+            <TableCell align="right">{RoseIndigenous.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-exotic")}}>
+          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-exotic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of exotic</TableCell>
-            <TableCell align="right">{roseExotic.length}</TableCell>
+            <TableCell align="right">{RoseExotic.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-endangered")}}>
+          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-endangered")}} style={{cursor:"pointer"}}>
             <TableCell>endangered</TableCell>
-            <TableCell align="right">{roseEndangered.length}</TableCell>
+            <TableCell align="right">{RoseEndangered.length}</TableCell>
           </TableRow>
         </TableBody>
       </Table>
     </TableContainer>
   );
-  }
+}
 
 export default RoseTable;

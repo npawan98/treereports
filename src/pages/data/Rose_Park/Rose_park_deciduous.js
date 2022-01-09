@@ -1,6 +1,6 @@
 
 import SubBanner from "../../../Components/Common/BannerImage/SubBanner/SubBanner"
-import Table_Rose_deciduous from "../../../Components/Common/MUI-table/rosePark/Table_rose_deciduous"
+import Table_Rose_deciduous from "../../../Components/Common/MUI-table/RosePark/Table_Rose_deciduous"
 
 function Rose_park_deciduous() {
     return (

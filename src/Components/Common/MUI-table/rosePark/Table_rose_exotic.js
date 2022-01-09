@@ -2,7 +2,7 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_rose_exotic() {
+function Table_Rose_exotic() {
 
     const[roseExotic,setRoseExotic] = useState([]);
 
@@ -49,4 +49,4 @@ function Table_rose_exotic() {
     )
 }
 
-export default Table_rose_exotic
+export default Table_Rose_exotic

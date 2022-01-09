@@ -1,6 +1,6 @@
 
 import SubBanner from "../../../Components/Common/BannerImage/SubBanner/SubBanner"
-import Table_rose_evergreen from "../../../Components/Common/MUI-table/rosePark/Table_rose_evergreen"
+import Table_rose_evergreen from "../../../Components/Common/MUI-table/RosePark/Table_Rose_evergreen"
 
 function Rose_park_evergreen() {
     return (

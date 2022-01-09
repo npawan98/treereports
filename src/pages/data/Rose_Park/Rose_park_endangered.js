@@ -1,6 +1,6 @@
 
 import SubBanner from "../../../Components/Common/BannerImage/SubBanner/SubBanner"
-import Table_Rose_endangered from "../../../Components/Common/MUI-table/rosePark/Table_rose_endangered"
+import Table_Rose_endangered from "../../../Components/Common/MUI-table/RosePark/Table_Rose_endangered"
 
 function Rose_park_endangered() {
     return (

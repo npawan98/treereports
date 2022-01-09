@@ -2,14 +2,14 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_rose_endemic() {
+function Table_Triangular_endangered() {
 
-    const[roseEndemic,setRoseEndemic] = useState([]);
+    const[TriangularEndangered,setTriangularEndangered] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEndemic").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularEndangered").then(res=> {
         console.log(res.data)
-        setRoseEndemic(res.data)
+        setTriangularEndangered(res.data)
     })
       },[])
 
@@ -29,7 +29,7 @@ function Table_rose_endemic() {
                     </TableHead>
                     <TableBody>
                         {
-                            roseEndemic.map((item) =>{
+                            TriangularEndangered.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>
@@ -49,4 +49,4 @@ function Table_rose_endemic() {
     )
 }
 
-export default Table_rose_endemic
+export default Table_Triangular_endangered

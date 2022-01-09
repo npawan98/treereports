@@ -2,14 +2,14 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_Rose_deciduous() {
+function Table_Triangular_endemic() {
 
-    const[roseDeciduous,setRoseDeciduous] = useState([]);
+    const[TriangularEndemic,setTriangularEndemic] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularEndemic").then(res=> {
         console.log(res.data)
-        setRoseDeciduous(res.data)
+        setTriangularEndemic(res.data)
     })
       },[])
 
@@ -29,7 +29,7 @@ function Table_Rose_deciduous() {
                     </TableHead>
                     <TableBody>
                         {
-                            roseDeciduous.map((item) =>{
+                            TriangularEndemic.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>
@@ -49,4 +49,4 @@ function Table_Rose_deciduous() {
     )
 }
 
-export default Table_Rose_deciduous
+export default Table_Triangular_endemic

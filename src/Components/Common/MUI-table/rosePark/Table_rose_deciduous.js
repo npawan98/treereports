@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 
 function Table_Rose_deciduous() {
 
-    const[roseDeciduous,setRoseDeciduous] = useState([]);
+    const[RoseDeciduous,setRoseDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/RoseDeciduous").then(res=> {
         console.log(res.data)
         setRoseDeciduous(res.data)
     })
@@ -29,7 +29,7 @@ function Table_Rose_deciduous() {
                     </TableHead>
                     <TableBody>
                         {
-                            roseDeciduous.map((item) =>{
+                            RoseDeciduous.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>

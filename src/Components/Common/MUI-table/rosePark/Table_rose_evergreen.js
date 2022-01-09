@@ -2,12 +2,12 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_rose_evergreen() {
+function Table_Rose_evergreen() {
 
-    const[roseEvergreen,setRoseEvergreen] = useState([]);
+    const[RoseEvergreen,setRoseEvergreen] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEvergreen").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/RoseEvergreen").then(res=> {
         console.log(res.data)
         setRoseEvergreen(res.data)
     })
@@ -29,7 +29,7 @@ function Table_rose_evergreen() {
                     </TableHead>
                     <TableBody>
                         {
-                            roseEvergreen.map((item) =>{
+                            RoseEvergreen.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>
@@ -49,4 +49,4 @@ function Table_rose_evergreen() {
     )
 }
 
-export default Table_rose_evergreen
+export default Table_Rose_evergreen

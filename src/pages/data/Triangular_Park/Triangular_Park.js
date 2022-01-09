@@ -3,11 +3,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import SubBanner from "../../../Components/Common/BannerImage/SubBanner/SubBanner"
-import RoseTable from "../../../Components/Common/MUI-table/rosePark/roseTable"
-import TraingularTable from "../../../Components/Common/MUI-table/traingularPark/traingularTable";
+import TriangularTable from "../../../Components/Common/MUI-table/TriangularPark/TriangularTable";
 import DonutChart from "../../../Components/DashbaordComponents/Dashboard_donut/DonutChart"
 
-function Traingular_Park() {
+function Triangular_Park() {
 
     const [triangularEvergreen, setTriangularEvergreen] = useState([]);
     const [triangularDeciduous, setTriangularDeciduous] = useState([]);
@@ -56,11 +55,11 @@ function Traingular_Park() {
 
     return (
         <div className="Dog__Park">
-            <SubBanner Title="Generate report" subTitle="Traingular Park" imgURL="https://images.unsplash.com/photo-1605138090832-672d54ff023f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2209&q=80"/>
+            <SubBanner Title="Generate report" subTitle="Triangular Park" imgURL="https://images.unsplash.com/photo-1605138090832-672d54ff023f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2209&q=80"/>
         
             <div className="Dog__Park-main" style={{display:'flex',placeItems:'center'}}>
             <DonutChart
-                title="Traingular Park"
+                title="Triangular Park"
                 values={arrTriangular}
                 labels={[
                 "Evergreen",
@@ -71,7 +70,7 @@ function Traingular_Park() {
                 "Endangered",
                 ]}
             />
-                <TraingularTable/>
+                <TriangularTable/>
             </div>
         
         
@@ -79,4 +78,4 @@ function Traingular_Park() {
     )
 }
 
-export default Traingular_Park
+export default Triangular_Park

@@ -42,13 +42,6 @@ import Rose_park_endemic from "./pages/data/Rose_Park/Rose_park_endemic"
 import Rose_park_evergreen from "./pages/data/Rose_Park/Rose_park_evergreen"
 import Rose_park_exotic from "./pages/data/Rose_Park/Rose_park_exotic"
 import Rose_park_indigenous from "./pages/data/Rose_Park/Rose_park_indigenous"
-import Traingular_Park from "./pages/data/Traingular_Park/Traingular_Park"
-import Traingular_Park_deciduous from "./pages/data/Traingular_Park/Traingular_Park_deciduous"
-import Traingular_Park_endangered from "./pages/data/Traingular_Park/Traingular_Park_endangered"
-import Traingular_Park_endemic from "./pages/data/Traingular_Park/Traingular_Park_endemic"
-import Traingular_Park_evergreen from "./pages/data/Traingular_Park/Traingular_Park_evergreen"
-import Traingular_Park_exotic from "./pages/data/Traingular_Park/Traingular_Park_exotic"
-import Traingular_Park_indigenous from "./pages/data/Traingular_Park/Traingular_Park_indigenous"
 import Workers_Park from "./pages/data/Workers_Park/Workers_Park"
 import Workers_park_deciduous from "./pages/data/Workers_Park/Workers_park_deciduous"
 import Workers_park_endangered from "./pages/data/Workers_Park/Workers_park_endangered"
@@ -77,6 +70,13 @@ import Dog_park_endemic from "./pages/data/Dog_Park/Dog_park_endemic"
 import Dog_park_indigenous from "./pages/data/Dog_Park/Dog_park_indigenous"
 import Dog_park_exotic from "./pages/data/Dog_Park/Dog_park_exotic"
 import Dog_park_endangered from "./pages/data/Dog_Park/Dog_park_endangered"
+import Triangular_Park from "./pages/data/Triangular_Park/Triangular_Park"
+import Triangular_Park_deciduous from "./pages/data/Triangular_Park/Triangular_Park_deciduous"
+import Triangular_Park_evergreen from "./pages/data/Triangular_Park/Triangular_Park_evergreen"
+import Triangular_Park_endemic from "./pages/data/Triangular_Park/Triangular_Park_endemic"
+import Triangular_Park_indigenous from "./pages/data/Triangular_Park/Triangular_Park_indigenous"
+import Triangular_Park_exotic from "./pages/data/Triangular_Park/Triangular_Park_exotic"
+import Triangular_Park_endangered from "./pages/data/Triangular_Park/Triangular_Park_endangered"
 
 function Router() {
     return (
@@ -115,14 +115,14 @@ function Router() {
                 <Route path="/Rose_Park/Rose_Park-exotic" element={<Rose_park_exotic />} />
                 <Route path="/Rose_Park/Rose_Park-endangered" element={<Rose_park_endangered />} />
 
-                {/* Traingular park */}
-                <Route path="/Traingular_Park" element={<Traingular_Park />} />
-                <Route path="/Traingular_Park/Traingular_Park-deciduous" element={<Traingular_Park_deciduous />} />
-                <Route path="/Traingular_Park/Traingular_Park-evergreen" element={<Traingular_Park_evergreen />} />
-                <Route path="/Traingular_Park/Traingular_Park-endemic" element={<Traingular_Park_endemic />} />
-                <Route path="/Traingular_Park/Traingular_Park-indigenous" element={<Traingular_Park_indigenous />} />
-                <Route path="/Traingular_Park/Traingular_Park-exotic" element={<Traingular_Park_exotic />} />
-                <Route path="/Traingular_Park/Traingular_Park-endangered" element={<Traingular_Park_endangered />} />
+                {/* Triangular park */}
+                <Route path="/Triangular_Park" element={<Triangular_Park />} />
+                <Route path="/Triangular_Park/Triangular_Park-deciduous" element={<Triangular_Park_deciduous />} />
+                <Route path="/Triangular_Park/Triangular_Park-evergreen" element={<Triangular_Park_evergreen />} />
+                <Route path="/Triangular_Park/Triangular_Park-endemic" element={<Triangular_Park_endemic />} />
+                <Route path="/Triangular_Park/Triangular_Park-indigenous" element={<Triangular_Park_indigenous />} />
+                <Route path="/Triangular_Park/Triangular_Park-exotic" element={<Triangular_Park_exotic />} />
+                <Route path="/Triangular_Park/Triangular_Park-endangered" element={<Triangular_Park_endangered />} />
 
                 {/* Circular park */}
                 <Route path="/Circular_Park" element={<Circular_Park />} />
