@@ -2,14 +2,14 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_Victoria_evergreen() {
+function Table_dog_evergreen() {
 
-    const[VictoriaEvergreen,setVictoriaEvergreen] = useState([]);
+    const[dogEvergreen,setDogEvergreen] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/Victoria_park_Evergreen").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Victoria_park_Evergreen").then(res=> {
         console.log(res.data)
-        setVictoriaEvergreen(res.data)
+        setDogEvergreen(res.data)
     })
       },[])
 
@@ -29,7 +29,7 @@ function Table_Victoria_evergreen() {
                     </TableHead>
                     <TableBody>
                         {
-                            VictoriaEvergreen.map((item) =>{
+                            dogEvergreen.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>
@@ -49,4 +49,4 @@ function Table_Victoria_evergreen() {
     )
 }
 
-export default Table_Victoria_evergreen
+export default Table_dog_evergreen

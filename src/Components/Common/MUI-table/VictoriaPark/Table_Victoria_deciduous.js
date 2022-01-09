@@ -7,7 +7,7 @@ function Table_Victoria_deciduous() {
     const[VictoriaDeciduous,setVictoriaDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/Victoria_park_Deciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Victoria_park_Deciduous").then(res=> {
         console.log(res.data)
         setVictoriaDeciduous(res.data)
     })

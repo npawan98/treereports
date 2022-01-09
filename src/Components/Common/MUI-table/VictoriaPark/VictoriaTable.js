@@ -22,12 +22,12 @@ function VictoriaTable() {
     const[VictoriaEndangered,setVictoriaEndangered] = useState([]);
   
     useEffect(()=>{
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/Victoria_park_Evergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Victoria_park_Evergreen").then(res=> {
         console.log(res.data)
         setVictoriaEvergreen(res.data)
         
       })
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/Victoria_park_Deciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Victoria_park_Deciduous").then(res=> {
         console.log(res.data)
         setVictoriaDeciduous(res.data)
     })
