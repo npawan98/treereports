@@ -12,8 +12,8 @@ const zones = [
         value:'Rose_Park'
     },
     {
-        zone:'Traingular Park',
-        value:'Traingular_Park'
+        zone:'Triangular Park',
+        value:'Triangular_Park'
     },
     {
         zone:'Circular Park',
