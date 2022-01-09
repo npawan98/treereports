@@ -2,14 +2,14 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_Edward_evergreen() {
+function Table_dog_evergreen() {
 
-    const[EdwardEvergreen,setEdwardEvergreen] = useState([]);
+    const[dogEvergreen,setDogEvergreen] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Evergreen").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Evergreen").then(res=> {
         console.log(res.data)
-        setEdwardEvergreen(res.data)
+        setDogEvergreen(res.data)
     })
       },[])
 
@@ -29,7 +29,7 @@ function Table_Edward_evergreen() {
                     </TableHead>
                     <TableBody>
                         {
-                            EdwardEvergreen.map((item) =>{
+                            dogEvergreen.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>
@@ -49,4 +49,4 @@ function Table_Edward_evergreen() {
     )
 }
 
-export default Table_Edward_evergreen
+export default Table_dog_evergreen

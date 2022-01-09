@@ -7,7 +7,7 @@ function Table_Edward_deciduous() {
     const[EdwardDeciduous,setEdwardDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Deciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Deciduous").then(res=> {
         console.log(res.data)
         setEdwardDeciduous(res.data)
     })

@@ -22,12 +22,12 @@ function EdwardTable() {
     const[EdwardEndangered,setEdwardEndangered] = useState([]);
   
     useEffect(()=>{
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Evergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Evergreen").then(res=> {
         console.log(res.data)
         setEdwardEvergreen(res.data)
         
       })
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Deciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Deciduous").then(res=> {
         console.log(res.data)
         setEdwardDeciduous(res.data)
     })
