@@ -7,7 +7,7 @@ function Table_Park_1_evergreen() {
     const[Park_1Evergreen,setPark_1Evergreen] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/Park_1Evergreen").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Park_1Evergreen").then(res=> {
         console.log(res.data)
         setPark_1Evergreen(res.data)
     })

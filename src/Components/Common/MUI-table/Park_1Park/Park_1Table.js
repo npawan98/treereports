@@ -20,14 +20,14 @@ function Park_1Table() {
     const[Park_1Indigenous,setPark_1Indigenous] = useState([]);
     const[Park_1Exotic,setPark_1Exotic] = useState([]);
     const[Park_1Endangered,setPark_1Endangered] = useState([]);
-  
+
     useEffect(()=>{
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/Park_1Evergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Park_1Evergreen").then(res=> {
         console.log(res.data)
         setPark_1Evergreen(res.data)
         
       })
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/Park_1Deciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Park_1Deciduous").then(res=> {
         console.log(res.data)
         setPark_1Deciduous(res.data)
     })
@@ -48,35 +48,35 @@ function Park_1Table() {
         setPark_1Endangered(res.data)
     })
       },[])
-  
-  
+
+
   return (
     <TableContainer component={Paper} style={{maxWidth:'650px'}}>
       <Table sx={{ maxWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow onClick={()=>{window.location.assign("/Park_1_Park/Park_1_Park-deciduous")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of deciduous</TableCell>
+            <TableCell>Number of deciduous (Phenology)</TableCell>
             <TableCell align="right">{Park_1Deciduous.length}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
         <TableRow onClick={()=>{window.location.assign("/Park_1_Park/Park_1_Park-evergreen")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of evergreen</TableCell>
+            <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{Park_1Evergreen.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Park_1_Park/Park_1_Park-endemic")}}>
+          <TableRow onClick={()=>{window.location.assign("/Park_1_Park/Park_1_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
             <TableCell align="right">{Park_1Endemic.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Park_1_Park/Park_1_Park-indigenous")}}>
+          <TableRow onClick={()=>{window.location.assign("/Park_1_Park/Park_1_Park-indigenous")}} style={{cursor:"pointer"}}>
             <TableCell>Number of indigenous</TableCell>
             <TableCell align="right">{Park_1Indigenous.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Park_1_Park/Park_1_Park-exotic")}}>
+          <TableRow onClick={()=>{window.location.assign("/Park_1_Park/Park_1_Park-exotic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of exotic</TableCell>
             <TableCell align="right">{Park_1Exotic.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Park_1_Park/Park_1_Park-endangered")}}>
+          <TableRow onClick={()=>{window.location.assign("/Park_1_Park/Park_1_Park-endangered")}} style={{cursor:"pointer"}}>
             <TableCell>endangered</TableCell>
             <TableCell align="right">{Park_1Endangered.length}</TableCell>
           </TableRow>
@@ -84,6 +84,6 @@ function Park_1Table() {
       </Table>
     </TableContainer>
   );
-  }
+}
 
 export default Park_1Table;
