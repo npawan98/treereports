@@ -498,7 +498,7 @@ function DashboardComponentsPhenology() {
         <div>
           {/* {console.log(dogEvergreen,dogDeciduous,dogEndemic,dogIndigenous,dogExotic,dogEndangered)} */}
           <DonutChart
-            title="Dog Park"
+            title="Dog Park - Phenology"
             values={arrDog}
             labels={[
               "Evergreen",
@@ -512,7 +512,7 @@ function DashboardComponentsPhenology() {
         </div>
         <div>
           <DonutChart
-            title="Snake Park"
+            title="Snake Park - Phenology"
             values={arrSnake}
             labels={[
               "Evergreen",
@@ -526,7 +526,7 @@ function DashboardComponentsPhenology() {
         </div>
         <div>
           <DonutChart
-            title="Rose Park"
+            title="Rose Park - Phenology"
             values={arrRose}
             labels={[
               "Evergreen",
@@ -543,7 +543,7 @@ function DashboardComponentsPhenology() {
         <div className="dashboard__component--main">
         <div>
           <DonutChart
-            title="Triangular Park"
+            title="Triangular Park - Phenology"
             values={arrTriangular}
             labels={[
               "Evergreen",
@@ -557,7 +557,7 @@ function DashboardComponentsPhenology() {
         </div>
         <div>
           <DonutChart
-            title="Circular Park"
+            title="Circular Park - Phenology"
             values={arrCircular}
             labels={[
               "Evergreen",
@@ -571,7 +571,7 @@ function DashboardComponentsPhenology() {
         </div>
         <div>
           <DonutChart
-            title="Workers Park"
+            title="Workers Park - Phenology"
             values={arrWorkers}
             labels={[
               "Evergreen",
@@ -587,7 +587,7 @@ function DashboardComponentsPhenology() {
         <div className="dashboard__component--main">
         <div>
           <DonutChart
-            title="Park 1"
+            title="Park 1 - Phenology"
             values={arrPark1}
             labels={[
               "Evergreen",
@@ -602,7 +602,7 @@ function DashboardComponentsPhenology() {
 
         <div>
           <DonutChart
-            title="Park 2"
+            title="Park 2 - Phenology"
             values={arrPark2}
             labels={[
               "Evergreen",
@@ -617,7 +617,7 @@ function DashboardComponentsPhenology() {
 
         <div>
           <DonutChart
-            title="Edward Park"
+            title="Edward Park - Phenology"
             values={arrEdward}
             labels={[
               "Evergreen",
@@ -633,7 +633,7 @@ function DashboardComponentsPhenology() {
 <div className="dashboard__component--main">
         <div>
           <DonutChart
-            title="victoria Park"
+            title="victoria Park - Phenology"
             values={arrVictoria}
             labels={[
               "Evergreen",
