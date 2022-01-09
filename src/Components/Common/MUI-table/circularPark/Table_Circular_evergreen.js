@@ -7,7 +7,7 @@ function Table_Circular_evergreen() {
     const[CircularEvergreen,setCircularEvergreen] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/CircularEvergreen").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/CircularEvergreen").then(res=> {
         console.log(res.data)
         setCircularEvergreen(res.data)
     })

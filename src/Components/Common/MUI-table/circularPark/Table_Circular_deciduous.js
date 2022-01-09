@@ -7,7 +7,7 @@ function Table_Circular_deciduous() {
     const[CircularDeciduous,setCircularDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/CircularDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/CircularDeciduous").then(res=> {
         console.log(res.data)
         setCircularDeciduous(res.data)
     })

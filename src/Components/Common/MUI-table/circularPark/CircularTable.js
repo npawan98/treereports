@@ -20,14 +20,14 @@ function CircularTable() {
     const[CircularIndigenous,setCircularIndigenous] = useState([]);
     const[CircularExotic,setCircularExotic] = useState([]);
     const[CircularEndangered,setCircularEndangered] = useState([]);
-  
+
     useEffect(()=>{
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/CircularEvergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/CircularEvergreen").then(res=> {
         console.log(res.data)
         setCircularEvergreen(res.data)
         
       })
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/CircularDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/CircularDeciduous").then(res=> {
         console.log(res.data)
         setCircularDeciduous(res.data)
     })
@@ -48,35 +48,35 @@ function CircularTable() {
         setCircularEndangered(res.data)
     })
       },[])
-  
-  
+
+
   return (
     <TableContainer component={Paper} style={{maxWidth:'650px'}}>
       <Table sx={{ maxWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-deciduous")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of deciduous</TableCell>
+            <TableCell>Number of deciduous (Phenology)</TableCell>
             <TableCell align="right">{CircularDeciduous.length}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
         <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-evergreen")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of evergreen</TableCell>
+            <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{CircularEvergreen.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-endemic")}}>
+          <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
             <TableCell align="right">{CircularEndemic.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-indigenous")}}>
+          <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-indigenous")}} style={{cursor:"pointer"}}>
             <TableCell>Number of indigenous</TableCell>
             <TableCell align="right">{CircularIndigenous.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-exotic")}}>
+          <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-exotic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of exotic</TableCell>
             <TableCell align="right">{CircularExotic.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-endangered")}}>
+          <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-endangered")}} style={{cursor:"pointer"}}>
             <TableCell>endangered</TableCell>
             <TableCell align="right">{CircularEndangered.length}</TableCell>
           </TableRow>
@@ -84,6 +84,6 @@ function CircularTable() {
       </Table>
     </TableContainer>
   );
-  }
+}
 
 export default CircularTable;
