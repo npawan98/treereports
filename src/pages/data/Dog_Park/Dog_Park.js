@@ -17,6 +17,11 @@ function Dog_Park() {
 
     const arrDog = [];
 
+    const [dogEvergreenPhenology, setDogEvergreenPhenology] = useState([]);
+    const [dogDeciduousPhenology, setDogDeciduousPhenology] = useState([]);
+
+    const arrDogPhenology = [];
+
     useEffect(() => {
         axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEvergreen").then((res) => {
           console.log(res.data.length);
@@ -42,6 +47,16 @@ function Dog_Park() {
           console.log(res.data.length);
           setDogEndangered(res.data.length);
         });
+
+
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogEvergreen").then((res) => {
+          console.log(res.data.length);
+          setDogEvergreenPhenology([res.data.length]);
+        });
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogDeciduous").then((res) => {
+          console.log(res.data.length);
+          setDogDeciduousPhenology(res.data.length);
+        });
     },[]);
 
 
@@ -54,12 +69,18 @@ function Dog_Park() {
         parseInt(dogEndangered)
       );
 
+      arrDogPhenology.push(
+        parseInt(dogEvergreenPhenology),
+        parseInt(dogDeciduousPhenology),
+
+      )
+
 
     return (
         <div className="Dog__Park">
             <SubBanner Title="Generate report" subTitle="Dog Park" imgURL="https://images.unsplash.com/photo-1635886840360-a2d27a5826d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
         
-            <div className="Dog__Park-main" style={{display:'flex',placeItems:'center'}}>
+            <div className="Dog__Park-main" style={{display:'flex',placeItems:'center',justifyContent:"space-around"}}>
                 <DonutChart
                 title="Dog Park"
                 values={arrDog}
@@ -72,7 +93,21 @@ function Dog_Park() {
                 "Endangered",
                 ]}
             />
+            <DonutChart
+                title="Dog Park (Phenology)"
+                values={arrDogPhenology}
+                labels={[
+                "Evergreen",
+                "Deciduous",
+                "Endemic",
+                "Indigenous",
+                "Exotic",
+                "Endangered",
+                ]}
+            />
 
+            </div>
+            < div style={{display: 'grid',placeItems:'center'}}>
                 <DogTable/>
             </div>
         

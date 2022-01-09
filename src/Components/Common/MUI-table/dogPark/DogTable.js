@@ -22,12 +22,12 @@ function DogTable() {
     const[dogEndangered,setDogEndangered] = useState([]);
 
     useEffect(()=>{
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEvergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogEvergreen").then(res=> {
         console.log(res.data)
         setDogEvergreen(res.data)
         
       })
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/dogDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogDeciduous").then(res=> {
         console.log(res.data)
         setDogDeciduous(res.data)
     })
@@ -55,13 +55,13 @@ function DogTable() {
       <Table sx={{ maxWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-deciduous")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of deciduous</TableCell>
+            <TableCell>Number of deciduous (Phenology)</TableCell>
             <TableCell align="right">{dogDeciduous.length}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
         <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-evergreen")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of evergreen</TableCell>
+            <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{dogEvergreen.length}</TableCell>
           </TableRow>
           <TableRow>
