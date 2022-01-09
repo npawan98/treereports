@@ -20,14 +20,14 @@ function SnakeTable() {
     const[SnakeIndigenous,setSnakeIndigenous] = useState([]);
     const[SnakeExotic,setSnakeExotic] = useState([]);
     const[SnakeEndangered,setSnakeEndangered] = useState([]);
-  
+
     useEffect(()=>{
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/SnakeEvergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/SnakeEvergreen").then(res=> {
         console.log(res.data)
         setSnakeEvergreen(res.data)
         
       })
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/SnakeDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/SnakeDeciduous").then(res=> {
         console.log(res.data)
         setSnakeDeciduous(res.data)
     })
@@ -48,35 +48,35 @@ function SnakeTable() {
         setSnakeEndangered(res.data)
     })
       },[])
-  
-  
+
+
   return (
     <TableContainer component={Paper} style={{maxWidth:'650px'}}>
       <Table sx={{ maxWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-deciduous")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of deciduous</TableCell>
+            <TableCell>Number of deciduous (Phenology)</TableCell>
             <TableCell align="right">{SnakeDeciduous.length}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
         <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-evergreen")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of evergreen</TableCell>
+            <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{SnakeEvergreen.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-endemic")}}>
+          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
             <TableCell align="right">{SnakeEndemic.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-indigenous")}}>
+          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-indigenous")}} style={{cursor:"pointer"}}>
             <TableCell>Number of indigenous</TableCell>
             <TableCell align="right">{SnakeIndigenous.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-exotic")}}>
+          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-exotic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of exotic</TableCell>
             <TableCell align="right">{SnakeExotic.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-endangered")}}>
+          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-endangered")}} style={{cursor:"pointer"}}>
             <TableCell>endangered</TableCell>
             <TableCell align="right">{SnakeEndangered.length}</TableCell>
           </TableRow>
@@ -84,6 +84,6 @@ function SnakeTable() {
       </Table>
     </TableContainer>
   );
-  }
+}
 
 export default SnakeTable;

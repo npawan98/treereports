@@ -2,12 +2,12 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_snake_deciduous() {
+function Table_Snake_deciduous() {
 
-    const[snakeDeciduous,setSnakeDeciduous] = useState([]);
+    const[SnakeDeciduous,setSnakeDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/SnakeDeciduous").then(res=> {
         console.log(res.data)
         setSnakeDeciduous(res.data)
     })
@@ -29,7 +29,7 @@ function Table_snake_deciduous() {
                     </TableHead>
                     <TableBody>
                         {
-                            snakeDeciduous.map((item) =>{
+                            SnakeDeciduous.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>
@@ -49,4 +49,4 @@ function Table_snake_deciduous() {
     )
 }
 
-export default Table_snake_deciduous
+export default Table_Snake_deciduous

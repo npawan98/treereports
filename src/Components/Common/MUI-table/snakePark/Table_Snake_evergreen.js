@@ -2,12 +2,12 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function Table_snake_evergreen() {
+function Table_Snake_evergreen() {
 
-    const[snakeEvergreen,setSnakeEvergreen] = useState([]);
+    const[SnakeEvergreen,setSnakeEvergreen] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEvergreen").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/SnakeEvergreen").then(res=> {
         console.log(res.data)
         setSnakeEvergreen(res.data)
     })
@@ -29,7 +29,7 @@ function Table_snake_evergreen() {
                     </TableHead>
                     <TableBody>
                         {
-                            snakeEvergreen.map((item) =>{
+                            SnakeEvergreen.map((item) =>{
                                 return (
                                     <TableRow>
                                         <TableCell>{item.Scientific_name}</TableCell>
@@ -49,4 +49,4 @@ function Table_snake_evergreen() {
     )
 }
 
-export default Table_snake_evergreen
+export default Table_Snake_evergreen
