@@ -20,14 +20,14 @@ function WorkersTable() {
     const[WorkersIndigenous,setWorkersIndigenous] = useState([]);
     const[WorkersExotic,setWorkersExotic] = useState([]);
     const[WorkersEndangered,setWorkersEndangered] = useState([]);
-  
+
     useEffect(()=>{
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/WorkersEvergreen").then(res=> {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/WorkersEvergreen").then(res=> {
         console.log(res.data)
         setWorkersEvergreen(res.data)
         
       })
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/WorkersDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/WorkersDeciduous").then(res=> {
         console.log(res.data)
         setWorkersDeciduous(res.data)
     })
@@ -48,35 +48,35 @@ function WorkersTable() {
         setWorkersEndangered(res.data)
     })
       },[])
-  
-  
+
+
   return (
     <TableContainer component={Paper} style={{maxWidth:'650px'}}>
       <Table sx={{ maxWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-deciduous")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of deciduous</TableCell>
+            <TableCell>Number of deciduous (Phenology)</TableCell>
             <TableCell align="right">{WorkersDeciduous.length}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
         <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-evergreen")}} style={{cursor:"pointer"}}>
-            <TableCell>Number of evergreen</TableCell>
+            <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{WorkersEvergreen.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-endemic")}}>
+          <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
             <TableCell align="right">{WorkersEndemic.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-indigenous")}}>
+          <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-indigenous")}} style={{cursor:"pointer"}}>
             <TableCell>Number of indigenous</TableCell>
             <TableCell align="right">{WorkersIndigenous.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-exotic")}}>
+          <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-exotic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of exotic</TableCell>
             <TableCell align="right">{WorkersExotic.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-endangered")}}>
+          <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-endangered")}} style={{cursor:"pointer"}}>
             <TableCell>endangered</TableCell>
             <TableCell align="right">{WorkersEndangered.length}</TableCell>
           </TableRow>
@@ -84,6 +84,6 @@ function WorkersTable() {
       </Table>
     </TableContainer>
   );
-  }
+}
 
 export default WorkersTable;

@@ -1,48 +1,64 @@
 import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import SubBanner from "../../../Components/Common/BannerImage/SubBanner/SubBanner"
 import WorkersTable from "../../../Components/Common/MUI-table/WorkersPark/WorkersTable"
-import DonutChart from "../../../Components/DashbaordComponents/Dashboard_donut/DonutChart"
+import DonutChart from "../../../Components/DashbaordComponents/Dashboard_donut/DonutChart";
 
 function Workers_Park() {
 
+    const [WorkersData, setWorkersData] = useState([]);
     const [WorkersEvergreen, setWorkersEvergreen] = useState([]);
     const [WorkersDeciduous, setWorkersDeciduous] = useState([]);
     const [WorkersEndemic, setWorkersEndemic] = useState([]);
     const [WorkersIndigenous, setWorkersIndigenous] = useState([]);
     const [WorkersExotic, setWorkersExotic] = useState([]);
     const [WorkersEndangered, setWorkersEndangered] = useState([]);
-  
+
     const arrWorkers = [];
 
-    useEffect(()=>{
+    const [WorkersEvergreenPhenology, setWorkersEvergreenPhenology] = useState([]);
+    const [WorkersDeciduousPhenology, setWorkersDeciduousPhenology] = useState([]);
+
+    const arrWorkersPhenology = [];
+
+    useEffect(() => {
         axios.get("https://afternoon-mountain-93761.herokuapp.com/WorkersEvergreen").then((res) => {
-        console.log(res.data.length);
-        setWorkersEvergreen([res.data.length]);
+          console.log(res.data.length);
+          setWorkersEvergreen([res.data.length]);
         });
         axios.get("https://afternoon-mountain-93761.herokuapp.com/WorkersDeciduous").then((res) => {
-        console.log(res.data.length);
-        setWorkersDeciduous(res.data.length);
+          console.log(res.data.length);
+          setWorkersDeciduous(res.data.length);
         });
         axios.get("https://afternoon-mountain-93761.herokuapp.com/WorkersEndemic").then((res) => {
-        console.log(res.data.length);
-        setWorkersEndemic(res.data.length);
+          console.log(res.data.length);
+          setWorkersEndemic(res.data.length);
         });
         axios.get("https://afternoon-mountain-93761.herokuapp.com/WorkersIndigenous").then((res) => {
-        console.log(res.data.length);
-        setWorkersIndigenous(res.data.length);
+          console.log(res.data.length);
+          setWorkersIndigenous(res.data.length);
         });
         axios.get("https://afternoon-mountain-93761.herokuapp.com/WorkersExotic").then((res) => {
-        console.log(res.data.length);
-        setWorkersExotic(res.data.length);
+          console.log(res.data.length);
+          setWorkersExotic(res.data.length);
         });
         axios.get("https://afternoon-mountain-93761.herokuapp.com/WorkersEndangered").then((res) => {
-        console.log(res.data.length);
-        setWorkersEndangered(res.data.length);
+          console.log(res.data.length);
+          setWorkersEndangered(res.data.length);
         });
-    },[])
+
+
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/WorkersEvergreen").then((res) => {
+          console.log(res.data.length);
+          setWorkersEvergreenPhenology([res.data.length]);
+        });
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/WorkersDeciduous").then((res) => {
+          console.log(res.data.length);
+          setWorkersDeciduousPhenology(res.data.length);
+        });
+    },[]);
+
 
     arrWorkers.push(
         parseInt(WorkersEvergreen),
@@ -53,12 +69,19 @@ function Workers_Park() {
         parseInt(WorkersEndangered)
       );
 
+      arrWorkersPhenology.push(
+        parseInt(WorkersEvergreenPhenology),
+        parseInt(WorkersDeciduousPhenology),
+
+      )
+
+
     return (
-        <div className="Dog__Park">
-            <SubBanner Title="Generate report" subTitle="Workers Park" imgURL="https://images.unsplash.com/photo-1605138090832-672d54ff023f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2209&q=80"/>
+        <div className="Workers__Park">
+            <SubBanner Title="Generate report" subTitle="Workers Park" imgURL="https://images.unsplash.com/photo-1635886840360-a2d27a5826d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
         
-            <div className="Dog__Park-main" style={{display:'flex',placeItems:'center'}}>
-            <DonutChart
+            <div className="Workers__Park-main" style={{display:'flex',placeItems:'center',justifyContent:"space-around"}}>
+                <DonutChart
                 title="Workers Park"
                 values={arrWorkers}
                 labels={[
@@ -70,6 +93,21 @@ function Workers_Park() {
                 "Endangered",
                 ]}
             />
+            <DonutChart
+                title="Workers Park (Phenology)"
+                values={arrWorkersPhenology}
+                labels={[
+                "Evergreen",
+                "Deciduous",
+                "Endemic",
+                "Indigenous",
+                "Exotic",
+                "Endangered",
+                ]}
+            />
+
+            </div>
+            < div style={{display: 'grid',placeItems:'center'}}>
                 <WorkersTable/>
             </div>
         

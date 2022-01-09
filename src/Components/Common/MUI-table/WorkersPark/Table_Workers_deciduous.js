@@ -7,7 +7,7 @@ function Table_Workers_deciduous() {
     const[WorkersDeciduous,setWorkersDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/WorkersDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/WorkersDeciduous").then(res=> {
         console.log(res.data)
         setWorkersDeciduous(res.data)
     })
