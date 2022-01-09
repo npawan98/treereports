@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import DonutChart from "./Dashboard_donut/DonutChart";
 import axios from "axios";
-import DashboardComponentsPhenology from "./DashboardComponentsPhenology";
-function DashboardComponents() {
+
+function DashboardComponentsPhenology() {
   const [dogData, setDogData] = useState([]);
   const [dogEvergreen, setDogEvergreen] = useState([]);
   const [dogDeciduous, setDogDeciduous] = useState([]);
@@ -121,243 +121,243 @@ function DashboardComponents() {
     console.log("helloooo",arrVictoria);
 
   useEffect(() => {
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEvergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogEvergreen").then((res) => {
       console.log(res.data.length);
       setDogEvergreen([res.data.length]);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogDeciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogDeciduous").then((res) => {
       console.log(res.data.length);
       setDogDeciduous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEndemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogEndemic").then((res) => {
       console.log(res.data.length);
       setDogEndemic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogIndigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogIndigenous").then((res) => {
       console.log(res.data.length);
       setDogIndigenous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogExotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogExotic").then((res) => {
       console.log(res.data.length);
       setDogExotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEndangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogEndangered").then((res) => {
       console.log(res.data.length);
       setDogEndangered(res.data.length);
     });
 
     // snakepark
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEvergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/snakeEvergreen").then((res) => {
       console.log(res.data.length);
       setSnakeEvergreen([res.data.length]);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeDeciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/snakeDeciduous").then((res) => {
       console.log(res.data.length);
       setSnakeDeciduous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEndemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/snakeEndemic").then((res) => {
       console.log(res.data.length);
       setSnakeEndemic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeIndigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/snakeIndigenous").then((res) => {
       console.log(res.data.length);
       setSnakeIndigenous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeExotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/snakeExotic").then((res) => {
       console.log(res.data.length);
       setSnakeExotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/snakeEndangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/snakeEndangered").then((res) => {
       console.log(res.data.length);
       setSnakeEndangered(res.data.length);
     });
 
     // rosepark
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEvergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/roseEvergreen").then((res) => {
       console.log(res.data.length);
       setRoseEvergreen([res.data.length]);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseDeciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/roseDeciduous").then((res) => {
       console.log(res.data.length);
       setRoseDeciduous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEndemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/roseEndemic").then((res) => {
       console.log(res.data.length);
       setRoseEndemic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseIndigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/roseIndigenous").then((res) => {
       console.log(res.data.length);
       setRoseIndigenous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseExotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/roseExotic").then((res) => {
       console.log(res.data.length);
       setRoseExotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/roseEndangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/roseEndangered").then((res) => {
       console.log(res.data.length);
       setRoseEndangered(res.data.length);
     });
 
     // Triangular park
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularEvergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/triangularEvergreen").then((res) => {
       console.log(res.data.length);
       setTriangularEvergreen([res.data.length]);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularDeciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/triangularDeciduous").then((res) => {
       console.log(res.data.length);
       setTriangularDeciduous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularEndemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/triangularEndemic").then((res) => {
       console.log(res.data.length);
       setTriangularEndemic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularIndigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/triangularIndigenous").then((res) => {
       console.log(res.data.length);
       setTriangularIndigenous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularExotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/triangularExotic").then((res) => {
       console.log(res.data.length);
       setTriangularExotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/triangularEndangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/triangularEndangered").then((res) => {
       console.log(res.data.length);
       setTriangularEndangered(res.data.length);
     });
 
     // Circular park
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/circularEvergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/circularEvergreen").then((res) => {
       console.log(res.data.length);
       setCircularEvergreen([res.data.length]);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/circularDeciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/circularDeciduous").then((res) => {
       console.log(res.data.length);
       setCircularDeciduous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/circularEndemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/circularEndemic").then((res) => {
       console.log(res.data.length);
       setCircularEndemic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/circularIndigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/circularIndigenous").then((res) => {
       console.log(res.data.length);
       setCircularIndigenous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/circularExotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/circularExotic").then((res) => {
       console.log(res.data.length);
       setCircularExotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/circularEndangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/circularEndangered").then((res) => {
       console.log(res.data.length);
       setCircularEndangered(res.data.length);
     });
 
     // Workers park
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/workersEvergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/workersEvergreen").then((res) => {
       console.log(res.data.length);
       setWorkersEvergreen([res.data.length]);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/workersDeciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/workersDeciduous").then((res) => {
       console.log(res.data.length);
       setWorkersDeciduous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/workersEndemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/workersEndemic").then((res) => {
       console.log(res.data.length);
       setWorkersEndemic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/workersIndigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/workersIndigenous").then((res) => {
       console.log(res.data.length);
       setWorkersIndigenous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/workersExotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/workersExotic").then((res) => {
       console.log(res.data.length);
       setWorkersExotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/workersEndangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/workersEndangered").then((res) => {
       console.log(res.data.length);
       setWorkersEndangered(res.data.length);
     });
 
     // park1
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_1Evergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_1Evergreen").then((res) => {
       console.log(res.data.length);
       setPark1Evergreen([res.data.length]);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_1Deciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_1Deciduous").then((res) => {
       console.log(res.data.length);
       setPark1Deciduous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_1Endemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_1Endemic").then((res) => {
       console.log(res.data.length);
       setPark1Endemic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_1Indigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_1Indigenous").then((res) => {
       console.log(res.data.length);
       setPark1Indigenous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_1Exotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_1Exotic").then((res) => {
       console.log(res.data.length);
       setPark1Exotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_1Endangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_1Endangered").then((res) => {
       console.log(res.data.length);
       setPark1Endangered(res.data.length);
     });
 
     // park2
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_2Evergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_2Evergreen").then((res) => {
       console.log(res.data.length);
       setPark2Evergreen([res.data.length]);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_2Deciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_2Deciduous").then((res) => {
       console.log(res.data.length);
       setPark2Deciduous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_2Endemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_2Endemic").then((res) => {
       console.log(res.data.length);
       setPark2Endemic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_2Indigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_2Indigenous").then((res) => {
       console.log(res.data.length);
       setPark2Indigenous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_2Exotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_2Exotic").then((res) => {
       console.log(res.data.length);
       setPark2Exotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/park_2Endangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/park_2Endangered").then((res) => {
       console.log(res.data.length);
       setPark2Endangered(res.data.length);
     });
 
     // edward
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Evergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Evergreen").then((res) => {
       console.log(res.data.length);
       setEdwardEvergreen([res.data.length]);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Deciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Deciduous").then((res) => {
       console.log(res.data.length);
       setEdwardDeciduous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Endemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Endemic").then((res) => {
       console.log(res.data.length);
       setEdwardEndemic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Indigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Indigenous").then((res) => {
       console.log(res.data.length);
       setEdwardIndigenous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Exotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Exotic").then((res) => {
       console.log(res.data.length);
       setEdwardExotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Endangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Endangered").then((res) => {
       console.log(res.data.length);
       setEdwardEndangered(res.data.length);
     });
@@ -365,27 +365,27 @@ function DashboardComponents() {
 
     // Victoria
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/victoria_park_Evergreen").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/victoria_park_Evergreen").then((res) => {
       console.log(res.data.length);
       setVictoriaEvergreen([res.data.length]);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/victoria_park_Deciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/victoria_park_Deciduous").then((res) => {
       console.log(res.data.length);
       setVictoriaDeciduous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/victoria_park_Endemic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/victoria_park_Endemic").then((res) => {
       console.log(res.data.length);
       setVictoriaEndemic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/victoria_park_Indigenous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/victoria_park_Indigenous").then((res) => {
       console.log(res.data.length);
       setVictoriaIndigenous(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/victoria_park_Exotic").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/victoria_park_Exotic").then((res) => {
       console.log(res.data.length);
       setVictoriaExotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/victoria_park_Endangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/victoria_park_Endangered").then((res) => {
       console.log(res.data.length);
       setVictoriaEndangered(res.data.length);
     });
@@ -492,7 +492,7 @@ function DashboardComponents() {
   return (
     <div className="dashboard__component">
       <center>
-        <h1>Zone wise breakdown</h1>
+        <h1>Zone wise breakdown (Phenology)</h1>
       </center>
       <div className="dashboard__component--main">
         <div>
@@ -646,9 +646,8 @@ function DashboardComponents() {
           />
         </div>
       </div>
-      <DashboardComponentsPhenology/>
     </div>
   );
 }
 
-export default DashboardComponents;
+export default DashboardComponentsPhenology;
