@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import SubBanner from "../../../Components/Common/BannerImage/SubBanner/SubBanner"
-import DogTable from "../../../Components/Common/MUI-table/dogPark/DogTable"
+import DogTable from "../../../Components/Common/MUI-table/DogPark/DogTable"
 import DonutChart from "../../../Components/DashbaordComponents/Dashboard_donut/DonutChart";
 
 function Dog_Park() {

@@ -64,19 +64,19 @@ function DogTable() {
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{dogEvergreen.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
             <TableCell align="right">{dogEndemic.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-indigenous")}} style={{cursor:"pointer"}}>
             <TableCell>Number of indigenous</TableCell>
             <TableCell align="right">{dogIndigenous.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-exotic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of exotic</TableCell>
             <TableCell align="right">{dogExotic.length}</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-endangered")}} style={{cursor:"pointer"}}>
             <TableCell>endangered</TableCell>
             <TableCell align="right">{dogEndangered.length}</TableCell>
           </TableRow>

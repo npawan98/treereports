@@ -73,6 +73,10 @@ import Snake_park_indigenous from "./pages/data/Snake_Park/Snake_park_indigenous
 import Snake_park_endangered from "./pages/data/Snake_Park/Snake_park_endangered"
 import Snake_park_exotic from "./pages/data/Snake_Park/Snake_park_exotic"
 import DownloadSpecie from "./pages/DownloadSpecie"
+import Dog_park_endemic from "./pages/data/Dog_Park/Dog_park_endemic"
+import Dog_park_indigenous from "./pages/data/Dog_Park/Dog_park_indigenous"
+import Dog_park_exotic from "./pages/data/Dog_Park/Dog_park_exotic"
+import Dog_park_endangered from "./pages/data/Dog_Park/Dog_park_endangered"
 
 function Router() {
     return (
@@ -88,6 +92,10 @@ function Router() {
                 <Route path="/Dog_Park" element={<Dog_Park />} />
                 <Route path="/Dog_Park/Dog_Park-deciduous" element={<Dog_park_deciduous />} />
                 <Route path="/Dog_Park/Dog_Park-evergreen" element={<Dog_park_evergreen />} />
+                <Route path="/Dog_Park/Dog_Park-endemic" element={<Dog_park_endemic />} />
+                <Route path="/Dog_Park/Dog_Park-indigenous" element={<Dog_park_indigenous />} />
+                <Route path="/Dog_Park/Dog_Park-exotic" element={<Dog_park_exotic />} />
+                <Route path="/Dog_Park/Dog_Park-endangered" element={<Dog_park_endangered />} />
 
                 {/* snake park */}
                 <Route path="/Snake_Park" element={<Snake_Park />} />
