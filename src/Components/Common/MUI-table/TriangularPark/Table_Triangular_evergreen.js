@@ -7,7 +7,7 @@ function Table_Triangular_evergreen() {
     const[TriangularEvergreen,setTriangularEvergreen] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularEvergreen").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/TriangularEvergreen").then(res=> {
         console.log(res.data)
         setTriangularEvergreen(res.data)
     })

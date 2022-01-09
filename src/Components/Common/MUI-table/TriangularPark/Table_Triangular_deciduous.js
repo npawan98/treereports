@@ -7,7 +7,7 @@ function Table_Triangular_deciduous() {
     const[TriangularDeciduous,setTriangularDeciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularDeciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/TriangularDeciduous").then(res=> {
         console.log(res.data)
         setTriangularDeciduous(res.data)
     })
