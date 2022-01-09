@@ -7,7 +7,7 @@ function Table_Park_2_deciduous() {
     const[Park_2Deciduous,setPark_2Deciduous] = useState([]);
 
     useEffect(()=>{
-      axios.get("https://afternoon-mountain-93762.herokuapp.com/Park_2Deciduous").then(res=> {
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Park_2Deciduous").then(res=> {
         console.log(res.data)
         setPark_2Deciduous(res.data)
     })
