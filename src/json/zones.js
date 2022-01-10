@@ -38,6 +38,10 @@ const zones = [
     {
         zone:'Victoria Park',
         value:'Victoria_park'
+    },
+    {
+        zone:'Wine Board',
+        value:'Wine_Board'
     }
 ];
 export default zones;

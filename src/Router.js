@@ -77,6 +77,13 @@ import Triangular_Park_endemic from "./pages/data/Triangular_Park/Triangular_Par
 import Triangular_Park_indigenous from "./pages/data/Triangular_Park/Triangular_Park_indigenous"
 import Triangular_Park_exotic from "./pages/data/Triangular_Park/Triangular_Park_exotic"
 import Triangular_Park_endangered from "./pages/data/Triangular_Park/Triangular_Park_endangered"
+import Wine_Board from "./pages/data/Wine_Board/Wine_Board"
+import Wine_Board_deciduous from "./pages/data/Wine_Board/Wine_Board_deciduous"
+import Wine_Board_evergreen from "./pages/data/Wine_Board/Wine_Board_evergreen"
+import Wine_Board_endemic from "./pages/data/Wine_Board/Wine_Board_endemic"
+import Wine_Board_indigenous from "./pages/data/Wine_Board/Wine_Board_indigenous"
+import Wine_Board_exotic from "./pages/data/Wine_Board/Wine_Board_exotic"
+import Wine_Board_endangered from "./pages/data/Wine_Board/Wine_Board_endangered"
 
 function Router() {
     return (
@@ -177,6 +184,15 @@ function Router() {
                 <Route path="/Victoria_Park/Victoria_Park-indigenous" element={<Victoria_park_indigenous />} />
                 <Route path="/Victoria_Park/Victoria_Park-exotic" element={<Victoria_park_exotic />} />
                 <Route path="/Victoria_Park/Victoria_Park-endangered" element={<Victoria_park_endangered />} />
+
+                {/* Wine_Board */}
+                <Route path="/Wine_Board" element={<Wine_Board/>} />
+                <Route path="/Wine_Board/Wine_Board-deciduous" element={<Wine_Board_deciduous />} />
+                <Route path="/Wine_Board/Wine_Board-evergreen" element={<Wine_Board_evergreen />} />
+                <Route path="/Wine_Board/Wine_Board-endemic" element={<Wine_Board_endemic />} />
+                <Route path="/Wine_Board/Wine_Board-indigenous" element={<Wine_Board_indigenous />} />
+                <Route path="/Wine_Board/Wine_Board-exotic" element={<Wine_Board_exotic />} />
+                <Route path="/Wine_Board/Wine_Board-endangered" element={<Wine_Board_endangered />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>
