@@ -120,6 +120,15 @@ function DashboardComponentsPhenology() {
 
     console.log("helloooo",arrVictoria);
 
+    const [WineEvergreen, setWineEvergreen] = useState([]);
+    const [WineDeciduous, setWineDeciduous] = useState([]);
+    const [WineEndemic, setWineEndemic] = useState([]);
+    const [WineIndigenous, setWineIndigenous] = useState([]);
+    const [WineExotic, setWineExotic] = useState([]);
+    const [WineEndangered, setWineEndangered] = useState([]);
+
+    const arrWine = [];
+
   useEffect(() => {
     axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/dogEvergreen").then((res) => {
       console.log(res.data.length);
@@ -390,6 +399,33 @@ function DashboardComponentsPhenology() {
       setVictoriaEndangered(res.data.length);
     });
 
+    // Wine
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/wine_board_Evergreen").then((res) => {
+      console.log(res.data.length);
+      setWineEvergreen([res.data.length]);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/wine_board_Deciduous").then((res) => {
+      console.log(res.data.length);
+      setWineDeciduous(res.data.length);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/wine_board_Endemic").then((res) => {
+      console.log(res.data.length);
+      setWineEndemic(res.data.length);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/wine_board_Indigenous").then((res) => {
+      console.log(res.data.length);
+      setWineIndigenous(res.data.length);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/wine_board_Exotic").then((res) => {
+      console.log(res.data.length);
+      setWineExotic(res.data.length);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/wine_board_Endangered").then((res) => {
+      console.log(res.data.length);
+      setWineEndangered(res.data.length);
+    });
+
   }, []);
 
   arrDog.push(
@@ -478,7 +514,7 @@ function DashboardComponentsPhenology() {
     parseInt(edwardEndangered)
   );
 
-  // edward
+  // Victoria
   arrVictoria.push(
     parseInt(victoriaEvergreen),
     parseInt(victoriaDeciduous),
@@ -486,6 +522,16 @@ function DashboardComponentsPhenology() {
     parseInt(victoriaIndigenous),
     parseInt(victoriaExotic),
     parseInt(victoriaEndangered)
+  );
+
+  // Wine
+  arrWine.push(
+    parseInt(WineEvergreen),
+    parseInt(WineDeciduous),
+    parseInt(WineEndemic),
+    parseInt(WineIndigenous),
+    parseInt(WineExotic),
+    parseInt(WineEndangered)
   );
 
   console.log("values", arrDog);
@@ -635,6 +681,20 @@ function DashboardComponentsPhenology() {
           <DonutChart
             title="victoria Park - Phenology"
             values={arrVictoria}
+            labels={[
+              "Evergreen",
+              "Deciduous",
+              "Endemic",
+              "Indigenous",
+              "Exotic",
+              "Endangered",
+            ]}
+          />
+        </div>
+        <div>
+          <DonutChart
+            title="Wine Board - Phenology"
+            values={arrWine}
             labels={[
               "Evergreen",
               "Deciduous",
