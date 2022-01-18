@@ -90,6 +90,12 @@ import Dog_park_LeastConcern from "./pages/data/Dog_Park/conservationStatus/Dog_
 import Dog_park_NearThreatened from "./pages/data/Dog_Park/conservationStatus/Dog_park_NearThreatened"
 import Dog_park_NotKnown from "./pages/data/Dog_Park/conservationStatus/Dog_park_NotKnown"
 import Dog_park_Vulnerable from "./pages/data/Dog_Park/conservationStatus/Dog_park_Vulnerable"
+import Snake_park_ConservationDependent from "./pages/data/Snake_Park/conservationStatus/Snake_park_ConservationDependent"
+import Snake_park_CriticallyEndangered from "./pages/data/Snake_Park/conservationStatus/Snake_park_CriticallyEndangered"
+import Snake_park_LeastConcern from "./pages/data/Snake_Park/conservationStatus/Snake_park_LeastConcern"
+import Snake_park_NearThreatened from "./pages/data/Snake_Park/conservationStatus/Snake_park_NearThreatened"
+import Snake_park_NotKnown from "./pages/data/Snake_Park/conservationStatus/Snake_park_NotKnown"
+import Snake_park_Vulnerable from "./pages/data/Snake_Park/conservationStatus/Snake_park_Vulnerable"
 
 function Router() {
     return (
@@ -125,6 +131,13 @@ function Router() {
                 <Route path="/Snake_Park/Snake_Park-indigenous" element={<Snake_park_indigenous />} />
                 <Route path="/Snake_Park/Snake_Park-exotic" element={<Snake_park_exotic />} />
                 <Route path="/Snake_Park/Snake_Park-endangered" element={<Snake_park_endangered />} />
+                {/* snake park conservation status */}
+                <Route path="/Snake_Park/conservationstatus/Snake_Park-ConservationDependent" element={<Snake_park_ConservationDependent />} />
+                <Route path="/Snake_Park/conservationstatus/Snake_Park-CriticallyEndangered" element={<Snake_park_CriticallyEndangered />} />
+                <Route path="/Snake_Park/conservationstatus/Snake_Park-LeastConcern" element={<Snake_park_LeastConcern />} />
+                <Route path="/Snake_Park/conservationstatus/Snake_Park-NearThreatened" element={<Snake_park_NearThreatened />} />
+                <Route path="/Snake_Park/conservationstatus/Snake_Park-NotKnown" element={<Snake_park_NotKnown />} />
+                <Route path="/Snake_Park/conservationstatus/Snake_Park-Vulnerable" element={<Snake_park_Vulnerable />} />
                 
                 {/* Rose park */}
                 <Route path="/Rose_Park" element={<Rose_Park />} />

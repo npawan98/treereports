@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import SubBanner from "../../../Components/Common/BannerImage/SubBanner/SubBanner"
+import SnakeTable_ConservationStatus from "../../../Components/Common/MUI-table/SnakePark/conservartionStatus/SnakeTable_ConservationStatus";
 import SnakeTable from "../../../Components/Common/MUI-table/SnakePark/SnakeTable"
 import DonutChart from "../../../Components/DashbaordComponents/Dashboard_donut/DonutChart";
 
@@ -21,6 +22,15 @@ function Snake_Park() {
     const [SnakeDeciduousPhenology, setSnakeDeciduousPhenology] = useState([]);
 
     const arrSnakePhenology = [];
+
+    const [SnakeLeastConcern, setLeastConcern] = useState([]);
+    const [SnakeNotknown, setSnakeNotknown] = useState([]);
+    const [SnakeNearThreatened, setSnakeNearThreatened] = useState([]);
+    const [SnakeVulnerable, setSnakeVulnerable] = useState([]);
+    const [SnakeCriticallyEndangered, setSnakeCriticallyEndangered] = useState([]);
+    const [SnakeConservationDependent, setSnakeConservationDependent] = useState([]);
+
+  const arrSnakeConservation = [];
 
     useEffect(() => {
         axios.get("https://afternoon-mountain-93761.herokuapp.com/SnakeEvergreen").then((res) => {
@@ -57,6 +67,33 @@ function Snake_Park() {
           console.log(res.data.length);
           setSnakeDeciduousPhenology(res.data.length);
         });
+
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/SnakeLeastConcern").then(res => {
+          console.log(res.data.length)
+          setLeastConcern(res.data.length)
+
+        })
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/SnakeNotknown").then(res => {
+          console.log(res.data)
+          setSnakeNotknown(res.data.length)
+        })
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/SnakeNearThreatened").then(res => {
+          console.log(res.data.length)
+          setSnakeNearThreatened(res.data.length)
+        })
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/SnakeVulnerable").then(res => {
+          console.log(res.data.length)
+          setSnakeVulnerable(res.data.length)
+        })
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/SnakeCriticallyEndangered").then(res => {
+          console.log(res.data.length)
+          setSnakeCriticallyEndangered(res.data.length)
+        })
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/SnakeConservationDependent").then(res => {
+          console.log(res.data.length)
+          setSnakeConservationDependent(res.data.length)
+        })
+      
     },[]);
 
 
@@ -73,6 +110,15 @@ function Snake_Park() {
         parseInt(SnakeEvergreenPhenology),
         parseInt(SnakeDeciduousPhenology),
 
+      )
+
+      arrSnakeConservation.push(
+        parseInt(SnakeLeastConcern),
+        parseInt(SnakeNotknown),
+        parseInt(SnakeNearThreatened),
+        parseInt(SnakeVulnerable),
+        parseInt(SnakeCriticallyEndangered),
+        parseInt(SnakeConservationDependent),
       )
 
 
@@ -110,6 +156,26 @@ function Snake_Park() {
             < div style={{display: 'grid',placeItems:'center'}}>
                 <SnakeTable/>
             </div>
+
+            <div style={{ padding: "50px" }}>
+              <h2>Conservation Status</h2>
+              <div style={{ display: 'flex', margin: "50px" }}>
+                <DonutChart
+                  title="Snake Park (conservation status)"
+                  values={arrSnakeConservation}
+                  labels={[
+                    "Least Concern",
+                    "Not known",
+                    "Near Threatened",
+                    "Vulnerable",
+                    "Critically endangered",
+                    "Conservation dependent",
+                  ]}
+                />
+                <SnakeTable_ConservationStatus />
+              </div>
+
+      </div>
         
         
         </div>
