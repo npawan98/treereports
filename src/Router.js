@@ -114,6 +114,12 @@ import Circular_park_LeastConcern from "./pages/data/Circular_Park/conservationS
 import Circular_park_NearThreatened from "./pages/data/Circular_Park/conservationStatus/Circular_park_NearThreatened"
 import Circular_park_NotKnown from "./pages/data/Circular_Park/conservationStatus/Circular_park_NotKnown"
 import Circular_park_Vulnerable from "./pages/data/Circular_Park/conservationStatus/Circular_park_Vulnerable"
+import Workers_park_ConservationDependent from "./pages/data/Workers_Park/conservationStatus/Workers_park_ConservationDependent"
+import Workers_park_CriticallyEndangered from "./pages/data/Workers_Park/conservationStatus/Workers_park_CriticallyEndangered"
+import Workers_park_LeastConcern from "./pages/data/Workers_Park/conservationStatus/Workers_park_LeastConcern"
+import Workers_park_NearThreatened from "./pages/data/Workers_Park/conservationStatus/Workers_park_NearThreatened"
+import Workers_park_NotKnown from "./pages/data/Workers_Park/conservationStatus/Workers_park_NotKnown"
+import Workers_park_Vulnerable from "./pages/data/Workers_Park/conservationStatus/Workers_park_Vulnerable"
 
 function Router() {
     return (
@@ -213,6 +219,13 @@ function Router() {
                 <Route path="/Workers_Park/Workers_Park-indigenous" element={<Workers_park_indigenous />} />
                 <Route path="/Workers_Park/Workers_Park-exotic" element={<Workers_park_exotic />} />
                 <Route path="/Workers_Park/Workers_Park-endangered" element={<Workers_park_endangered />} />
+                {/* Workers  park conservation status */}
+                <Route path="/Workers_Park/conservationstatus/Workers_Park-ConservationDependent" element={<Workers_park_ConservationDependent />} />
+                <Route path="/Workers_Park/conservationstatus/Workers_Park-CriticallyEndangered" element={<Workers_park_CriticallyEndangered />} />
+                <Route path="/Workers_Park/conservationstatus/Workers_Park-LeastConcern" element={<Workers_park_LeastConcern />} />
+                <Route path="/Workers_Park/conservationstatus/Workers_Park-NearThreatened" element={<Workers_park_NearThreatened />} />
+                <Route path="/Workers_Park/conservationstatus/Workers_Park-NotKnown" element={<Workers_park_NotKnown />} />
+                <Route path="/Workers_Park/conservationstatus/Workers_Park-Vulnerable" element={<Workers_park_Vulnerable />} />
 
                 {/* Park_1 */}
                 <Route path="/Park_1_Park" element={<Park_1_Park />} />
