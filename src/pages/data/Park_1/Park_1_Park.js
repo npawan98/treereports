@@ -23,7 +23,7 @@ function Park_1_Park() {
 
   const arrPark_1Phenology = [];
 
-  const [Park_1LeastConcern, setLeastConcern] = useState([]);
+  const [Park_1LeastConcern, setPark_1LeastConcern] = useState([]);
   const [Park_1Notknown, setPark_1Notknown] = useState([]);
   const [Park_1NearThreatened, setPark_1NearThreatened] = useState([]);
   const [Park_1Vulnerable, setPark_1Vulnerable] = useState([]);
@@ -71,7 +71,7 @@ function Park_1_Park() {
 
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/Park_1LeastConcern").then(res => {
       console.log(res.data.length)
-      setLeastConcern(res.data.length)
+      setPark_1LeastConcern(res.data.length)
 
     })
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/Park_1Notknown").then(res => {

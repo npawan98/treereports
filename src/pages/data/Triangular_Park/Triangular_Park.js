@@ -23,7 +23,7 @@ function Triangular_Park() {
 
   const arrTriangularPhenology = [];
 
-  const [TriangularLeastConcern, setLeastConcern] = useState([]);
+  const [TriangularLeastConcern, setTriangularLeastConcern] = useState([]);
   const [TriangularNotknown, setTriangularNotknown] = useState([]);
   const [TriangularNearThreatened, setTriangularNearThreatened] = useState([]);
   const [TriangularVulnerable, setTriangularVulnerable] = useState([]);
@@ -71,7 +71,7 @@ function Triangular_Park() {
 
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/TriangularLeastConcern").then(res => {
       console.log(res.data.length)
-      setLeastConcern(res.data.length)
+      setTriangularLeastConcern(res.data.length)
 
     })
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/TriangularNotknown").then(res => {

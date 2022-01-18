@@ -23,7 +23,7 @@ function Snake_Park() {
 
     const arrSnakePhenology = [];
 
-    const [SnakeLeastConcern, setLeastConcern] = useState([]);
+    const [SnakeLeastConcern, setSnakeLeastConcern] = useState([]);
     const [SnakeNotknown, setSnakeNotknown] = useState([]);
     const [SnakeNearThreatened, setSnakeNearThreatened] = useState([]);
     const [SnakeVulnerable, setSnakeVulnerable] = useState([]);
@@ -70,7 +70,7 @@ function Snake_Park() {
 
         axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/SnakeLeastConcern").then(res => {
           console.log(res.data.length)
-          setLeastConcern(res.data.length)
+          setSnakeLeastConcern(res.data.length)
 
         })
         axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/SnakeNotknown").then(res => {

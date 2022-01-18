@@ -23,7 +23,7 @@ function Edward_Park() {
 
   const arrEdwardPhenology = [];
 
-  const [EdwardLeastConcern, setLeastConcern] = useState([]);
+  const [EdwardLeastConcern, setEdwardLeastConcern] = useState([]);
   const [EdwardNotknown, setEdwardNotknown] = useState([]);
   const [EdwardNearThreatened, setEdwardNearThreatened] = useState([]);
   const [EdwardVulnerable, setEdwardVulnerable] = useState([]);
@@ -71,7 +71,7 @@ function Edward_Park() {
 
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/EdwardLeastConcern").then(res => {
       console.log(res.data.length)
-      setLeastConcern(res.data.length)
+      setEdwardLeastConcern(res.data.length)
 
     })
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/EdwardNotknown").then(res => {

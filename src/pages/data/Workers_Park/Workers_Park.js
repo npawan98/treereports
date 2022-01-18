@@ -23,7 +23,7 @@ function Workers_Park() {
 
   const arrWorkersPhenology = [];
 
-  const [WorkersLeastConcern, setLeastConcern] = useState([]);
+  const [WorkersLeastConcern, setWorkersLeastConcern] = useState([]);
   const [WorkersNotknown, setWorkersNotknown] = useState([]);
   const [WorkersNearThreatened, setWorkersNearThreatened] = useState([]);
   const [WorkersVulnerable, setWorkersVulnerable] = useState([]);
@@ -70,7 +70,7 @@ function Workers_Park() {
 
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/WorkersLeastConcern").then(res => {
       console.log(res.data.length)
-      setLeastConcern(res.data.length)
+      setWorkersLeastConcern(res.data.length)
 
     })
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/WorkersNotknown").then(res => {

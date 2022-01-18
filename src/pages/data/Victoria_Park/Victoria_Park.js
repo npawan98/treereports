@@ -23,7 +23,7 @@ function Victoria_Park() {
 
   const arrVictoriaPhenology = [];
 
-  const [VictoriaLeastConcern, setLeastConcern] = useState([]);
+  const [VictoriaLeastConcern, setVictoriaLeastConcern] = useState([]);
   const [VictoriaNotknown, setVictoriaNotknown] = useState([]);
   const [VictoriaNearThreatened, setVictoriaNearThreatened] = useState([]);
   const [VictoriaVulnerable, setVictoriaVulnerable] = useState([]);
@@ -70,7 +70,7 @@ function Victoria_Park() {
 
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/VictoriaLeastConcern").then(res => {
       console.log(res.data.length)
-      setLeastConcern(res.data.length)
+      setVictoriaLeastConcern(res.data.length)
 
     })
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/VictoriaNotknown").then(res => {

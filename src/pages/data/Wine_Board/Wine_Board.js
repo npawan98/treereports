@@ -23,7 +23,7 @@ function Wine_Board() {
 
   const arrWinePhenology = [];
 
-  const [WineLeastConcern, setLeastConcern] = useState([]);
+  const [WineLeastConcern, setWineLeastConcern] = useState([]);
   const [WineNotknown, setWineNotknown] = useState([]);
   const [WineNearThreatened, setWineNearThreatened] = useState([]);
   const [WineVulnerable, setWineVulnerable] = useState([]);
@@ -71,7 +71,7 @@ function Wine_Board() {
 
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/WineLeastConcern").then(res => {
       console.log(res.data.length)
-      setLeastConcern(res.data.length)
+      setWineLeastConcern(res.data.length)
 
     })
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/WineNotknown").then(res => {

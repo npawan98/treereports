@@ -23,7 +23,7 @@ function Rose_Park() {
 
   const arrRosePhenology = [];
 
-  const [RoseLeastConcern, setLeastConcern] = useState([]);
+  const [RoseLeastConcern, setRoseLeastConcern] = useState([]);
   const [RoseNotknown, setRoseNotknown] = useState([]);
   const [RoseNearThreatened, setRoseNearThreatened] = useState([]);
   const [RoseVulnerable, setRoseVulnerable] = useState([]);
@@ -71,7 +71,7 @@ function Rose_Park() {
 
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/RoseLeastConcern").then(res => {
       console.log(res.data.length)
-      setLeastConcern(res.data.length)
+      setRoseLeastConcern(res.data.length)
 
     })
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/RoseNotknown").then(res => {

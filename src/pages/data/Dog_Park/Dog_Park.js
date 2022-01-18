@@ -23,7 +23,7 @@ function Dog_Park() {
 
   const arrDogPhenology = [];
 
-  const [dogLeastConcern, setLeastConcern] = useState([]);
+  const [dogLeastConcern, setdogLeastConcern] = useState([]);
   const [dogNotknown, setdogNotknown] = useState([]);
   const [dogNearThreatened, setdogNearThreatened] = useState([]);
   const [dogVulnerable, setdogVulnerable] = useState([]);
@@ -73,7 +73,7 @@ function Dog_Park() {
 
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/dogLeastConcern").then(res => {
       console.log(res.data.length)
-      setLeastConcern(res.data.length)
+      setdogLeastConcern(res.data.length)
 
     })
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/dogNotknown").then(res => {

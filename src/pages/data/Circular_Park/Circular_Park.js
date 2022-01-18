@@ -23,7 +23,7 @@ function Circular_Park() {
 
   const arrCircularPhenology = [];
 
-  const [CircularLeastConcern, setLeastConcern] = useState([]);
+  const [CircularLeastConcern, setCircularLeastConcern] = useState([]);
   const [CircularNotknown, setCircularNotknown] = useState([]);
   const [CircularNearThreatened, setCircularNearThreatened] = useState([]);
   const [CircularVulnerable, setCircularVulnerable] = useState([]);
@@ -71,7 +71,7 @@ function Circular_Park() {
 
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/CircularLeastConcern").then(res => {
       console.log(res.data.length)
-      setLeastConcern(res.data.length)
+      setCircularLeastConcern(res.data.length)
 
     })
     axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/CircularNotknown").then(res => {
