@@ -138,6 +138,12 @@ import Edward_park_LeastConcern from "./pages/data/Edward_Park/conservationStatu
 import Edward_park_NearThreatened from "./pages/data/Edward_Park/conservationStatus/Edward_park_NearThreatened"
 import Edward_park_NotKnown from "./pages/data/Edward_Park/conservationStatus/Edward_park_NotKnown"
 import Edward_park_Vulnerable from "./pages/data/Edward_Park/conservationStatus/Edward_park_Vulnerable"
+import Victoria_park_ConservationDependent from "./pages/data/Victoria_Park/conservationStatus/Victoria_park_ConservationDependent"
+import Victoria_park_CriticallyEndangered from "./pages/data/Victoria_Park/conservationStatus/Victoria_park_CriticallyEndangered"
+import Victoria_park_LeastConcern from "./pages/data/Victoria_Park/conservationStatus/Victoria_park_LeastConcern"
+import Victoria_park_NearThreatened from "./pages/data/Victoria_Park/conservationStatus/Victoria_park_NearThreatened"
+import Victoria_park_NotKnown from "./pages/data/Victoria_Park/conservationStatus/Victoria_park_NotKnown"
+import Victoria_park_Vulnerable from "./pages/data/Victoria_Park/conservationStatus/Victoria_park_Vulnerable"
 
 function Router() {
     return (
@@ -293,7 +299,7 @@ function Router() {
                 <Route path="/Edward_Park/conservationstatus/Edward_Park-NotKnown" element={<Edward_park_NotKnown />} />
                 <Route path="/Edward_Park/conservationstatus/Edward_Park-Vulnerable" element={<Edward_park_Vulnerable />} />
 
-                {/* Park_2 */}
+                {/* Victoria */}
                 <Route path="/Victoria_Park" element={<Victoria_Park />} />
                 <Route path="/Victoria_Park/Victoria_Park-deciduous" element={<Victoria_park_deciduous />} />
                 <Route path="/Victoria_Park/Victoria_Park-evergreen" element={<Victoria_park_evergreen />} />
@@ -301,6 +307,14 @@ function Router() {
                 <Route path="/Victoria_Park/Victoria_Park-indigenous" element={<Victoria_park_indigenous />} />
                 <Route path="/Victoria_Park/Victoria_Park-exotic" element={<Victoria_park_exotic />} />
                 <Route path="/Victoria_Park/Victoria_Park-endangered" element={<Victoria_park_endangered />} />
+                {/* Victoria park conservation status */}
+                <Route path="/Victoria_Park/conservationstatus/Victoria_Park-ConservationDependent" element={<Victoria_park_ConservationDependent />} />
+                <Route path="/Victoria_Park/conservationstatus/Victoria_Park-CriticallyEndangered" element={<Victoria_park_CriticallyEndangered />} />
+                <Route path="/Victoria_Park/conservationstatus/Victoria_Park-LeastConcern" element={<Victoria_park_LeastConcern />} />
+                <Route path="/Victoria_Park/conservationstatus/Victoria_Park-NearThreatened" element={<Victoria_park_NearThreatened />} />
+                <Route path="/Victoria_Park/conservationstatus/Victoria_Park-NotKnown" element={<Victoria_park_NotKnown />} />
+                <Route path="/Victoria_Park/conservationstatus/Victoria_Park-Vulnerable" element={<Victoria_park_Vulnerable />} />
+                
 
                 {/* Wine_Board */}
                 <Route path="/Wine_Board" element={<Wine_Board/>} />
