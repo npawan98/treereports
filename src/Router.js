@@ -132,6 +132,12 @@ import Park_2_park_LeastConcern from "./pages/data/Park_2/conservationStatus/Par
 import Park_2_park_NearThreatened from "./pages/data/Park_2/conservationStatus/Park_2_NearThreatened"
 import Park_2_park_NotKnown from "./pages/data/Park_2/conservationStatus/Park_2_NotKnown"
 import Park_2_park_Vulnerable from "./pages/data/Park_2/conservationStatus/Park_2_Vulnerable"
+import Edward_park_ConservationDependent from "./pages/data/Edward_Park/conservationStatus/Edward_park_ConservationDependent"
+import Edward_park_CriticallyEndangered from "./pages/data/Edward_Park/conservationStatus/Edward_park_CriticallyEndangered"
+import Edward_park_LeastConcern from "./pages/data/Edward_Park/conservationStatus/Edward_park_LeastConcern"
+import Edward_park_NearThreatened from "./pages/data/Edward_Park/conservationStatus/Edward_park_NearThreatened"
+import Edward_park_NotKnown from "./pages/data/Edward_Park/conservationStatus/Edward_park_NotKnown"
+import Edward_park_Vulnerable from "./pages/data/Edward_Park/conservationStatus/Edward_park_Vulnerable"
 
 function Router() {
     return (
@@ -271,7 +277,7 @@ function Router() {
                 <Route path="/Park_2_Park/conservationstatus/Park_2_Park-NotKnown" element={<Park_2_park_NotKnown />} />
                 <Route path="/Park_2_Park/conservationstatus/Park_2_Park-Vulnerable" element={<Park_2_park_Vulnerable />} />
 
-                {/* Park_2 */}
+                {/* Edward */}
                 <Route path="/Edward_Park" element={<Edward_Park />} />
                 <Route path="/Edward_Park/Edward_Park-deciduous" element={<Edward_park_deciduous />} />
                 <Route path="/Edward_Park/Edward_Park-evergreen" element={<Edward_park_evergreen />} />
@@ -279,6 +285,13 @@ function Router() {
                 <Route path="/Edward_Park/Edward_Park-indigenous" element={<Edward_park_indigenous />} />
                 <Route path="/Edward_Park/Edward_Park-exotic" element={<Edward_park_exotic />} />
                 <Route path="/Edward_Park/Edward_Park-endangered" element={<Edward_park_endangered />} />
+                {/* Edward park conservation status */}
+                <Route path="/Edward_Park/conservationstatus/Edward_Park-ConservationDependent" element={<Edward_park_ConservationDependent />} />
+                <Route path="/Edward_Park/conservationstatus/Edward_Park-CriticallyEndangered" element={<Edward_park_CriticallyEndangered />} />
+                <Route path="/Edward_Park/conservationstatus/Edward_Park-LeastConcern" element={<Edward_park_LeastConcern />} />
+                <Route path="/Edward_Park/conservationstatus/Edward_Park-NearThreatened" element={<Edward_park_NearThreatened />} />
+                <Route path="/Edward_Park/conservationstatus/Edward_Park-NotKnown" element={<Edward_park_NotKnown />} />
+                <Route path="/Edward_Park/conservationstatus/Edward_Park-Vulnerable" element={<Edward_park_Vulnerable />} />
 
                 {/* Park_2 */}
                 <Route path="/Victoria_Park" element={<Victoria_Park />} />
