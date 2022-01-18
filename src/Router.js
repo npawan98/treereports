@@ -102,6 +102,12 @@ import Rose_park_LeastConcern from "./pages/data/Rose_Park/conservationStatus/Ro
 import Rose_park_NearThreatened from "./pages/data/Rose_Park/conservationStatus/Rose_park_NearThreatened"
 import Rose_park_NotKnown from "./pages/data/Rose_Park/conservationStatus/Rose_park_NotKnown"
 import Rose_park_Vulnerable from "./pages/data/Rose_Park/conservationStatus/Rose_park_Vulnerable"
+import Triangular_park_ConservationDependent from "./pages/data/Triangular_Park/conservationStatus/Triangular_park_ConservationDependent"
+import Triangular_park_CriticallyEndangered from "./pages/data/Triangular_Park/conservationStatus/Triangular_park_CriticallyEndangered"
+import Triangular_park_LeastConcern from "./pages/data/Triangular_Park/conservationStatus/Triangular_park_LeastConcern"
+import Triangular_park_NearThreatened from "./pages/data/Triangular_Park/conservationStatus/Triangular_park_NearThreatened"
+import Triangular_park_NotKnown from "./pages/data/Triangular_Park/conservationStatus/Triangular_park_NotKnown"
+import Triangular_park_Vulnerable from "./pages/data/Triangular_Park/conservationStatus/Triangular_park_Vulnerable"
 
 function Router() {
     return (
@@ -153,7 +159,7 @@ function Router() {
                 <Route path="/Rose_Park/Rose_Park-indigenous" element={<Rose_park_indigenous />} />
                 <Route path="/Rose_Park/Rose_Park-exotic" element={<Rose_park_exotic />} />
                 <Route path="/Rose_Park/Rose_Park-endangered" element={<Rose_park_endangered />} />
-                {/* snake park conservation status */}
+                {/* rose park conservation status */}
                 <Route path="/Rose_Park/conservationstatus/Rose_Park-ConservationDependent" element={<Rose_park_ConservationDependent />} />
                 <Route path="/Rose_Park/conservationstatus/Rose_Park-CriticallyEndangered" element={<Rose_park_CriticallyEndangered />} />
                 <Route path="/Rose_Park/conservationstatus/Rose_Park-LeastConcern" element={<Rose_park_LeastConcern />} />
@@ -169,6 +175,13 @@ function Router() {
                 <Route path="/Triangular_Park/Triangular_Park-indigenous" element={<Triangular_Park_indigenous />} />
                 <Route path="/Triangular_Park/Triangular_Park-exotic" element={<Triangular_Park_exotic />} />
                 <Route path="/Triangular_Park/Triangular_Park-endangered" element={<Triangular_Park_endangered />} />
+                {/* Triangular park conservation status */}
+                <Route path="/Triangular_Park/conservationstatus/Triangular_Park-ConservationDependent" element={<Triangular_park_ConservationDependent />} />
+                <Route path="/Triangular_Park/conservationstatus/Triangular_Park-CriticallyEndangered" element={<Triangular_park_CriticallyEndangered />} />
+                <Route path="/Triangular_Park/conservationstatus/Triangular_Park-LeastConcern" element={<Triangular_park_LeastConcern />} />
+                <Route path="/Triangular_Park/conservationstatus/Triangular_Park-NearThreatened" element={<Triangular_park_NearThreatened />} />
+                <Route path="/Triangular_Park/conservationstatus/Triangular_Park-NotKnown" element={<Triangular_park_NotKnown />} />
+                <Route path="/Triangular_Park/conservationstatus/Triangular_Park-Vulnerable" element={<Triangular_park_Vulnerable />} />
 
                 {/* Circular park */}
                 <Route path="/Circular_Park" element={<Circular_Park />} />
