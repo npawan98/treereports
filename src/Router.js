@@ -144,6 +144,12 @@ import Victoria_park_LeastConcern from "./pages/data/Victoria_Park/conservationS
 import Victoria_park_NearThreatened from "./pages/data/Victoria_Park/conservationStatus/Victoria_park_NearThreatened"
 import Victoria_park_NotKnown from "./pages/data/Victoria_Park/conservationStatus/Victoria_park_NotKnown"
 import Victoria_park_Vulnerable from "./pages/data/Victoria_Park/conservationStatus/Victoria_park_Vulnerable"
+import Wine_Board_ConservationDependent from "./pages/data/Wine_Board/conservationStatus/Wine_Board_ConservationDependent"
+import Wine_Board_CriticallyEndangered from "./pages/data/Wine_Board/conservationStatus/Wine_Board_CriticallyEndangered"
+import Wine_Board_LeastConcern from "./pages/data/Wine_Board/conservationStatus/Wine_Board_LeastConcern"
+import Wine_Board_NearThreatened from "./pages/data/Wine_Board/conservationStatus/Wine_Board_NearThreatened"
+import Wine_Board_NotKnown from "./pages/data/Wine_Board/conservationStatus/Wine_Board_NotKnown"
+import Wine_Board_Vulnerable from "./pages/data/Wine_Board/conservationStatus/Wine_Board_Vulnerable"
 
 function Router() {
     return (
@@ -324,6 +330,13 @@ function Router() {
                 <Route path="/Wine_Board/Wine_Board-indigenous" element={<Wine_Board_indigenous />} />
                 <Route path="/Wine_Board/Wine_Board-exotic" element={<Wine_Board_exotic />} />
                 <Route path="/Wine_Board/Wine_Board-endangered" element={<Wine_Board_endangered />} />
+                {/* Wine board conservation status */}
+                <Route path="/Wine_Board/conservationstatus/Wine_Board-ConservationDependent" element={<Wine_Board_ConservationDependent />} />
+                <Route path="/Wine_Board/conservationstatus/Wine_Board-CriticallyEndangered" element={<Wine_Board_CriticallyEndangered />} />
+                <Route path="/Wine_Board/conservationstatus/Wine_Board-LeastConcern" element={<Wine_Board_LeastConcern />} />
+                <Route path="/Wine_Board/conservationstatus/Wine_Board-NearThreatened" element={<Wine_Board_NearThreatened />} />
+                <Route path="/Wine_Board/conservationstatus/Wine_Board-NotKnown" element={<Wine_Board_NotKnown />} />
+                <Route path="/Wine_Board/conservationstatus/Wine_Board-Vulnerable" element={<Wine_Board_Vulnerable />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>
