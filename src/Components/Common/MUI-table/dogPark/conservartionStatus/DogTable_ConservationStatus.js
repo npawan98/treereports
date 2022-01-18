@@ -53,29 +53,29 @@ function DogTable_ConservationStatus() {
     <TableContainer component={Paper} style={{maxWidth:'650px'}}>
       <Table sx={{ maxWidth: 650 }} aria-label="simple table">
         <TableHead>
-          <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-deciduous")}} style={{cursor:"pointer"}}>
+          <TableRow onClick={()=>{window.location.assign("/Dog_Park/conservationstatus/Dog_Park-LeastConcern")}} style={{cursor:"pointer"}}>
             <TableCell>Least Concern</TableCell>
-            <TableCell align="right">{dogNotknown.length}</TableCell>
+            <TableCell align="right">{dogLeastConcern.length}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-        <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-evergreen")}} style={{cursor:"pointer"}}>
+        <TableRow onClick={()=>{window.location.assign("/Dog_Park/conservationstatus/Dog_Park-NotKnown")}} style={{cursor:"pointer"}}>
             <TableCell>Not known</TableCell>
-            <TableCell align="right">{dogLeastConcern.length}</TableCell>
+            <TableCell align="right">{dogNotknown.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-endemic")}} style={{cursor:"pointer"}}>
+          <TableRow onClick={()=>{window.location.assign("/Dog_Park/conservationstatus/Dog_Park-NearThreatened")}} style={{cursor:"pointer"}}>
             <TableCell>Near Threatened </TableCell>
             <TableCell align="right">{dogNearThreatened.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-indigenous")}} style={{cursor:"pointer"}}>
+          <TableRow onClick={()=>{window.location.assign("/Dog_Park/conservationstatus/Dog_Park-Vulnerable")}} style={{cursor:"pointer"}}>
             <TableCell>Vulnerable</TableCell>
             <TableCell align="right">{dogVulnerable.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-exotic")}} style={{cursor:"pointer"}}>
+          <TableRow onClick={()=>{window.location.assign("/Dog_Park/conservationstatus/Dog_Park-CriticallyEndangered")}} style={{cursor:"pointer"}}>
             <TableCell>Critically endangered</TableCell>
             <TableCell align="right">{dogCriticallyEndangered.length}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Dog_Park/Dog_Park-endangered")}} style={{cursor:"pointer"}}>
+          <TableRow onClick={()=>{window.location.assign("/Dog_Park/conservationstatus/Dog_Park-ConservationDependent")}} style={{cursor:"pointer"}}>
             <TableCell>Conservation dependent</TableCell>
             <TableCell align="right">{dogConservationDependent.length}</TableCell>
           </TableRow>

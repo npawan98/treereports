@@ -84,6 +84,12 @@ import Wine_Board_endemic from "./pages/data/Wine_Board/Wine_Board_endemic"
 import Wine_Board_indigenous from "./pages/data/Wine_Board/Wine_Board_indigenous"
 import Wine_Board_exotic from "./pages/data/Wine_Board/Wine_Board_exotic"
 import Wine_Board_endangered from "./pages/data/Wine_Board/Wine_Board_endangered"
+import Dog_park_ConservationDependent from "./pages/data/Dog_Park/conservationStatus/Dog_park_ConservationDependent"
+import Dog_park_CriticallyEndangered from "./pages/data/Dog_Park/conservationStatus/Dog_park_CriticallyEndangered"
+import Dog_park_LeastConcern from "./pages/data/Dog_Park/conservationStatus/Dog_park_LeastConcern"
+import Dog_park_NearThreatened from "./pages/data/Dog_Park/conservationStatus/Dog_park_NearThreatened"
+import Dog_park_NotKnown from "./pages/data/Dog_Park/conservationStatus/Dog_park_NotKnown"
+import Dog_park_Vulnerable from "./pages/data/Dog_Park/conservationStatus/Dog_park_Vulnerable"
 
 function Router() {
     return (
@@ -103,6 +109,13 @@ function Router() {
                 <Route path="/Dog_Park/Dog_Park-indigenous" element={<Dog_park_indigenous />} />
                 <Route path="/Dog_Park/Dog_Park-exotic" element={<Dog_park_exotic />} />
                 <Route path="/Dog_Park/Dog_Park-endangered" element={<Dog_park_endangered />} />
+                {/* dog park conservation status */}
+                <Route path="/Dog_Park/conservationstatus/Dog_Park-ConservationDependent" element={<Dog_park_ConservationDependent />} />
+                <Route path="/Dog_Park/conservationstatus/Dog_Park-CriticallyEndangered" element={<Dog_park_CriticallyEndangered />} />
+                <Route path="/Dog_Park/conservationstatus/Dog_Park-LeastConcern" element={<Dog_park_LeastConcern />} />
+                <Route path="/Dog_Park/conservationstatus/Dog_Park-NearThreatened" element={<Dog_park_NearThreatened />} />
+                <Route path="/Dog_Park/conservationstatus/Dog_Park-NotKnown" element={<Dog_park_NotKnown />} />
+                <Route path="/Dog_Park/conservationstatus/Dog_Park-Vulnerable" element={<Dog_park_Vulnerable />} />
 
                 {/* snake park */}
                 <Route path="/Snake_Park" element={<Snake_Park />} />
