@@ -108,6 +108,12 @@ import Triangular_park_LeastConcern from "./pages/data/Triangular_Park/conservat
 import Triangular_park_NearThreatened from "./pages/data/Triangular_Park/conservationStatus/Triangular_park_NearThreatened"
 import Triangular_park_NotKnown from "./pages/data/Triangular_Park/conservationStatus/Triangular_park_NotKnown"
 import Triangular_park_Vulnerable from "./pages/data/Triangular_Park/conservationStatus/Triangular_park_Vulnerable"
+import Circular_park_ConservationDependent from "./pages/data/Circular_Park/conservationStatus/Circular_park_ConservationDependent"
+import Circular_park_CriticallyEndangered from "./pages/data/Circular_Park/conservationStatus/Circular_park_CriticallyEndangered"
+import Circular_park_LeastConcern from "./pages/data/Circular_Park/conservationStatus/Circular_park_LeastConcern"
+import Circular_park_NearThreatened from "./pages/data/Circular_Park/conservationStatus/Circular_park_NearThreatened"
+import Circular_park_NotKnown from "./pages/data/Circular_Park/conservationStatus/Circular_park_NotKnown"
+import Circular_park_Vulnerable from "./pages/data/Circular_Park/conservationStatus/Circular_park_Vulnerable"
 
 function Router() {
     return (
@@ -191,6 +197,13 @@ function Router() {
                 <Route path="/Circular_Park/Circular_Park-indigenous" element={<Circular_park_indigenous />} />
                 <Route path="/Circular_Park/Circular_Park-exotic" element={<Circular_park_exotic />} />
                 <Route path="/Circular_Park/Circular_Park-endangered" element={<Circular_park_endangered />} />
+                {/* Circular park conservation status */}
+                <Route path="/Circular_Park/conservationstatus/Circular_Park-ConservationDependent" element={<Circular_park_ConservationDependent />} />
+                <Route path="/Circular_Park/conservationstatus/Circular_Park-CriticallyEndangered" element={<Circular_park_CriticallyEndangered />} />
+                <Route path="/Circular_Park/conservationstatus/Circular_Park-LeastConcern" element={<Circular_park_LeastConcern />} />
+                <Route path="/Circular_Park/conservationstatus/Circular_Park-NearThreatened" element={<Circular_park_NearThreatened />} />
+                <Route path="/Circular_Park/conservationstatus/Circular_Park-NotKnown" element={<Circular_park_NotKnown />} />
+                <Route path="/Circular_Park/conservationstatus/Circular_Park-Vulnerable" element={<Circular_park_Vulnerable />} />
 
                 {/* Workers park */}
                 <Route path="/Workers_Park" element={<Workers_Park />} />
