@@ -6,6 +6,7 @@ import ReactApexChart from "react-apexcharts";
 import DonutChart from "./Dashboard_donut/DonutChart";
 import axios from "axios";
 import DashboardComponentsPhenology from "./DashboardComponentsPhenology";
+import DashboardComponentsConservationStatus from "./DashboardComponentsConservationStatus";
 function DashboardComponents() {
   const [dogData, setDogData] = useState([]);
   const [dogEvergreen, setDogEvergreen] = useState([]);
@@ -711,6 +712,7 @@ function DashboardComponents() {
         </div>
       </div>
       <DashboardComponentsPhenology/>
+      <DashboardComponentsConservationStatus/>
     </div>
   );
 }
