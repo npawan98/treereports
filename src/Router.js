@@ -120,6 +120,12 @@ import Workers_park_LeastConcern from "./pages/data/Workers_Park/conservationSta
 import Workers_park_NearThreatened from "./pages/data/Workers_Park/conservationStatus/Workers_park_NearThreatened"
 import Workers_park_NotKnown from "./pages/data/Workers_Park/conservationStatus/Workers_park_NotKnown"
 import Workers_park_Vulnerable from "./pages/data/Workers_Park/conservationStatus/Workers_park_Vulnerable"
+import Park_1_park_ConservationDependent from "./pages/data/Park_1/conservationStatus/Park_1_ConservationDependent"
+import Park_1_park_CriticallyEndangered from "./pages/data/Park_1/conservationStatus/Park_1_CriticallyEndangered"
+import Park_1_park_LeastConcern from "./pages/data/Park_1/conservationStatus/Park_1_LeastConcern"
+import Park_1_park_NearThreatened from "./pages/data/Park_1/conservationStatus/Park_1_NearThreatened"
+import Park_1_park_NotKnown from "./pages/data/Park_1/conservationStatus/Park_1_NotKnown"
+import Park_1_park_Vulnerable from "./pages/data/Park_1/conservationStatus/Park_1_Vulnerable"
 
 function Router() {
     return (
@@ -235,6 +241,13 @@ function Router() {
                 <Route path="/Park_1_Park/Park_1_Park-indigenous" element={<Park_1_park_indigenous />} />
                 <Route path="/Park_1_Park/Park_1_Park-exotic" element={<Park_1_park_exotic />} />
                 <Route path="/Park_1_Park/Park_1_Park-endangered" element={<Park_1_park_endangered />} />
+                {/* Park_1  park conservation status */}
+                <Route path="/Park_1_Park/conservationstatus/Park_1_Park-ConservationDependent" element={<Park_1_park_ConservationDependent />} />
+                <Route path="/Park_1_Park/conservationstatus/Park_1_Park-CriticallyEndangered" element={<Park_1_park_CriticallyEndangered />} />
+                <Route path="/Park_1_Park/conservationstatus/Park_1_Park-LeastConcern" element={<Park_1_park_LeastConcern />} />
+                <Route path="/Park_1_Park/conservationstatus/Park_1_Park-NearThreatened" element={<Park_1_park_NearThreatened />} />
+                <Route path="/Park_1_Park/conservationstatus/Park_1_Park-NotKnown" element={<Park_1_park_NotKnown />} />
+                <Route path="/Park_1_Park/conservationstatus/Park_1_Park-Vulnerable" element={<Park_1_park_Vulnerable />} />
 
                 {/* Park_2 */}
                 <Route path="/Park_2_Park" element={<Park_2_Park />} />
