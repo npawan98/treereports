@@ -163,6 +163,19 @@ import Secretary_club_LeastConcern from "./pages/data/Secretary_club/conservatio
 import Secretary_club_NearThreatened from "./pages/data/Secretary_club/conservationStatus/Secretary_club_NearThreatened"
 import Secretary_club_NotKnown from "./pages/data/Secretary_club/conservationStatus/Secretary_club_NotKnown"
 import Secretary_club_Vulnerable from "./pages/data/Secretary_club/conservationStatus/Secretary_club_Vulnerable"
+import Bal_bhavan from "./pages/data/Bal_bhavan/Bal_bhavan"
+import Bal_bhavan_deciduous from "./pages/data/Bal_bhavan/Bal_bhavan_deciduous"
+import Bal_bhavan_evergreen from "./pages/data/Bal_bhavan/Bal_bhavan_evergreen"
+import Bal_bhavan_endemic from "./pages/data/Bal_bhavan/Bal_bhavan_endemic"
+import Bal_bhavan_indigenous from "./pages/data/Bal_bhavan/Bal_bhavan_indigenous"
+import Bal_bhavan_exotic from "./pages/data/Bal_bhavan/Bal_bhavan_exotic"
+import Bal_bhavan_endangered from "./pages/data/Bal_bhavan/Bal_bhavan_endangered"
+import Bal_bhavan_ConservationDependent from "./pages/data/Bal_bhavan/conservationStatus/Bal_bhavan_ConservationDependent"
+import Bal_bhavan_CriticallyEndangered from "./pages/data/Bal_bhavan/conservationStatus/Bal_bhavan_CriticallyEndangered"
+import Bal_bhavan_LeastConcern from "./pages/data/Bal_bhavan/conservationStatus/Bal_bhavan_LeastConcern"
+import Bal_bhavan_NearThreatened from "./pages/data/Bal_bhavan/conservationStatus/Bal_bhavan_NearThreatened"
+import Bal_bhavan_NotKnown from "./pages/data/Bal_bhavan/conservationStatus/Bal_bhavan_NotKnown"
+import Bal_bhavan_Vulnerable from "./pages/data/Bal_bhavan/conservationStatus/Bal_bhavan_Vulnerable"
 
 function Router() {
     return (
@@ -366,6 +379,22 @@ function Router() {
                 <Route path="/Secretary_club/conservationstatus/Secretary_club-NearThreatened" element={<Secretary_club_NearThreatened />} />
                 <Route path="/Secretary_club/conservationstatus/Secretary_club-NotKnown" element={<Secretary_club_NotKnown />} />
                 <Route path="/Secretary_club/conservationstatus/Secretary_club-Vulnerable" element={<Secretary_club_Vulnerable />} />
+
+                {/* Bal_bhavan */}
+                <Route path="/Bal_bhavan" element={<Bal_bhavan/>} />
+                <Route path="/Bal_bhavan/Bal_bhavan-deciduous" element={<Bal_bhavan_deciduous />} />
+                <Route path="/Bal_bhavan/Bal_bhavan-evergreen" element={<Bal_bhavan_evergreen />} />
+                <Route path="/Bal_bhavan/Bal_bhavan-endemic" element={<Bal_bhavan_endemic />} />
+                <Route path="/Bal_bhavan/Bal_bhavan-indigenous" element={<Bal_bhavan_indigenous />} />
+                <Route path="/Bal_bhavan/Bal_bhavan-exotic" element={<Bal_bhavan_exotic />} />
+                <Route path="/Bal_bhavan/Bal_bhavan-endangered" element={<Bal_bhavan_endangered />} />
+                {/* Wine board conservation status */}
+                <Route path="/Bal_bhavan/conservationstatus/Bal_bhavan-ConservationDependent" element={<Bal_bhavan_ConservationDependent />} />
+                <Route path="/Bal_bhavan/conservationstatus/Bal_bhavan-CriticallyEndangered" element={<Bal_bhavan_CriticallyEndangered />} />
+                <Route path="/Bal_bhavan/conservationstatus/Bal_bhavan-LeastConcern" element={<Bal_bhavan_LeastConcern />} />
+                <Route path="/Bal_bhavan/conservationstatus/Bal_bhavan-NearThreatened" element={<Bal_bhavan_NearThreatened />} />
+                <Route path="/Bal_bhavan/conservationstatus/Bal_bhavan-NotKnown" element={<Bal_bhavan_NotKnown />} />
+                <Route path="/Bal_bhavan/conservationstatus/Bal_bhavan-Vulnerable" element={<Bal_bhavan_Vulnerable />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>
