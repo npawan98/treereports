@@ -176,6 +176,19 @@ import Bal_bhavan_LeastConcern from "./pages/data/Bal_bhavan/conservationStatus/
 import Bal_bhavan_NearThreatened from "./pages/data/Bal_bhavan/conservationStatus/Bal_bhavan_NearThreatened"
 import Bal_bhavan_NotKnown from "./pages/data/Bal_bhavan/conservationStatus/Bal_bhavan_NotKnown"
 import Bal_bhavan_Vulnerable from "./pages/data/Bal_bhavan/conservationStatus/Bal_bhavan_Vulnerable"
+import High_court from "./pages/data/High_court/High_court"
+import High_court_deciduous from "./pages/data/High_court/High_court_deciduous"
+import High_court_evergreen from "./pages/data/High_court/High_court_evergreen"
+import High_court_endemic from "./pages/data/High_court/High_court_endemic"
+import High_court_indigenous from "./pages/data/High_court/High_court_indigenous"
+import High_court_exotic from "./pages/data/High_court/High_court_exotic"
+import High_court_endangered from "./pages/data/High_court/High_court_endangered"
+import High_court_ConservationDependent from "./pages/data/High_court/conservationStatus/High_court_ConservationDependent"
+import High_court_CriticallyEndangered from "./pages/data/High_court/conservationStatus/High_court_CriticallyEndangered"
+import High_court_LeastConcern from "./pages/data/High_court/conservationStatus/High_court_LeastConcern"
+import High_court_NearThreatened from "./pages/data/High_court/conservationStatus/High_court_NearThreatened"
+import High_court_NotKnown from "./pages/data/High_court/conservationStatus/High_court_NotKnown"
+import High_court_Vulnerable from "./pages/data/High_court/conservationStatus/High_court_Vulnerable"
 
 function Router() {
     return (
@@ -395,6 +408,22 @@ function Router() {
                 <Route path="/Bal_bhavan/conservationstatus/Bal_bhavan-NearThreatened" element={<Bal_bhavan_NearThreatened />} />
                 <Route path="/Bal_bhavan/conservationstatus/Bal_bhavan-NotKnown" element={<Bal_bhavan_NotKnown />} />
                 <Route path="/Bal_bhavan/conservationstatus/Bal_bhavan-Vulnerable" element={<Bal_bhavan_Vulnerable />} />
+
+                {/* High_court */}
+                <Route path="/High_court" element={<High_court/>} />
+                <Route path="/High_court/High_court-deciduous" element={<High_court_deciduous />} />
+                <Route path="/High_court/High_court-evergreen" element={<High_court_evergreen />} />
+                <Route path="/High_court/High_court-endemic" element={<High_court_endemic />} />
+                <Route path="/High_court/High_court-indigenous" element={<High_court_indigenous />} />
+                <Route path="/High_court/High_court-exotic" element={<High_court_exotic />} />
+                <Route path="/High_court/High_court-endangered" element={<High_court_endangered />} />
+                {/* Wine board conservation status */}
+                <Route path="/High_court/conservationstatus/High_court-ConservationDependent" element={<High_court_ConservationDependent />} />
+                <Route path="/High_court/conservationstatus/High_court-CriticallyEndangered" element={<High_court_CriticallyEndangered />} />
+                <Route path="/High_court/conservationstatus/High_court-LeastConcern" element={<High_court_LeastConcern />} />
+                <Route path="/High_court/conservationstatus/High_court-NearThreatened" element={<High_court_NearThreatened />} />
+                <Route path="/High_court/conservationstatus/High_court-NotKnown" element={<High_court_NotKnown />} />
+                <Route path="/High_court/conservationstatus/High_court-Vulnerable" element={<High_court_Vulnerable />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>

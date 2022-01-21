@@ -50,6 +50,10 @@ const zones = [
     {
         zone:'Bal Bhavan',
         value:'Bal_bhavan'
+    },
+    {
+        zone:'High Court',
+        value:'High_court'
     }
 ];
 export default zones;
