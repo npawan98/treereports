@@ -189,6 +189,19 @@ import High_court_LeastConcern from "./pages/data/High_court/conservationStatus/
 import High_court_NearThreatened from "./pages/data/High_court/conservationStatus/High_court_NearThreatened"
 import High_court_NotKnown from "./pages/data/High_court/conservationStatus/High_court_NotKnown"
 import High_court_Vulnerable from "./pages/data/High_court/conservationStatus/High_court_Vulnerable"
+import Park_opp_snake_park from "./pages/data/Park_opp_snake_park/Park_opp_snake_park"
+import Park_opp_snake_park_deciduous from "./pages/data/Park_opp_snake_park/Park_opp_snake_park_deciduous"
+import Park_opp_snake_park_evergreen from "./pages/data/Park_opp_snake_park/Park_opp_snake_park_evergreen"
+import Park_opp_snake_park_endemic from "./pages/data/Park_opp_snake_park/Park_opp_snake_park_endemic"
+import Park_opp_snake_park_indigenous from "./pages/data/Park_opp_snake_park/Park_opp_snake_park_indigenous"
+import Park_opp_snake_park_exotic from "./pages/data/Park_opp_snake_park/Park_opp_snake_park_exotic"
+import Park_opp_snake_park_endangered from "./pages/data/Park_opp_snake_park/Park_opp_snake_park_endangered"
+import Park_opp_snake_park_ConservationDependent from "./pages/data/Park_opp_snake_park/conservationStatus/Park_opp_snake_park_ConservationDependent"
+import Park_opp_snake_park_CriticallyEndangered from "./pages/data/Park_opp_snake_park/conservationStatus/Park_opp_snake_park_CriticallyEndangered"
+import Park_opp_snake_park_LeastConcern from "./pages/data/Park_opp_snake_park/conservationStatus/Park_opp_snake_park_LeastConcern"
+import Park_opp_snake_park_NearThreatened from "./pages/data/Park_opp_snake_park/conservationStatus/Park_opp_snake_park_NearThreatened"
+import Park_opp_snake_park_NotKnown from "./pages/data/Park_opp_snake_park/conservationStatus/Park_opp_snake_park_NotKnown"
+import Park_opp_snake_park_Vulnerable from "./pages/data/Park_opp_snake_park/conservationStatus/Park_opp_snake_park_Vulnerable"
 
 function Router() {
     return (
@@ -424,6 +437,22 @@ function Router() {
                 <Route path="/High_court/conservationstatus/High_court-NearThreatened" element={<High_court_NearThreatened />} />
                 <Route path="/High_court/conservationstatus/High_court-NotKnown" element={<High_court_NotKnown />} />
                 <Route path="/High_court/conservationstatus/High_court-Vulnerable" element={<High_court_Vulnerable />} />
+
+                {/* Park_opp_snake_park */}
+<Route path="/Park_opp_snake_park" element={<Park_opp_snake_park/>} />
+<Route path="/Park_opp_snake_park/Park_opp_snake_park-deciduous" element={<Park_opp_snake_park_deciduous />} />
+<Route path="/Park_opp_snake_park/Park_opp_snake_park-evergreen" element={<Park_opp_snake_park_evergreen />} />
+<Route path="/Park_opp_snake_park/Park_opp_snake_park-endemic" element={<Park_opp_snake_park_endemic />} />
+<Route path="/Park_opp_snake_park/Park_opp_snake_park-indigenous" element={<Park_opp_snake_park_indigenous />} />
+<Route path="/Park_opp_snake_park/Park_opp_snake_park-exotic" element={<Park_opp_snake_park_exotic />} />
+<Route path="/Park_opp_snake_park/Park_opp_snake_park-endangered" element={<Park_opp_snake_park_endangered />} />
+{/* Wine board conservation status */}
+<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-ConservationDependent" element={<Park_opp_snake_park_ConservationDependent />} />
+<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-CriticallyEndangered" element={<Park_opp_snake_park_CriticallyEndangered />} />
+<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-LeastConcern" element={<Park_opp_snake_park_LeastConcern />} />
+<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-NearThreatened" element={<Park_opp_snake_park_NearThreatened />} />
+<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-NotKnown" element={<Park_opp_snake_park_NotKnown />} />
+<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-Vulnerable" element={<Park_opp_snake_park_Vulnerable />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>

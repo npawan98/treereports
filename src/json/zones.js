@@ -54,6 +54,10 @@ const zones = [
     {
         zone:'High Court',
         value:'High_court'
+    },
+    {
+        zone:'Park Opp Snake Park',
+        value:'Park_opp_snake_park'
     }
 ];
 export default zones;
