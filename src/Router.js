@@ -150,6 +150,19 @@ import Wine_Board_LeastConcern from "./pages/data/Wine_Board/conservationStatus/
 import Wine_Board_NearThreatened from "./pages/data/Wine_Board/conservationStatus/Wine_Board_NearThreatened"
 import Wine_Board_NotKnown from "./pages/data/Wine_Board/conservationStatus/Wine_Board_NotKnown"
 import Wine_Board_Vulnerable from "./pages/data/Wine_Board/conservationStatus/Wine_Board_Vulnerable"
+import Secretary_club from "./pages/data/Secretary_club/Secretary_club"
+import Secretary_club_deciduous from "./pages/data/Secretary_club/Secretary_club_deciduous"
+import Secretary_club_evergreen from "./pages/data/Secretary_club/Secretary_club_evergreen"
+import Secretary_club_endemic from "./pages/data/Secretary_club/Secretary_club_endemic"
+import Secretary_club_indigenous from "./pages/data/Secretary_club/Secretary_club_indigenous"
+import Secretary_club_exotic from "./pages/data/Secretary_club/Secretary_club_exotic"
+import Secretary_club_endangered from "./pages/data/Secretary_club/Secretary_club_endangered"
+import Secretary_club_ConservationDependent from "./pages/data/Secretary_club/conservationStatus/Secretary_club_ConservationDependent"
+import Secretary_club_CriticallyEndangered from "./pages/data/Secretary_club/conservationStatus/Secretary_club_CriticallyEndangered"
+import Secretary_club_LeastConcern from "./pages/data/Secretary_club/conservationStatus/Secretary_club_LeastConcern"
+import Secretary_club_NearThreatened from "./pages/data/Secretary_club/conservationStatus/Secretary_club_NearThreatened"
+import Secretary_club_NotKnown from "./pages/data/Secretary_club/conservationStatus/Secretary_club_NotKnown"
+import Secretary_club_Vulnerable from "./pages/data/Secretary_club/conservationStatus/Secretary_club_Vulnerable"
 
 function Router() {
     return (
@@ -337,6 +350,22 @@ function Router() {
                 <Route path="/Wine_Board/conservationstatus/Wine_Board-NearThreatened" element={<Wine_Board_NearThreatened />} />
                 <Route path="/Wine_Board/conservationstatus/Wine_Board-NotKnown" element={<Wine_Board_NotKnown />} />
                 <Route path="/Wine_Board/conservationstatus/Wine_Board-Vulnerable" element={<Wine_Board_Vulnerable />} />
+
+                {/* Secretary_club */}
+                <Route path="/Secretary_club" element={<Secretary_club/>} />
+                <Route path="/Secretary_club/Secretary_club-deciduous" element={<Secretary_club_deciduous />} />
+                <Route path="/Secretary_club/Secretary_club-evergreen" element={<Secretary_club_evergreen />} />
+                <Route path="/Secretary_club/Secretary_club-endemic" element={<Secretary_club_endemic />} />
+                <Route path="/Secretary_club/Secretary_club-indigenous" element={<Secretary_club_indigenous />} />
+                <Route path="/Secretary_club/Secretary_club-exotic" element={<Secretary_club_exotic />} />
+                <Route path="/Secretary_club/Secretary_club-endangered" element={<Secretary_club_endangered />} />
+                {/* Wine board conservation status */}
+                <Route path="/Secretary_club/conservationstatus/Secretary_club-ConservationDependent" element={<Secretary_club_ConservationDependent />} />
+                <Route path="/Secretary_club/conservationstatus/Secretary_club-CriticallyEndangered" element={<Secretary_club_CriticallyEndangered />} />
+                <Route path="/Secretary_club/conservationstatus/Secretary_club-LeastConcern" element={<Secretary_club_LeastConcern />} />
+                <Route path="/Secretary_club/conservationstatus/Secretary_club-NearThreatened" element={<Secretary_club_NearThreatened />} />
+                <Route path="/Secretary_club/conservationstatus/Secretary_club-NotKnown" element={<Secretary_club_NotKnown />} />
+                <Route path="/Secretary_club/conservationstatus/Secretary_club-Vulnerable" element={<Secretary_club_Vulnerable />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>

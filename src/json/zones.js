@@ -42,6 +42,10 @@ const zones = [
     {
         zone:'Wine Board',
         value:'Wine_Board'
+    },
+    {
+        zone:'Secretary Club',
+        value:'Secretary_club'
     }
 ];
 export default zones;
