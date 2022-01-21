@@ -202,6 +202,19 @@ import Park_opp_snake_park_LeastConcern from "./pages/data/Park_opp_snake_park/c
 import Park_opp_snake_park_NearThreatened from "./pages/data/Park_opp_snake_park/conservationStatus/Park_opp_snake_park_NearThreatened"
 import Park_opp_snake_park_NotKnown from "./pages/data/Park_opp_snake_park/conservationStatus/Park_opp_snake_park_NotKnown"
 import Park_opp_snake_park_Vulnerable from "./pages/data/Park_opp_snake_park/conservationStatus/Park_opp_snake_park_Vulnerable"
+import Park_opp_workers_club from "./pages/data/Park_opp_workers_club/Park_opp_workers_club"
+import Park_opp_workers_club_deciduous from "./pages/data/Park_opp_workers_club/Park_opp_workers_club_deciduous"
+import Park_opp_workers_club_evergreen from "./pages/data/Park_opp_workers_club/Park_opp_workers_club_evergreen"
+import Park_opp_workers_club_endemic from "./pages/data/Park_opp_workers_club/Park_opp_workers_club_endemic"
+import Park_opp_workers_club_indigenous from "./pages/data/Park_opp_workers_club/Park_opp_workers_club_indigenous"
+import Park_opp_workers_club_exotic from "./pages/data/Park_opp_workers_club/Park_opp_workers_club_exotic"
+import Park_opp_workers_club_endangered from "./pages/data/Park_opp_workers_club/Park_opp_workers_club_endangered"
+import Park_opp_workers_club_ConservationDependent from "./pages/data/Park_opp_workers_club/conservationStatus/Park_opp_workers_club_ConservationDependent"
+import Park_opp_workers_club_CriticallyEndangered from "./pages/data/Park_opp_workers_club/conservationStatus/Park_opp_workers_club_CriticallyEndangered"
+import Park_opp_workers_club_LeastConcern from "./pages/data/Park_opp_workers_club/conservationStatus/Park_opp_workers_club_LeastConcern"
+import Park_opp_workers_club_NearThreatened from "./pages/data/Park_opp_workers_club/conservationStatus/Park_opp_workers_club_NearThreatened"
+import Park_opp_workers_club_NotKnown from "./pages/data/Park_opp_workers_club/conservationStatus/Park_opp_workers_club_NotKnown"
+import Park_opp_workers_club_Vulnerable from "./pages/data/Park_opp_workers_club/conservationStatus/Park_opp_workers_club_Vulnerable"
 
 function Router() {
     return (
@@ -439,20 +452,36 @@ function Router() {
                 <Route path="/High_court/conservationstatus/High_court-Vulnerable" element={<High_court_Vulnerable />} />
 
                 {/* Park_opp_snake_park */}
-<Route path="/Park_opp_snake_park" element={<Park_opp_snake_park/>} />
-<Route path="/Park_opp_snake_park/Park_opp_snake_park-deciduous" element={<Park_opp_snake_park_deciduous />} />
-<Route path="/Park_opp_snake_park/Park_opp_snake_park-evergreen" element={<Park_opp_snake_park_evergreen />} />
-<Route path="/Park_opp_snake_park/Park_opp_snake_park-endemic" element={<Park_opp_snake_park_endemic />} />
-<Route path="/Park_opp_snake_park/Park_opp_snake_park-indigenous" element={<Park_opp_snake_park_indigenous />} />
-<Route path="/Park_opp_snake_park/Park_opp_snake_park-exotic" element={<Park_opp_snake_park_exotic />} />
-<Route path="/Park_opp_snake_park/Park_opp_snake_park-endangered" element={<Park_opp_snake_park_endangered />} />
-{/* Wine board conservation status */}
-<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-ConservationDependent" element={<Park_opp_snake_park_ConservationDependent />} />
-<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-CriticallyEndangered" element={<Park_opp_snake_park_CriticallyEndangered />} />
-<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-LeastConcern" element={<Park_opp_snake_park_LeastConcern />} />
-<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-NearThreatened" element={<Park_opp_snake_park_NearThreatened />} />
-<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-NotKnown" element={<Park_opp_snake_park_NotKnown />} />
-<Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-Vulnerable" element={<Park_opp_snake_park_Vulnerable />} />
+                <Route path="/Park_opp_snake_park" element={<Park_opp_snake_park/>} />
+                <Route path="/Park_opp_snake_park/Park_opp_snake_park-deciduous" element={<Park_opp_snake_park_deciduous />} />
+                <Route path="/Park_opp_snake_park/Park_opp_snake_park-evergreen" element={<Park_opp_snake_park_evergreen />} />
+                <Route path="/Park_opp_snake_park/Park_opp_snake_park-endemic" element={<Park_opp_snake_park_endemic />} />
+                <Route path="/Park_opp_snake_park/Park_opp_snake_park-indigenous" element={<Park_opp_snake_park_indigenous />} />
+                <Route path="/Park_opp_snake_park/Park_opp_snake_park-exotic" element={<Park_opp_snake_park_exotic />} />
+                <Route path="/Park_opp_snake_park/Park_opp_snake_park-endangered" element={<Park_opp_snake_park_endangered />} />
+                {/* Wine board conservation status */}
+                <Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-ConservationDependent" element={<Park_opp_snake_park_ConservationDependent />} />
+                <Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-CriticallyEndangered" element={<Park_opp_snake_park_CriticallyEndangered />} />
+                <Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-LeastConcern" element={<Park_opp_snake_park_LeastConcern />} />
+                <Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-NearThreatened" element={<Park_opp_snake_park_NearThreatened />} />
+                <Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-NotKnown" element={<Park_opp_snake_park_NotKnown />} />
+                <Route path="/Park_opp_snake_park/conservationstatus/Park_opp_snake_park-Vulnerable" element={<Park_opp_snake_park_Vulnerable />} />
+
+                {/* Park_opp_workers_club */}
+                <Route path="/Park_opp_workers_club" element={<Park_opp_workers_club/>} />
+                <Route path="/Park_opp_workers_club/Park_opp_workers_club-deciduous" element={<Park_opp_workers_club_deciduous />} />
+                <Route path="/Park_opp_workers_club/Park_opp_workers_club-evergreen" element={<Park_opp_workers_club_evergreen />} />
+                <Route path="/Park_opp_workers_club/Park_opp_workers_club-endemic" element={<Park_opp_workers_club_endemic />} />
+                <Route path="/Park_opp_workers_club/Park_opp_workers_club-indigenous" element={<Park_opp_workers_club_indigenous />} />
+                <Route path="/Park_opp_workers_club/Park_opp_workers_club-exotic" element={<Park_opp_workers_club_exotic />} />
+                <Route path="/Park_opp_workers_club/Park_opp_workers_club-endangered" element={<Park_opp_workers_club_endangered />} />
+                {/* Wine board conservation status */}
+                <Route path="/Park_opp_workers_club/conservationstatus/Park_opp_workers_club-ConservationDependent" element={<Park_opp_workers_club_ConservationDependent />} />
+                <Route path="/Park_opp_workers_club/conservationstatus/Park_opp_workers_club-CriticallyEndangered" element={<Park_opp_workers_club_CriticallyEndangered />} />
+                <Route path="/Park_opp_workers_club/conservationstatus/Park_opp_workers_club-LeastConcern" element={<Park_opp_workers_club_LeastConcern />} />
+                <Route path="/Park_opp_workers_club/conservationstatus/Park_opp_workers_club-NearThreatened" element={<Park_opp_workers_club_NearThreatened />} />
+                <Route path="/Park_opp_workers_club/conservationstatus/Park_opp_workers_club-NotKnown" element={<Park_opp_workers_club_NotKnown />} />
+                <Route path="/Park_opp_workers_club/conservationstatus/Park_opp_workers_club-Vulnerable" element={<Park_opp_workers_club_Vulnerable />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>
