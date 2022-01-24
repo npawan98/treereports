@@ -215,6 +215,19 @@ import Park_opp_workers_club_LeastConcern from "./pages/data/Park_opp_workers_cl
 import Park_opp_workers_club_NearThreatened from "./pages/data/Park_opp_workers_club/conservationStatus/Park_opp_workers_club_NearThreatened"
 import Park_opp_workers_club_NotKnown from "./pages/data/Park_opp_workers_club/conservationStatus/Park_opp_workers_club_NotKnown"
 import Park_opp_workers_club_Vulnerable from "./pages/data/Park_opp_workers_club/conservationStatus/Park_opp_workers_club_Vulnerable"
+import Avenue_trees from "./pages/data/Avenue_trees/Avenue_trees"
+import Avenue_trees_deciduous from "./pages/data/Avenue_trees/Avenue_trees_deciduous"
+import Avenue_trees_evergreen from "./pages/data/Avenue_trees/Avenue_trees_evergreen"
+import Avenue_trees_endemic from "./pages/data/Avenue_trees/Avenue_trees_endemic"
+import Avenue_trees_indigenous from "./pages/data/Avenue_trees/Avenue_trees_indigenous"
+import Avenue_trees_exotic from "./pages/data/Avenue_trees/Avenue_trees_exotic"
+import Avenue_trees_endangered from "./pages/data/Avenue_trees/Avenue_trees_endangered"
+import Avenue_trees_ConservationDependent from "./pages/data/Avenue_trees/conservationStatus/Avenue_trees_ConservationDependent"
+import Avenue_trees_CriticallyEndangered from "./pages/data/Avenue_trees/conservationStatus/Avenue_trees_CriticallyEndangered"
+import Avenue_trees_LeastConcern from "./pages/data/Avenue_trees/conservationStatus/Avenue_trees_LeastConcern"
+import Avenue_trees_NearThreatened from "./pages/data/Avenue_trees/conservationStatus/Avenue_trees_NearThreatened"
+import Avenue_trees_NotKnown from "./pages/data/Avenue_trees/conservationStatus/Avenue_trees_NotKnown"
+import Avenue_trees_Vulnerable from "./pages/data/Avenue_trees/conservationStatus/Avenue_trees_Vulnerable"
 
 function Router() {
     return (
@@ -482,6 +495,22 @@ function Router() {
                 <Route path="/Park_opp_workers_club/conservationstatus/Park_opp_workers_club-NearThreatened" element={<Park_opp_workers_club_NearThreatened />} />
                 <Route path="/Park_opp_workers_club/conservationstatus/Park_opp_workers_club-NotKnown" element={<Park_opp_workers_club_NotKnown />} />
                 <Route path="/Park_opp_workers_club/conservationstatus/Park_opp_workers_club-Vulnerable" element={<Park_opp_workers_club_Vulnerable />} />
+
+                {/* Avenue_trees */}
+                <Route path="/Avenue_trees" element={<Avenue_trees/>} />
+                <Route path="/Avenue_trees/Avenue_trees-deciduous" element={<Avenue_trees_deciduous />} />
+                <Route path="/Avenue_trees/Avenue_trees-evergreen" element={<Avenue_trees_evergreen />} />
+                <Route path="/Avenue_trees/Avenue_trees-endemic" element={<Avenue_trees_endemic />} />
+                <Route path="/Avenue_trees/Avenue_trees-indigenous" element={<Avenue_trees_indigenous />} />
+                <Route path="/Avenue_trees/Avenue_trees-exotic" element={<Avenue_trees_exotic />} />
+                <Route path="/Avenue_trees/Avenue_trees-endangered" element={<Avenue_trees_endangered />} />
+                {/* Avenue_trees  conservation status */}
+                <Route path="/Avenue_trees/conservationstatus/Avenue_trees-ConservationDependent" element={<Avenue_trees_ConservationDependent />} />
+                <Route path="/Avenue_trees/conservationstatus/Avenue_trees-CriticallyEndangered" element={<Avenue_trees_CriticallyEndangered />} />
+                <Route path="/Avenue_trees/conservationstatus/Avenue_trees-LeastConcern" element={<Avenue_trees_LeastConcern />} />
+                <Route path="/Avenue_trees/conservationstatus/Avenue_trees-NearThreatened" element={<Avenue_trees_NearThreatened />} />
+                <Route path="/Avenue_trees/conservationstatus/Avenue_trees-NotKnown" element={<Avenue_trees_NotKnown />} />
+                <Route path="/Avenue_trees/conservationstatus/Avenue_trees-Vulnerable" element={<Avenue_trees_Vulnerable />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>
