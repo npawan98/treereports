@@ -228,6 +228,19 @@ import Avenue_trees_LeastConcern from "./pages/data/Avenue_trees/conservationSta
 import Avenue_trees_NearThreatened from "./pages/data/Avenue_trees/conservationStatus/Avenue_trees_NearThreatened"
 import Avenue_trees_NotKnown from "./pages/data/Avenue_trees/conservationStatus/Avenue_trees_NotKnown"
 import Avenue_trees_Vulnerable from "./pages/data/Avenue_trees/conservationStatus/Avenue_trees_Vulnerable"
+import Park_opp_wine_board from "./pages/data/Park_opp_wine_board/Park_opp_wine_board"
+import Park_opp_wine_board_deciduous from "./pages/data/Park_opp_wine_board/Park_opp_wine_board_deciduous"
+import Park_opp_wine_board_evergreen from "./pages/data/Park_opp_wine_board/Park_opp_wine_board_evergreen"
+import Park_opp_wine_board_endemic from "./pages/data/Park_opp_wine_board/Park_opp_wine_board_endemic"
+import Park_opp_wine_board_indigenous from "./pages/data/Park_opp_wine_board/Park_opp_wine_board_indigenous"
+import Park_opp_wine_board_exotic from "./pages/data/Park_opp_wine_board/Park_opp_wine_board_exotic"
+import Park_opp_wine_board_endangered from "./pages/data/Park_opp_wine_board/Park_opp_wine_board_endangered"
+import Park_opp_wine_board_ConservationDependent from "./pages/data/Park_opp_wine_board/conservationStatus/Park_opp_wine_board_ConservationDependent"
+import Park_opp_wine_board_CriticallyEndangered from "./pages/data/Park_opp_wine_board/conservationStatus/Park_opp_wine_board_CriticallyEndangered"
+import Park_opp_wine_board_LeastConcern from "./pages/data/Park_opp_wine_board/conservationStatus/Park_opp_wine_board_LeastConcern"
+import Park_opp_wine_board_NearThreatened from "./pages/data/Park_opp_wine_board/conservationStatus/Park_opp_wine_board_NearThreatened"
+import Park_opp_wine_board_NotKnown from "./pages/data/Park_opp_wine_board/conservationStatus/Park_opp_wine_board_NotKnown"
+import Park_opp_wine_board_Vulnerable from "./pages/data/Park_opp_wine_board/conservationStatus/Park_opp_wine_board_Vulnerable"
 
 function Router() {
     return (
@@ -511,6 +524,23 @@ function Router() {
                 <Route path="/Avenue_trees/conservationstatus/Avenue_trees-NearThreatened" element={<Avenue_trees_NearThreatened />} />
                 <Route path="/Avenue_trees/conservationstatus/Avenue_trees-NotKnown" element={<Avenue_trees_NotKnown />} />
                 <Route path="/Avenue_trees/conservationstatus/Avenue_trees-Vulnerable" element={<Avenue_trees_Vulnerable />} />
+
+
+                {/* Park_opp_wine_board */}
+                <Route path="/Park_opp_wine_board" element={<Park_opp_wine_board/>} />
+                <Route path="/Park_opp_wine_board/Park_opp_wine_board-deciduous" element={<Park_opp_wine_board_deciduous />} />
+                <Route path="/Park_opp_wine_board/Park_opp_wine_board-evergreen" element={<Park_opp_wine_board_evergreen />} />
+                <Route path="/Park_opp_wine_board/Park_opp_wine_board-endemic" element={<Park_opp_wine_board_endemic />} />
+                <Route path="/Park_opp_wine_board/Park_opp_wine_board-indigenous" element={<Park_opp_wine_board_indigenous />} />
+                <Route path="/Park_opp_wine_board/Park_opp_wine_board-exotic" element={<Park_opp_wine_board_exotic />} />
+                <Route path="/Park_opp_wine_board/Park_opp_wine_board-endangered" element={<Park_opp_wine_board_endangered />} />
+                {/* Park_opp_wine_board conservation status */}
+                <Route path="/Park_opp_wine_board/conservationstatus/Park_opp_wine_board-ConservationDependent" element={<Park_opp_wine_board_ConservationDependent />} />
+                <Route path="/Park_opp_wine_board/conservationstatus/Park_opp_wine_board-CriticallyEndangered" element={<Park_opp_wine_board_CriticallyEndangered />} />
+                <Route path="/Park_opp_wine_board/conservationstatus/Park_opp_wine_board-LeastConcern" element={<Park_opp_wine_board_LeastConcern />} />
+                <Route path="/Park_opp_wine_board/conservationstatus/Park_opp_wine_board-NearThreatened" element={<Park_opp_wine_board_NearThreatened />} />
+                <Route path="/Park_opp_wine_board/conservationstatus/Park_opp_wine_board-NotKnown" element={<Park_opp_wine_board_NotKnown />} />
+                <Route path="/Park_opp_wine_board/conservationstatus/Park_opp_wine_board-Vulnerable" element={<Park_opp_wine_board_Vulnerable />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>
