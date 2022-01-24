@@ -241,6 +241,19 @@ import Park_opp_wine_board_LeastConcern from "./pages/data/Park_opp_wine_board/c
 import Park_opp_wine_board_NearThreatened from "./pages/data/Park_opp_wine_board/conservationStatus/Park_opp_wine_board_NearThreatened"
 import Park_opp_wine_board_NotKnown from "./pages/data/Park_opp_wine_board/conservationStatus/Park_opp_wine_board_NotKnown"
 import Park_opp_wine_board_Vulnerable from "./pages/data/Park_opp_wine_board/conservationStatus/Park_opp_wine_board_Vulnerable"
+import Kslta_hort_dept from "./pages/data/Kslta_hort_dept/Kslta_hort_dept"
+import Kslta_hort_dept_deciduous from "./pages/data/Kslta_hort_dept/Kslta_hort_dept_deciduous"
+import Kslta_hort_dept_evergreen from "./pages/data/Kslta_hort_dept/Kslta_hort_dept_evergreen"
+import Kslta_hort_dept_endemic from "./pages/data/Kslta_hort_dept/Kslta_hort_dept_endemic"
+import Kslta_hort_dept_indigenous from "./pages/data/Kslta_hort_dept/Kslta_hort_dept_indigenous"
+import Kslta_hort_dept_exotic from "./pages/data/Kslta_hort_dept/Kslta_hort_dept_exotic"
+import Kslta_hort_dept_endangered from "./pages/data/Kslta_hort_dept/Kslta_hort_dept_endangered"
+import Kslta_hort_dept_ConservationDependent from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_ConservationDependent"
+import Kslta_hort_dept_CriticallyEndangered from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_CriticallyEndangered"
+import Kslta_hort_dept_LeastConcern from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_LeastConcern"
+import Kslta_hort_dept_NearThreatened from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_NearThreatened"
+import Kslta_hort_dept_NotKnown from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_NotKnown"
+import Kslta_hort_dept_Vulnerable from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_Vulnerable"
 
 function Router() {
     return (
@@ -541,6 +554,23 @@ function Router() {
                 <Route path="/Park_opp_wine_board/conservationstatus/Park_opp_wine_board-NearThreatened" element={<Park_opp_wine_board_NearThreatened />} />
                 <Route path="/Park_opp_wine_board/conservationstatus/Park_opp_wine_board-NotKnown" element={<Park_opp_wine_board_NotKnown />} />
                 <Route path="/Park_opp_wine_board/conservationstatus/Park_opp_wine_board-Vulnerable" element={<Park_opp_wine_board_Vulnerable />} />
+
+
+                {/* Kslta_hort_dept */}
+                <Route path="/Kslta_hort_dept" element={<Kslta_hort_dept/>} />
+                <Route path="/Kslta_hort_dept/Kslta_hort_dept-deciduous" element={<Kslta_hort_dept_deciduous />} />
+                <Route path="/Kslta_hort_dept/Kslta_hort_dept-evergreen" element={<Kslta_hort_dept_evergreen />} />
+                <Route path="/Kslta_hort_dept/Kslta_hort_dept-endemic" element={<Kslta_hort_dept_endemic />} />
+                <Route path="/Kslta_hort_dept/Kslta_hort_dept-indigenous" element={<Kslta_hort_dept_indigenous />} />
+                <Route path="/Kslta_hort_dept/Kslta_hort_dept-exotic" element={<Kslta_hort_dept_exotic />} />
+                <Route path="/Kslta_hort_dept/Kslta_hort_dept-endangered" element={<Kslta_hort_dept_endangered />} />
+                {/* Kslta_hort_dept conservation status */}
+                <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-ConservationDependent" element={<Kslta_hort_dept_ConservationDependent />} />
+                <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-CriticallyEndangered" element={<Kslta_hort_dept_CriticallyEndangered />} />
+                <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-LeastConcern" element={<Kslta_hort_dept_LeastConcern />} />
+                <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-NearThreatened" element={<Kslta_hort_dept_NearThreatened />} />
+                <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-NotKnown" element={<Kslta_hort_dept_NotKnown />} />
+                <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-Vulnerable" element={<Kslta_hort_dept_Vulnerable />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>

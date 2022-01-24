@@ -70,6 +70,10 @@ const zones = [
     {
         zone:'Park Opp Wine Board',
         value:'park_opp_wine_board'
+    },
+    {
+        zone:'KSLTA + Hort Dept',
+        value:'kslta_hort_dept'
     }
 ];
 export default zones;
