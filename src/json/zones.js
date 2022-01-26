@@ -74,6 +74,10 @@ const zones = [
     {
         zone:'KSLTA + Hort Dept',
         value:'kslta_hort_dept'
+    },
+    {
+        zone:'Central Library',
+        value:'Central_library'
     }
 ];
 export default zones;

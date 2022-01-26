@@ -255,6 +255,19 @@ import Kslta_hort_dept_NearThreatened from "./pages/data/Kslta_hort_dept/conserv
 import Kslta_hort_dept_NotKnown from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_NotKnown"
 import Kslta_hort_dept_Vulnerable from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_Vulnerable"
 import AllTrees from "./pages/data/AllTrees/AllTrees"
+import Central_library from "./pages/data/Central_library/Central_library"
+import Central_library_deciduous from "./pages/data/Central_library/Central_library_deciduous"
+import Central_library_evergreen from "./pages/data/Central_library/Central_library_evergreen"
+import Central_library_endemic from "./pages/data/Central_library/Central_library_endemic"
+import Central_library_indigenous from "./pages/data/Central_library/Central_library_indigenous"
+import Central_library_exotic from "./pages/data/Central_library/Central_library_exotic"
+import Central_library_endangered from "./pages/data/Central_library/Central_library_endangered"
+import Central_library_ConservationDependent from "./pages/data/Central_library/conservationStatus/Central_library_ConservationDependent"
+import Central_library_CriticallyEndangered from "./pages/data/Central_library/conservationStatus/Central_library_CriticallyEndangered"
+import Central_library_LeastConcern from "./pages/data/Central_library/conservationStatus/Central_library_LeastConcern"
+import Central_library_NearThreatened from "./pages/data/Central_library/conservationStatus/Central_library_NearThreatened"
+import Central_library_NotKnown from "./pages/data/Central_library/conservationStatus/Central_library_NotKnown"
+import Central_library_Vulnerable from "./pages/data/Central_library/conservationStatus/Central_library_Vulnerable"
 
 function Router() {
     return (
@@ -572,6 +585,23 @@ function Router() {
                 <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-NearThreatened" element={<Kslta_hort_dept_NearThreatened />} />
                 <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-NotKnown" element={<Kslta_hort_dept_NotKnown />} />
                 <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-Vulnerable" element={<Kslta_hort_dept_Vulnerable />} />
+
+
+                {/* Central_library */}
+                <Route path="/Central_library" element={<Central_library/>} />
+                <Route path="/Central_library/Central_library-deciduous" element={<Central_library_deciduous />} />
+                <Route path="/Central_library/Central_library-evergreen" element={<Central_library_evergreen />} />
+                <Route path="/Central_library/Central_library-endemic" element={<Central_library_endemic />} />
+                <Route path="/Central_library/Central_library-indigenous" element={<Central_library_indigenous />} />
+                <Route path="/Central_library/Central_library-exotic" element={<Central_library_exotic />} />
+                <Route path="/Central_library/Central_library-endangered" element={<Central_library_endangered />} />
+                {/* Central_library conservation status */}
+                <Route path="/Central_library/conservationstatus/Central_library-ConservationDependent" element={<Central_library_ConservationDependent />} />
+                <Route path="/Central_library/conservationstatus/Central_library-CriticallyEndangered" element={<Central_library_CriticallyEndangered />} />
+                <Route path="/Central_library/conservationstatus/Central_library-LeastConcern" element={<Central_library_LeastConcern />} />
+                <Route path="/Central_library/conservationstatus/Central_library-NearThreatened" element={<Central_library_NearThreatened />} />
+                <Route path="/Central_library/conservationstatus/Central_library-NotKnown" element={<Central_library_NotKnown />} />
+                <Route path="/Central_library/conservationstatus/Central_library-Vulnerable" element={<Central_library_Vulnerable />} />
 
                 <Route path="/all-trees" element={<AllTrees />} />
                 
