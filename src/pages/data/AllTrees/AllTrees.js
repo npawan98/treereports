@@ -502,6 +502,30 @@ function AllTrees() {
 
     const arrWorkersConservation = [];
 
+    const [Central_libraryData, setCentral_libraryData] = useState([]);
+    const [Central_libraryEvergreen, setCentral_libraryEvergreen] = useState([]);
+    const [Central_libraryDeciduous, setCentral_libraryDeciduous] = useState([]);
+    const [Central_libraryEndemic, setCentral_libraryEndemic] = useState([]);
+    const [Central_libraryIndigenous, setCentral_libraryIndigenous] = useState([]);
+    const [Central_libraryExotic, setCentral_libraryExotic] = useState([]);
+    const [Central_libraryEndangered, setCentral_libraryEndangered] = useState([]);
+
+    const arrCentral_library = [];
+
+    const [Central_libraryEvergreenPhenology, setCentral_libraryEvergreenPhenology] = useState([]);
+    const [Central_libraryDeciduousPhenology, setCentral_libraryDeciduousPhenology] = useState([]);
+
+    const arrCentral_libraryPhenology = [];
+
+    const [Central_libraryLeastConcern, setCentral_libraryLeastConcern] = useState([]);
+    const [Central_libraryNotknown, setCentral_libraryNotknown] = useState([]);
+    const [Central_libraryNearThreatened, setCentral_libraryNearThreatened] = useState([]);
+    const [Central_libraryVulnerable, setCentral_libraryVulnerable] = useState([]);
+    const [Central_libraryCriticallyEndangered, setCentral_libraryCriticallyEndangered] = useState([]);
+    const [Central_libraryConservationDependent, setCentral_libraryConservationDependent] = useState([]);
+
+    const arrCentral_libraryConservation = [];
+
 
     useEffect(() => {
         axios.get("https://afternoon-mountain-93761.herokuapp.com/Avenue_trees_Evergreen").then((res) => {
@@ -1710,32 +1734,96 @@ function AllTrees() {
             setWorkersConservationDependent(res.data.length)
         })
 
+        // 
+
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/Central_library_Evergreen").then((res) => {
+      console.log(res.data.length);
+      setCentral_libraryEvergreen([res.data.length]);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/Central_library_Deciduous").then((res) => {
+      console.log(res.data.length);
+      setCentral_libraryDeciduous(res.data.length);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/Central_library_Endemic").then((res) => {
+      console.log(res.data.length);
+      setCentral_libraryEndemic(res.data.length);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/Central_library_Indigenous").then((res) => {
+      console.log(res.data.length);
+      setCentral_libraryIndigenous(res.data.length);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/Central_library_Exotic").then((res) => {
+      console.log(res.data.length);
+      setCentral_libraryExotic(res.data.length);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/Central_library_Endangered").then((res) => {
+      console.log(res.data.length);
+      setCentral_libraryEndangered(res.data.length);
+    });
+
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Central_library_Evergreen").then((res) => {
+      console.log(res.data.length);
+      setCentral_libraryEvergreenPhenology([res.data.length]);
+    });
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Central_library_Deciduous").then((res) => {
+      console.log(res.data.length);
+      setCentral_libraryDeciduousPhenology(res.data.length);
+    });
+
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/Central_libraryLeastConcern").then(res => {
+      console.log(res.data.length)
+      setCentral_libraryLeastConcern(res.data.length)
+
+    })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/Central_libraryNotknown").then(res => {
+      console.log(res.data)
+      setCentral_libraryNotknown(res.data.length)
+    })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/Central_libraryNearThreatened").then(res => {
+      console.log(res.data.length)
+      setCentral_libraryNearThreatened(res.data.length)
+    })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/Central_libraryVulnerable").then(res => {
+      console.log(res.data.length)
+      setCentral_libraryVulnerable(res.data.length)
+    })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/Central_libraryCriticallyEndangered").then(res => {
+      console.log(res.data.length)
+      setCentral_libraryCriticallyEndangered(res.data.length)
+    })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationstatus/Central_libraryConservationDependent").then(res => {
+      console.log(res.data.length)
+      setCentral_libraryConservationDependent(res.data.length)
+    })
+
     }, []);
 
     arrMaster.push(
-        parseInt(Avenue_treesEvergreen) + parseInt(Bal_bhavanEvergreen) + parseInt(CircularEvergreen) + parseInt(dogEvergreen) + parseInt(EdwardEvergreen) + parseInt(High_courtEvergreen) + parseInt(Kslta_hort_deptEvergreen) + parseInt(Park_1Evergreen) + parseInt(Park_2Evergreen) + parseInt(Park_opp_snake_parkEvergreen) + parseInt(Park_opp_wine_boardEvergreen) + parseInt(Park_opp_workers_clubEvergreen) + parseInt(RoseEvergreen) + parseInt(SecretaryEvergreen) + parseInt(SnakeEvergreen) + parseInt(TriangularEvergreen) + parseInt(VictoriaEvergreen) + parseInt(WineEvergreen) + parseInt(WorkersEvergreen),
-        parseInt(Avenue_treesDeciduous) + parseInt(Bal_bhavanDeciduous) + parseInt(CircularDeciduous) + parseInt(dogDeciduous) + parseInt(EdwardDeciduous) + parseInt(High_courtDeciduous) + parseInt(Kslta_hort_deptDeciduous) + parseInt(Park_1Deciduous) + parseInt(Park_2Deciduous) + parseInt(Park_opp_snake_parkDeciduous) + parseInt(Park_opp_wine_boardDeciduous) + parseInt(Park_opp_workers_clubDeciduous) + parseInt(RoseDeciduous) + parseInt(SecretaryDeciduous) + parseInt(SnakeDeciduous) + parseInt(TriangularDeciduous) + parseInt(VictoriaDeciduous) + parseInt(WineDeciduous) + parseInt(WorkersDeciduous),
-        parseInt(Avenue_treesEndemic) + parseInt(Bal_bhavanEndemic) + parseInt(CircularEndemic) + parseInt(dogEndemic) + parseInt(EdwardEndemic) + parseInt(High_courtEndemic) + parseInt(Kslta_hort_deptEndemic) + parseInt(Park_1Endemic) + parseInt(Park_2Endemic) + parseInt(Park_opp_snake_parkEndemic) + parseInt(Park_opp_wine_boardEndemic) + parseInt(Park_opp_workers_clubEndemic) + parseInt(RoseEndemic) + parseInt(SecretaryEndemic) + parseInt(SnakeEndemic) + parseInt(TriangularEndemic) + parseInt(VictoriaEndemic) + parseInt(WineEndemic) + parseInt(WorkersEndemic),
-        parseInt(Avenue_treesIndigenous) + parseInt(Bal_bhavanIndigenous) + parseInt(CircularIndigenous) + parseInt(dogIndigenous) + parseInt(EdwardIndigenous) + parseInt(High_courtIndigenous) + parseInt(Kslta_hort_deptIndigenous) + parseInt(Park_1Indigenous) + parseInt(Park_2Indigenous) + parseInt(Park_opp_snake_parkIndigenous) + parseInt(Park_opp_wine_boardIndigenous) + parseInt(Park_opp_workers_clubIndigenous) + parseInt(RoseIndigenous) + parseInt(SecretaryIndigenous) + parseInt(SnakeIndigenous) + parseInt(TriangularIndigenous) + parseInt(VictoriaIndigenous) + parseInt(WineIndigenous) + parseInt(WorkersIndigenous),
-        parseInt(Avenue_treesExotic) + parseInt(Bal_bhavanExotic) + parseInt(CircularExotic) + parseInt(dogExotic) + parseInt(EdwardExotic) + parseInt(High_courtExotic) + parseInt(Kslta_hort_deptExotic) + parseInt(Park_1Exotic) + parseInt(Park_2Exotic) + parseInt(Park_opp_snake_parkExotic) + parseInt(Park_opp_wine_boardExotic) + parseInt(Park_opp_workers_clubExotic) + parseInt(RoseExotic) + parseInt(SecretaryExotic) + parseInt(SnakeExotic) + parseInt(TriangularExotic) + parseInt(VictoriaExotic) + parseInt(WineExotic) + parseInt(WorkersExotic),
-        parseInt(Avenue_treesEndangered) + parseInt(Bal_bhavanEndangered) + parseInt(CircularEndangered) + parseInt(dogEndangered) + parseInt(EdwardEndangered) + parseInt(High_courtEndangered) + parseInt(Kslta_hort_deptEndangered) + parseInt(Park_1Endangered) + parseInt(Park_2Endangered) + parseInt(Park_opp_snake_parkEndangered) + parseInt(Park_opp_wine_boardEndangered) + parseInt(Park_opp_workers_clubEndangered) + parseInt(RoseEndangered) + parseInt(SecretaryEndangered) + parseInt(SnakeEndangered) + parseInt(TriangularEndangered) + parseInt(VictoriaEndangered) + parseInt(WineEndangered) + parseInt(WorkersEndangered),
+        parseInt(Avenue_treesEvergreen) + parseInt(Bal_bhavanEvergreen) + parseInt(CircularEvergreen) + parseInt(dogEvergreen) + parseInt(EdwardEvergreen) + parseInt(High_courtEvergreen) + parseInt(Kslta_hort_deptEvergreen) + parseInt(Park_1Evergreen) + parseInt(Park_2Evergreen) + parseInt(Park_opp_snake_parkEvergreen) + parseInt(Park_opp_wine_boardEvergreen) + parseInt(Park_opp_workers_clubEvergreen) + parseInt(RoseEvergreen) + parseInt(SecretaryEvergreen) + parseInt(SnakeEvergreen) + parseInt(TriangularEvergreen) + parseInt(VictoriaEvergreen) + parseInt(WineEvergreen) + parseInt(WorkersEvergreen) + parseInt(Central_libraryEvergreen),
+        parseInt(Avenue_treesDeciduous) + parseInt(Bal_bhavanDeciduous) + parseInt(CircularDeciduous) + parseInt(dogDeciduous) + parseInt(EdwardDeciduous) + parseInt(High_courtDeciduous) + parseInt(Kslta_hort_deptDeciduous) + parseInt(Park_1Deciduous) + parseInt(Park_2Deciduous) + parseInt(Park_opp_snake_parkDeciduous) + parseInt(Park_opp_wine_boardDeciduous) + parseInt(Park_opp_workers_clubDeciduous) + parseInt(RoseDeciduous) + parseInt(SecretaryDeciduous) + parseInt(SnakeDeciduous) + parseInt(TriangularDeciduous) + parseInt(VictoriaDeciduous) + parseInt(WineDeciduous) + parseInt(WorkersDeciduous) + parseInt(Central_libraryDeciduous),
+        parseInt(Avenue_treesEndemic) + parseInt(Bal_bhavanEndemic) + parseInt(CircularEndemic) + parseInt(dogEndemic) + parseInt(EdwardEndemic) + parseInt(High_courtEndemic) + parseInt(Kslta_hort_deptEndemic) + parseInt(Park_1Endemic) + parseInt(Park_2Endemic) + parseInt(Park_opp_snake_parkEndemic) + parseInt(Park_opp_wine_boardEndemic) + parseInt(Park_opp_workers_clubEndemic) + parseInt(RoseEndemic) + parseInt(SecretaryEndemic) + parseInt(SnakeEndemic) + parseInt(TriangularEndemic) + parseInt(VictoriaEndemic) + parseInt(WineEndemic) + parseInt(WorkersEndemic) + parseInt(Central_libraryEndemic),
+        parseInt(Avenue_treesIndigenous) + parseInt(Bal_bhavanIndigenous) + parseInt(CircularIndigenous) + parseInt(dogIndigenous) + parseInt(EdwardIndigenous) + parseInt(High_courtIndigenous) + parseInt(Kslta_hort_deptIndigenous) + parseInt(Park_1Indigenous) + parseInt(Park_2Indigenous) + parseInt(Park_opp_snake_parkIndigenous) + parseInt(Park_opp_wine_boardIndigenous) + parseInt(Park_opp_workers_clubIndigenous) + parseInt(RoseIndigenous) + parseInt(SecretaryIndigenous) + parseInt(SnakeIndigenous) + parseInt(TriangularIndigenous) + parseInt(VictoriaIndigenous) + parseInt(WineIndigenous) + parseInt(WorkersIndigenous) + parseInt(Central_libraryIndigenous),
+        parseInt(Avenue_treesExotic) + parseInt(Bal_bhavanExotic) + parseInt(CircularExotic) + parseInt(dogExotic) + parseInt(EdwardExotic) + parseInt(High_courtExotic) + parseInt(Kslta_hort_deptExotic) + parseInt(Park_1Exotic) + parseInt(Park_2Exotic) + parseInt(Park_opp_snake_parkExotic) + parseInt(Park_opp_wine_boardExotic) + parseInt(Park_opp_workers_clubExotic) + parseInt(RoseExotic) + parseInt(SecretaryExotic) + parseInt(SnakeExotic) + parseInt(TriangularExotic) + parseInt(VictoriaExotic) + parseInt(WineExotic) + parseInt(WorkersExotic) + parseInt(Central_libraryExotic),
+        parseInt(Avenue_treesEndangered) + parseInt(Bal_bhavanEndangered) + parseInt(CircularEndangered) + parseInt(dogEndangered) + parseInt(EdwardEndangered) + parseInt(High_courtEndangered) + parseInt(Kslta_hort_deptEndangered) + parseInt(Park_1Endangered) + parseInt(Park_2Endangered) + parseInt(Park_opp_snake_parkEndangered) + parseInt(Park_opp_wine_boardEndangered) + parseInt(Park_opp_workers_clubEndangered) + parseInt(RoseEndangered) + parseInt(SecretaryEndangered) + parseInt(SnakeEndangered) + parseInt(TriangularEndangered) + parseInt(VictoriaEndangered) + parseInt(WineEndangered) + parseInt(WorkersEndangered) + parseInt(Central_libraryEndangered),
     )
     console.log("master",arrMaster);
 
     arrMasterPhenology.push(
-        parseInt(Avenue_treesEvergreenPhenology) + parseInt(Bal_bhavanEvergreenPhenology) + parseInt(CircularEvergreenPhenology) + parseInt(dogEvergreenPhenology) + parseInt(EdwardEvergreenPhenology) + parseInt(High_courtEvergreenPhenology) + parseInt(Kslta_hort_deptEvergreenPhenology) + parseInt(Park_1EvergreenPhenology) + parseInt(Park_2EvergreenPhenology) + parseInt(Park_opp_snake_parkEvergreenPhenology) + parseInt(Park_opp_wine_boardEvergreenPhenology) + parseInt(Park_opp_workers_clubEvergreenPhenology) + parseInt(RoseEvergreenPhenology) + parseInt(SecretaryEvergreenPhenology) + parseInt(SnakeEvergreenPhenology) + parseInt(TriangularEvergreenPhenology) + parseInt(VictoriaEvergreenPhenology) + parseInt(WineEvergreenPhenology) + parseInt(WorkersEvergreenPhenology),
-        parseInt(Avenue_treesDeciduousPhenology) + parseInt(Bal_bhavanDeciduousPhenology) + parseInt(CircularDeciduousPhenology) + parseInt(dogDeciduousPhenology) + parseInt(EdwardDeciduousPhenology) + parseInt(High_courtDeciduousPhenology) + parseInt(Kslta_hort_deptDeciduousPhenology) + parseInt(Park_1DeciduousPhenology) + parseInt(Park_2DeciduousPhenology) + parseInt(Park_opp_snake_parkDeciduousPhenology) + parseInt(Park_opp_wine_boardDeciduousPhenology) + parseInt(Park_opp_workers_clubDeciduousPhenology) + parseInt(RoseDeciduousPhenology) + parseInt(SecretaryDeciduousPhenology) + parseInt(SnakeDeciduousPhenology) + parseInt(TriangularDeciduousPhenology) + parseInt(VictoriaDeciduousPhenology) + parseInt(WineDeciduousPhenology) + parseInt(WorkersDeciduousPhenology),
+        parseInt(Avenue_treesEvergreenPhenology) + parseInt(Bal_bhavanEvergreenPhenology) + parseInt(CircularEvergreenPhenology) + parseInt(dogEvergreenPhenology) + parseInt(EdwardEvergreenPhenology) + parseInt(High_courtEvergreenPhenology) + parseInt(Kslta_hort_deptEvergreenPhenology) + parseInt(Park_1EvergreenPhenology) + parseInt(Park_2EvergreenPhenology) + parseInt(Park_opp_snake_parkEvergreenPhenology) + parseInt(Park_opp_wine_boardEvergreenPhenology) + parseInt(Park_opp_workers_clubEvergreenPhenology) + parseInt(RoseEvergreenPhenology) + parseInt(SecretaryEvergreenPhenology) + parseInt(SnakeEvergreenPhenology) + parseInt(TriangularEvergreenPhenology) + parseInt(VictoriaEvergreenPhenology) + parseInt(WineEvergreenPhenology) + parseInt(WorkersEvergreenPhenology) + parseInt(Central_libraryEvergreenPhenology),
+        parseInt(Avenue_treesDeciduousPhenology) + parseInt(Bal_bhavanDeciduousPhenology) + parseInt(CircularDeciduousPhenology) + parseInt(dogDeciduousPhenology) + parseInt(EdwardDeciduousPhenology) + parseInt(High_courtDeciduousPhenology) + parseInt(Kslta_hort_deptDeciduousPhenology) + parseInt(Park_1DeciduousPhenology) + parseInt(Park_2DeciduousPhenology) + parseInt(Park_opp_snake_parkDeciduousPhenology) + parseInt(Park_opp_wine_boardDeciduousPhenology) + parseInt(Park_opp_workers_clubDeciduousPhenology) + parseInt(RoseDeciduousPhenology) + parseInt(SecretaryDeciduousPhenology) + parseInt(SnakeDeciduousPhenology) + parseInt(TriangularDeciduousPhenology) + parseInt(VictoriaDeciduousPhenology) + parseInt(WineDeciduousPhenology) + parseInt(WorkersDeciduousPhenology) + parseInt(Central_libraryDeciduousPhenology),
     )
 
     console.log("master phenology",arrMasterPhenology);
 
     arrMasterConservation.push(
-        parseInt(Avenue_treesLeastConcern) + parseInt(Bal_bhavanLeastConcern) + parseInt(CircularLeastConcern) + parseInt(dogLeastConcern) + parseInt(EdwardLeastConcern) + parseInt(High_courtLeastConcern) + parseInt(Kslta_hort_deptLeastConcern) + parseInt(Park_1LeastConcern) + parseInt(Park_2LeastConcern) + parseInt(Park_opp_snake_parkLeastConcern) + parseInt(Park_opp_wine_boardLeastConcern) + parseInt(Park_opp_workers_clubLeastConcern) + parseInt(RoseLeastConcern) + parseInt(SecretaryLeastConcern) + parseInt(SnakeLeastConcern) + parseInt(TriangularLeastConcern) + parseInt(VictoriaLeastConcern) + parseInt(WineLeastConcern) + parseInt(WorkersLeastConcern),
-        parseInt(Avenue_treesNotknown) + parseInt(Bal_bhavanNotknown) + parseInt(CircularNotknown) + parseInt(dogNotknown) + parseInt(EdwardNotknown) + parseInt(High_courtNotknown) + parseInt(Kslta_hort_deptNotknown) + parseInt(Park_1Notknown) + parseInt(Park_2Notknown) + parseInt(Park_opp_snake_parkNotknown) + parseInt(Park_opp_wine_boardNotknown) + parseInt(Park_opp_workers_clubNotknown) + parseInt(RoseNotknown) + parseInt(SecretaryNotknown) + parseInt(SnakeNotknown) + parseInt(TriangularNotknown) + parseInt(VictoriaNotknown) + parseInt(WineNotknown) + parseInt(WorkersNotknown),
-        parseInt(Avenue_treesNearThreatened) + parseInt(Bal_bhavanNearThreatened) + parseInt(CircularNearThreatened) + parseInt(dogNearThreatened) + parseInt(EdwardNearThreatened) + parseInt(High_courtNearThreatened) + parseInt(Kslta_hort_deptNearThreatened) + parseInt(Park_1NearThreatened) + parseInt(Park_2NearThreatened) + parseInt(Park_opp_snake_parkNearThreatened) + parseInt(Park_opp_wine_boardNearThreatened) + parseInt(Park_opp_workers_clubNearThreatened) + parseInt(RoseNearThreatened) + parseInt(SecretaryNearThreatened) + parseInt(SnakeNearThreatened) + parseInt(TriangularNearThreatened) + parseInt(VictoriaNearThreatened) + parseInt(WineNearThreatened) + parseInt(WorkersNearThreatened),
-        parseInt(Avenue_treesVulnerable) + parseInt(Bal_bhavanVulnerable) + parseInt(CircularVulnerable) + parseInt(dogVulnerable) + parseInt(EdwardVulnerable) + parseInt(High_courtVulnerable) + parseInt(Kslta_hort_deptVulnerable) + parseInt(Park_1Vulnerable) + parseInt(Park_2Vulnerable) + parseInt(Park_opp_snake_parkVulnerable) + parseInt(Park_opp_wine_boardVulnerable) + parseInt(Park_opp_workers_clubVulnerable) + parseInt(RoseVulnerable) + parseInt(SecretaryVulnerable) + parseInt(SnakeVulnerable) + parseInt(TriangularVulnerable) + parseInt(VictoriaVulnerable) + parseInt(WineVulnerable) + parseInt(WorkersVulnerable),
-        parseInt(Avenue_treesCriticallyEndangered) + parseInt(Bal_bhavanCriticallyEndangered) + parseInt(CircularCriticallyEndangered) + parseInt(dogCriticallyEndangered) + parseInt(EdwardCriticallyEndangered) + parseInt(High_courtCriticallyEndangered) + parseInt(Kslta_hort_deptCriticallyEndangered) + parseInt(Park_1CriticallyEndangered) + parseInt(Park_2CriticallyEndangered) + parseInt(Park_opp_snake_parkCriticallyEndangered) + parseInt(Park_opp_wine_boardCriticallyEndangered) + parseInt(Park_opp_workers_clubCriticallyEndangered) + parseInt(RoseCriticallyEndangered) + parseInt(SecretaryCriticallyEndangered) + parseInt(SnakeCriticallyEndangered) + parseInt(TriangularCriticallyEndangered) + parseInt(VictoriaCriticallyEndangered) + parseInt(WineCriticallyEndangered) + parseInt(WorkersCriticallyEndangered),
-        parseInt(Avenue_treesConservationDependent) + parseInt(Bal_bhavanConservationDependent) + parseInt(CircularConservationDependent) + parseInt(dogConservationDependent) + parseInt(EdwardConservationDependent) + parseInt(High_courtConservationDependent) + parseInt(Kslta_hort_deptConservationDependent) + parseInt(Park_1ConservationDependent) + parseInt(Park_2ConservationDependent) + parseInt(Park_opp_snake_parkConservationDependent) + parseInt(Park_opp_wine_boardConservationDependent) + parseInt(Park_opp_workers_clubConservationDependent) + parseInt(RoseConservationDependent) + parseInt(SecretaryConservationDependent) + parseInt(SnakeConservationDependent) + parseInt(TriangularConservationDependent) + parseInt(VictoriaConservationDependent) + parseInt(WineConservationDependent) + parseInt(WorkersConservationDependent),
+        parseInt(Avenue_treesLeastConcern) + parseInt(Bal_bhavanLeastConcern) + parseInt(CircularLeastConcern) + parseInt(dogLeastConcern) + parseInt(EdwardLeastConcern) + parseInt(High_courtLeastConcern) + parseInt(Kslta_hort_deptLeastConcern) + parseInt(Park_1LeastConcern) + parseInt(Park_2LeastConcern) + parseInt(Park_opp_snake_parkLeastConcern) + parseInt(Park_opp_wine_boardLeastConcern) + parseInt(Park_opp_workers_clubLeastConcern) + parseInt(RoseLeastConcern) + parseInt(SecretaryLeastConcern) + parseInt(SnakeLeastConcern) + parseInt(TriangularLeastConcern) + parseInt(VictoriaLeastConcern) + parseInt(WineLeastConcern) + parseInt(WorkersLeastConcern) + parseInt(Central_libraryLeastConcern),
+        parseInt(Avenue_treesNotknown) + parseInt(Bal_bhavanNotknown) + parseInt(CircularNotknown) + parseInt(dogNotknown) + parseInt(EdwardNotknown) + parseInt(High_courtNotknown) + parseInt(Kslta_hort_deptNotknown) + parseInt(Park_1Notknown) + parseInt(Park_2Notknown) + parseInt(Park_opp_snake_parkNotknown) + parseInt(Park_opp_wine_boardNotknown) + parseInt(Park_opp_workers_clubNotknown) + parseInt(RoseNotknown) + parseInt(SecretaryNotknown) + parseInt(SnakeNotknown) + parseInt(TriangularNotknown) + parseInt(VictoriaNotknown) + parseInt(WineNotknown) + parseInt(WorkersNotknown) + parseInt(Central_libraryNotknown),
+        parseInt(Avenue_treesNearThreatened) + parseInt(Bal_bhavanNearThreatened) + parseInt(CircularNearThreatened) + parseInt(dogNearThreatened) + parseInt(EdwardNearThreatened) + parseInt(High_courtNearThreatened) + parseInt(Kslta_hort_deptNearThreatened) + parseInt(Park_1NearThreatened) + parseInt(Park_2NearThreatened) + parseInt(Park_opp_snake_parkNearThreatened) + parseInt(Park_opp_wine_boardNearThreatened) + parseInt(Park_opp_workers_clubNearThreatened) + parseInt(RoseNearThreatened) + parseInt(SecretaryNearThreatened) + parseInt(SnakeNearThreatened) + parseInt(TriangularNearThreatened) + parseInt(VictoriaNearThreatened) + parseInt(WineNearThreatened) + parseInt(WorkersNearThreatened) + parseInt(Central_libraryNearThreatened),
+        parseInt(Avenue_treesVulnerable) + parseInt(Bal_bhavanVulnerable) + parseInt(CircularVulnerable) + parseInt(dogVulnerable) + parseInt(EdwardVulnerable) + parseInt(High_courtVulnerable) + parseInt(Kslta_hort_deptVulnerable) + parseInt(Park_1Vulnerable) + parseInt(Park_2Vulnerable) + parseInt(Park_opp_snake_parkVulnerable) + parseInt(Park_opp_wine_boardVulnerable) + parseInt(Park_opp_workers_clubVulnerable) + parseInt(RoseVulnerable) + parseInt(SecretaryVulnerable) + parseInt(SnakeVulnerable) + parseInt(TriangularVulnerable) + parseInt(VictoriaVulnerable) + parseInt(WineVulnerable) + parseInt(WorkersVulnerable) + parseInt(Central_libraryVulnerable),
+        parseInt(Avenue_treesCriticallyEndangered) + parseInt(Bal_bhavanCriticallyEndangered) + parseInt(CircularCriticallyEndangered) + parseInt(dogCriticallyEndangered) + parseInt(EdwardCriticallyEndangered) + parseInt(High_courtCriticallyEndangered) + parseInt(Kslta_hort_deptCriticallyEndangered) + parseInt(Park_1CriticallyEndangered) + parseInt(Park_2CriticallyEndangered) + parseInt(Park_opp_snake_parkCriticallyEndangered) + parseInt(Park_opp_wine_boardCriticallyEndangered) + parseInt(Park_opp_workers_clubCriticallyEndangered) + parseInt(RoseCriticallyEndangered) + parseInt(SecretaryCriticallyEndangered) + parseInt(SnakeCriticallyEndangered) + parseInt(TriangularCriticallyEndangered) + parseInt(VictoriaCriticallyEndangered) + parseInt(WineCriticallyEndangered) + parseInt(WorkersCriticallyEndangered) + parseInt(Central_libraryCriticallyEndangered),
+        parseInt(Avenue_treesConservationDependent) + parseInt(Bal_bhavanConservationDependent) + parseInt(CircularConservationDependent) + parseInt(dogConservationDependent) + parseInt(EdwardConservationDependent) + parseInt(High_courtConservationDependent) + parseInt(Kslta_hort_deptConservationDependent) + parseInt(Park_1ConservationDependent) + parseInt(Park_2ConservationDependent) + parseInt(Park_opp_snake_parkConservationDependent) + parseInt(Park_opp_wine_boardConservationDependent) + parseInt(Park_opp_workers_clubConservationDependent) + parseInt(RoseConservationDependent) + parseInt(SecretaryConservationDependent) + parseInt(SnakeConservationDependent) + parseInt(TriangularConservationDependent) + parseInt(VictoriaConservationDependent) + parseInt(WineConservationDependent) + parseInt(WorkersConservationDependent) + parseInt(Central_libraryConservationDependent),
     )
 
     console.log("master conservation",arrMasterConservation);
