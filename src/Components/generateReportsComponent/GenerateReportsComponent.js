@@ -12,9 +12,11 @@ function GenerateReportsComponent() {
 
             <div className="Generate__report--container--main">
                 <div>
+                    <Link to="/all-trees" style={{textDecoration:"none"}}>
                     <div>
-                        <Button btn_text="All Reports"/>
+                        <Button btn_text="Total Overview"/>
                     </div>
+                    </Link>
                     <Link to="/generate_by_zone" style={{textDecoration:"none"}}>
                     <div>
                         <Button btn_text="By Zone"/>

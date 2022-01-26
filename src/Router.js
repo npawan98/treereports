@@ -254,6 +254,7 @@ import Kslta_hort_dept_LeastConcern from "./pages/data/Kslta_hort_dept/conservat
 import Kslta_hort_dept_NearThreatened from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_NearThreatened"
 import Kslta_hort_dept_NotKnown from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_NotKnown"
 import Kslta_hort_dept_Vulnerable from "./pages/data/Kslta_hort_dept/conservationStatus/Kslta_hort_dept_Vulnerable"
+import AllTrees from "./pages/data/AllTrees/AllTrees"
 
 function Router() {
     return (
@@ -571,6 +572,8 @@ function Router() {
                 <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-NearThreatened" element={<Kslta_hort_dept_NearThreatened />} />
                 <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-NotKnown" element={<Kslta_hort_dept_NotKnown />} />
                 <Route path="/Kslta_hort_dept/conservationstatus/Kslta_hort_dept-Vulnerable" element={<Kslta_hort_dept_Vulnerable />} />
+
+                <Route path="/all-trees" element={<AllTrees />} />
                 
                 <Route exact path="/downloadSpecie/:Snum" element={<DownloadSpecie />} />
             </Routes>
