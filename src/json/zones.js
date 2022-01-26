@@ -78,6 +78,10 @@ const zones = [
     {
         zone:'Central Library',
         value:'Central_library'
+    },
+    {
+        zone:'Lotus Pond + Kargadhakunte',
+        value:'Lotus_pond_kargadhakunte'
     }
 ];
 export default zones;

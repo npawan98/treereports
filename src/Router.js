@@ -268,6 +268,19 @@ import Central_library_LeastConcern from "./pages/data/Central_library/conservat
 import Central_library_NearThreatened from "./pages/data/Central_library/conservationStatus/Central_library_NearThreatened"
 import Central_library_NotKnown from "./pages/data/Central_library/conservationStatus/Central_library_NotKnown"
 import Central_library_Vulnerable from "./pages/data/Central_library/conservationStatus/Central_library_Vulnerable"
+import Lotus_pond_kargadhakunte from "./pages/data/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte"
+import Lotus_pond_kargadhakunte_deciduous from "./pages/data/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte_deciduous"
+import Lotus_pond_kargadhakunte_evergreen from "./pages/data/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte_evergreen"
+import Lotus_pond_kargadhakunte_endemic from "./pages/data/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte_endemic"
+import Lotus_pond_kargadhakunte_indigenous from "./pages/data/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte_indigenous"
+import Lotus_pond_kargadhakunte_exotic from "./pages/data/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte_exotic"
+import Lotus_pond_kargadhakunte_endangered from "./pages/data/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte_endangered"
+import Lotus_pond_kargadhakunte_ConservationDependent from "./pages/data/Lotus_pond_kargadhakunte/conservationStatus/Lotus_pond_kargadhakunte_ConservationDependent"
+import Lotus_pond_kargadhakunte_CriticallyEndangered from "./pages/data/Lotus_pond_kargadhakunte/conservationStatus/Lotus_pond_kargadhakunte_CriticallyEndangered"
+import Lotus_pond_kargadhakunte_LeastConcern from "./pages/data/Lotus_pond_kargadhakunte/conservationStatus/Lotus_pond_kargadhakunte_LeastConcern"
+import Lotus_pond_kargadhakunte_NearThreatened from "./pages/data/Lotus_pond_kargadhakunte/conservationStatus/Lotus_pond_kargadhakunte_NearThreatened"
+import Lotus_pond_kargadhakunte_NotKnown from "./pages/data/Lotus_pond_kargadhakunte/conservationStatus/Lotus_pond_kargadhakunte_NotKnown"
+import Lotus_pond_kargadhakunte_Vulnerable from "./pages/data/Lotus_pond_kargadhakunte/conservationStatus/Lotus_pond_kargadhakunte_Vulnerable"
 
 function Router() {
     return (
@@ -602,6 +615,22 @@ function Router() {
                 <Route path="/Central_library/conservationstatus/Central_library-NearThreatened" element={<Central_library_NearThreatened />} />
                 <Route path="/Central_library/conservationstatus/Central_library-NotKnown" element={<Central_library_NotKnown />} />
                 <Route path="/Central_library/conservationstatus/Central_library-Vulnerable" element={<Central_library_Vulnerable />} />
+
+                {/* Lotus_pond_kargadhakunte */}
+                <Route path="/Lotus_pond_kargadhakunte" element={<Lotus_pond_kargadhakunte/>} />
+                <Route path="/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte-deciduous" element={<Lotus_pond_kargadhakunte_deciduous />} />
+                <Route path="/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte-evergreen" element={<Lotus_pond_kargadhakunte_evergreen />} />
+                <Route path="/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte-endemic" element={<Lotus_pond_kargadhakunte_endemic />} />
+                <Route path="/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte-indigenous" element={<Lotus_pond_kargadhakunte_indigenous />} />
+                <Route path="/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte-exotic" element={<Lotus_pond_kargadhakunte_exotic />} />
+                <Route path="/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte-endangered" element={<Lotus_pond_kargadhakunte_endangered />} />
+                {/* Lotus_pond_kargadhakunte conservation status */}
+                <Route path="/Lotus_pond_kargadhakunte/conservationstatus/Lotus_pond_kargadhakunte-ConservationDependent" element={<Lotus_pond_kargadhakunte_ConservationDependent />} />
+                <Route path="/Lotus_pond_kargadhakunte/conservationstatus/Lotus_pond_kargadhakunte-CriticallyEndangered" element={<Lotus_pond_kargadhakunte_CriticallyEndangered />} />
+                <Route path="/Lotus_pond_kargadhakunte/conservationstatus/Lotus_pond_kargadhakunte-LeastConcern" element={<Lotus_pond_kargadhakunte_LeastConcern />} />
+                <Route path="/Lotus_pond_kargadhakunte/conservationstatus/Lotus_pond_kargadhakunte-NearThreatened" element={<Lotus_pond_kargadhakunte_NearThreatened />} />
+                <Route path="/Lotus_pond_kargadhakunte/conservationstatus/Lotus_pond_kargadhakunte-NotKnown" element={<Lotus_pond_kargadhakunte_NotKnown />} />
+                <Route path="/Lotus_pond_kargadhakunte/conservationstatus/Lotus_pond_kargadhakunte-Vulnerable" element={<Lotus_pond_kargadhakunte_Vulnerable />} />
 
                 <Route path="/all-trees" element={<AllTrees />} />
                 
