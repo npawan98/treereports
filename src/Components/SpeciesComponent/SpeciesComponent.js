@@ -4,6 +4,7 @@ import Button from '../Common/ButtonComponent/Button'
 import zones from '../../json/zones'
 import { useState } from 'react';
 import SpeciesTable from '../Common/MUI-table/SpeciesTable/SpeciesTable';
+import SpeciesDonut from './SpeciesDonut';
 function SpeciesComponent() {
 
     const [zone,setZone] = useState("");
@@ -20,6 +21,7 @@ function SpeciesComponent() {
             </div>
 
             <div className="reports__zone--main">
+                <SpeciesDonut/>
                <SpeciesTable/>
             
             </div>
