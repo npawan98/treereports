@@ -121,7 +121,7 @@ function SpeciesDonut() {
 
   return <div style={{display: 'flex', overflowX:"scroll"}}>
       <DonutChart
-          title="Bal_bhavan Park (Phenology)"
+          title="Specie Type"
           values={species_type}
           labels={[
             "Evergreen",
@@ -134,7 +134,7 @@ function SpeciesDonut() {
         />
 
 <DonutChart
-          title="Bal_bhavan Park (Phenology)"
+          title="Conservation Staus"
           values={species_conservation}
           labels={[
             "LeastConcern",
@@ -147,7 +147,7 @@ function SpeciesDonut() {
         />
 
 <DonutChart
-          title="Bal_bhavan Park (Phenology)"
+          title="Phenology"
           values={species_phenology}
           labels={[
             "Evergreen",
