@@ -21,6 +21,9 @@ function Central_libraryTable() {
     const[Central_libraryExotic,setCentral_libraryExotic] = useState([]);
     const[Central_libraryEndangered,setCentral_libraryEndangered] = useState([]);
 
+    const [Central_librarySemiDeciduousPhenology, setCentral_librarySemiDeciduousPhenology] = useState([]);
+
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Central_library_Evergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +50,11 @@ function Central_libraryTable() {
         console.log(res.data)
         setCentral_libraryEndangered(res.data)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Central_library_Deciduous").then((res) => {
+      console.log(res.data.length);
+      setCentral_librarySemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +71,10 @@ function Central_libraryTable() {
         <TableRow onClick={()=>{window.location.assign("/Central_library/Central_library-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{Central_libraryEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Central_library/Central_library-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{Central_librarySemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Central_library/Central_library-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
