@@ -21,6 +21,9 @@ function Lotus_pond_kargadhakunte() {
   const [Lotus_pond_kargadhakunteEvergreenPhenology, setLotus_pond_kargadhakunteEvergreenPhenology] = useState([]);
   const [Lotus_pond_kargadhakunteDeciduousPhenology, setLotus_pond_kargadhakunteDeciduousPhenology] = useState([]);
 
+  const [Lotus_pond_kargadhakunteSemiDeciduousPhenology, setLotus_pond_kargadhakunteSemiDeciduousPhenology] = useState([]);
+
+
   const arrLotus_pond_kargadhakuntePhenology = [];
 
   const [Lotus_pond_kargadhakunteLeastConcern, setLotus_pond_kargadhakunteLeastConcern] = useState([]);
@@ -96,6 +99,11 @@ function Lotus_pond_kargadhakunte() {
       console.log(res.data.length)
       setLotus_pond_kargadhakunteConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=lotus_pond_kargadhakunte").then((res) => {
+      console.log(res.data.length);
+      setLotus_pond_kargadhakunteSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -111,6 +119,8 @@ function Lotus_pond_kargadhakunte() {
   arrLotus_pond_kargadhakuntePhenology.push(
     parseInt(Lotus_pond_kargadhakunteEvergreenPhenology),
     parseInt(Lotus_pond_kargadhakunteDeciduousPhenology),
+    parseInt(Lotus_pond_kargadhakunteSemiDeciduousPhenology),
+
 
   )
 
@@ -147,6 +157,7 @@ function Lotus_pond_kargadhakunte() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",

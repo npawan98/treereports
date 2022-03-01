@@ -21,6 +21,9 @@ function Lotus_pond_kargadhakunteTable() {
     const[Lotus_pond_kargadhakunteExotic,setLotus_pond_kargadhakunteExotic] = useState([]);
     const[Lotus_pond_kargadhakunteEndangered,setLotus_pond_kargadhakunteEndangered] = useState([]);
 
+  const [Lotus_pond_kargadhakunteSemiDeciduousPhenology, setLotus_pond_kargadhakunteSemiDeciduousPhenology] = useState([]);
+
+    
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Lotus_pond_kargadhakunte_Evergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +50,11 @@ function Lotus_pond_kargadhakunteTable() {
         console.log(res.data)
         setLotus_pond_kargadhakunteEndangered(res.data)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=lotus_pond_kargadhakunte").then((res) => {
+      console.log(res.data.length);
+      setLotus_pond_kargadhakunteSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +71,11 @@ function Lotus_pond_kargadhakunteTable() {
         <TableRow onClick={()=>{window.location.assign("/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{Lotus_pond_kargadhakunteEvergreen.length}</TableCell>
+          </TableRow>
+
+          <TableRow onClick={()=>{window.location.assign("/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{Lotus_pond_kargadhakunteSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Lotus_pond_kargadhakunte/Lotus_pond_kargadhakunte-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
