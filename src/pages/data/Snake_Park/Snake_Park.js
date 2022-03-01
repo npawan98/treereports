@@ -20,6 +20,8 @@ function Snake_Park() {
 
     const [SnakeEvergreenPhenology, setSnakeEvergreenPhenology] = useState([]);
     const [SnakeDeciduousPhenology, setSnakeDeciduousPhenology] = useState([]);
+      // semi deciduous
+    const [SnakeSemiDeciduousPhenology, setSnakeSemiDeciduousPhenology] = useState([]);
 
     const arrSnakePhenology = [];
 
@@ -93,6 +95,10 @@ function Snake_Park() {
           console.log(res.data.length)
           setSnakeConservationDependent(res.data.length)
         })
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=snake_park").then((res) => {
+          console.log(res.data.length);
+          setSnakeSemiDeciduousPhenology(res.data.length);
+        });
       
     },[]);
 
@@ -109,6 +115,7 @@ function Snake_Park() {
       arrSnakePhenology.push(
         parseInt(SnakeEvergreenPhenology),
         parseInt(SnakeDeciduousPhenology),
+        parseInt(SnakeSemiDeciduousPhenology),
 
       )
 
@@ -145,6 +152,7 @@ function Snake_Park() {
                 labels={[
                 "Evergreen",
                 "Deciduous",
+                "Semi Deciduous",
                 "Endemic",
                 "Indigenous",
                 "Exotic",

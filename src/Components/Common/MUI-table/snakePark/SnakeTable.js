@@ -21,6 +21,8 @@ function SnakeTable() {
     const[SnakeExotic,setSnakeExotic] = useState([]);
     const[SnakeEndangered,setSnakeEndangered] = useState([]);
 
+    const [SnakeSemiDeciduousPhenology, setSnakeSemiDeciduousPhenology] = useState([]);
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/SnakeEvergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +49,10 @@ function SnakeTable() {
         console.log(res.data)
         setSnakeEndangered(res.data)
     })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=snake_park").then((res) => {
+          console.log(res.data.length);
+          setSnakeSemiDeciduousPhenology(res.data);
+        });
       },[])
 
 
@@ -63,6 +69,10 @@ function SnakeTable() {
         <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{SnakeEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-evergreen")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi-Deciduous (Phenology)</TableCell>
+            <TableCell align="right">{SnakeSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Snake_Park/Snake_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
