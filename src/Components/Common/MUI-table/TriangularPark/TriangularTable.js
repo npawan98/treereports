@@ -21,6 +21,9 @@ function TriangularTable() {
     const[TriangularExotic,setTriangularExotic] = useState([]);
     const[TriangularEndangered,setTriangularEndangered] = useState([]);
 
+    const [TriangularSemiDeciduousPhenology, setTriangularSemiDeciduousPhenology] = useState([]);
+
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/TriangularEvergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +50,10 @@ function TriangularTable() {
         console.log(res.data)
         setTriangularEndangered(res.data)
     })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=triangular_Park").then((res) => {
+      console.log(res.data.length);
+      setTriangularSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +70,10 @@ function TriangularTable() {
         <TableRow onClick={()=>{window.location.assign("/Triangular_Park/Triangular_Park-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{TriangularEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Triangular_Park/Triangular_Park-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{TriangularSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Triangular_Park/Triangular_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
