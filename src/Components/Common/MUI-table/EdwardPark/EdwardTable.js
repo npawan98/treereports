@@ -20,6 +20,9 @@ function EdwardTable() {
     const[EdwardIndigenous,setEdwardIndigenous] = useState([]);
     const[EdwardExotic,setEdwardExotic] = useState([]);
     const[EdwardEndangered,setEdwardEndangered] = useState([]);
+
+    const [EdwardSemiDeciduousPhenology, setEdwardSemiDeciduousPhenology] = useState([]);
+
   
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/edward_park_Evergreen").then(res=> {
@@ -47,6 +50,11 @@ function EdwardTable() {
         console.log(res.data)
         setEdwardEndangered(res.data)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=edward_park").then((res) => {
+      console.log(res.data.length);
+      setEdwardSemiDeciduousPhenology(res.data);
+    });
       },[])
   
   
@@ -63,6 +71,10 @@ function EdwardTable() {
         <TableRow onClick={()=>{window.location.assign("/Edward_Park/Edward_Park-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen</TableCell>
             <TableCell align="right">{EdwardEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Edward_Park/Edward_Park-evergreen")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of semi Deciduous (Phenology)</TableCell>
+            <TableCell align="right">{EdwardSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Edward_Park/Edward_Park-endemic")}}>
             <TableCell>Number of endemic </TableCell>

@@ -21,6 +21,9 @@ function Edward_Park() {
   const [EdwardEvergreenPhenology, setEdwardEvergreenPhenology] = useState([]);
   const [EdwardDeciduousPhenology, setEdwardDeciduousPhenology] = useState([]);
 
+  const [EdwardSemiDeciduousPhenology, setEdwardSemiDeciduousPhenology] = useState([]);
+
+
   const arrEdwardPhenology = [];
 
   const [EdwardLeastConcern, setEdwardLeastConcern] = useState([]);
@@ -94,6 +97,11 @@ function Edward_Park() {
       console.log(res.data.length)
       setEdwardConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=edward_park").then((res) => {
+      console.log(res.data.length);
+      setEdwardSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -109,6 +117,8 @@ function Edward_Park() {
   arrEdwardPhenology.push(
     parseInt(EdwardEvergreenPhenology),
     parseInt(EdwardDeciduousPhenology),
+    parseInt(EdwardSemiDeciduousPhenology),
+
 
   )
 
@@ -145,6 +155,7 @@ function Edward_Park() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
