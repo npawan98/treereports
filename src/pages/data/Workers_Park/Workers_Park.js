@@ -21,6 +21,9 @@ function Workers_Park() {
   const [WorkersEvergreenPhenology, setWorkersEvergreenPhenology] = useState([]);
   const [WorkersDeciduousPhenology, setWorkersDeciduousPhenology] = useState([]);
 
+  const [WorkersSemiDeciduousPhenology, setWorkersSemiDeciduousPhenology] = useState([]);
+
+
   const arrWorkersPhenology = [];
 
   const [WorkersLeastConcern, setWorkersLeastConcern] = useState([]);
@@ -94,6 +97,11 @@ function Workers_Park() {
       setWorkersConservationDependent(res.data.length)
     })
 
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=workers_club").then((res) => {
+      console.log(res.data.length);
+      setWorkersSemiDeciduousPhenology(res.data.length);
+    });
+
     }, []);
 
 
@@ -109,6 +117,8 @@ function Workers_Park() {
     arrWorkersPhenology.push(
       parseInt(WorkersEvergreenPhenology),
       parseInt(WorkersDeciduousPhenology),
+      parseInt(WorkersSemiDeciduousPhenology),
+
 
     )
 
@@ -145,6 +155,7 @@ function Workers_Park() {
             labels={[
               "Evergreen",
               "Deciduous",
+              "Semi Deciduous",
               "Endemic",
               "Indigenous",
               "Exotic",

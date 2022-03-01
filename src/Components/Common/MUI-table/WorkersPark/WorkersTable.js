@@ -21,6 +21,9 @@ function WorkersTable() {
     const[WorkersExotic,setWorkersExotic] = useState([]);
     const[WorkersEndangered,setWorkersEndangered] = useState([]);
 
+    const [WorkersSemiDeciduousPhenology, setWorkersSemiDeciduousPhenology] = useState([]);
+
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/WorkersEvergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +50,11 @@ function WorkersTable() {
         console.log(res.data)
         setWorkersEndangered(res.data)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=workers_club").then((res) => {
+      console.log(res.data.length);
+      setWorkersSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +71,11 @@ function WorkersTable() {
         <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{WorkersEvergreen.length}</TableCell>
+          </TableRow>
+
+          <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{WorkersSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Workers_Park/Workers_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
