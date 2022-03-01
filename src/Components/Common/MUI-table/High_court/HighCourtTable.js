@@ -21,6 +21,9 @@ function HighCourtTable() {
     const[HighCourtExotic,setHighCourtExotic] = useState([]);
     const[HighCourtEndangered,setHighCourtEndangered] = useState([]);
 
+  const [High_courtSemiDeciduousPhenology, setHigh_courtSemiDeciduousPhenology] = useState([]);
+
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/high_court_park_Evergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +50,10 @@ function HighCourtTable() {
         console.log(res.data)
         setHighCourtEndangered(res.data)
     })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=high_court_park").then((res) => {
+      console.log(res.data.length);
+      setHigh_courtSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +70,11 @@ function HighCourtTable() {
         <TableRow onClick={()=>{window.location.assign("/High_court/High_court-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{HighCourtEvergreen.length}</TableCell>
+          </TableRow>
+
+          <TableRow onClick={()=>{window.location.assign("/High_court/High_court-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{High_courtSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/High_court/High_court-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>

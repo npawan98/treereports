@@ -22,6 +22,9 @@ function High_court() {
   const [High_courtEvergreenPhenology, setHigh_courtEvergreenPhenology] = useState([]);
   const [High_courtDeciduousPhenology, setHigh_courtDeciduousPhenology] = useState([]);
 
+  const [High_courtSemiDeciduousPhenology, setHigh_courtSemiDeciduousPhenology] = useState([]);
+
+
   const arrHigh_courtPhenology = [];
 
   const [High_courtLeastConcern, setHigh_courtLeastConcern] = useState([]);
@@ -97,6 +100,11 @@ function High_court() {
       console.log(res.data.length)
       setHigh_courtConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=high_court_park").then((res) => {
+      console.log(res.data.length);
+      setHigh_courtSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -112,6 +120,8 @@ function High_court() {
   arrHigh_courtPhenology.push(
     parseInt(High_courtEvergreenPhenology),
     parseInt(High_courtDeciduousPhenology),
+    parseInt(High_courtSemiDeciduousPhenology),
+
 
   )
 
@@ -148,6 +158,7 @@ function High_court() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
