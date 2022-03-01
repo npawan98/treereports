@@ -21,6 +21,9 @@ function Kslta_hort_deptTable() {
     const[Kslta_hort_deptExotic,setKslta_hort_deptExotic] = useState([]);
     const[Kslta_hort_deptEndangered,setKslta_hort_deptEndangered] = useState([]);
 
+    const [Kslta_hort_deptSemiDeciduousPhenology, setKslta_hort_deptSemiDeciduousPhenology] = useState([]);
+
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Kslta_hort_dept_Evergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +50,11 @@ function Kslta_hort_deptTable() {
         console.log(res.data)
         setKslta_hort_deptEndangered(res.data)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=kslta_hort_dept").then((res) => {
+      console.log(res.data.length);
+      setKslta_hort_deptSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +71,10 @@ function Kslta_hort_deptTable() {
         <TableRow onClick={()=>{window.location.assign("/Kslta_hort_dept/Kslta_hort_dept-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{Kslta_hort_deptEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Kslta_hort_dept/Kslta_hort_dept-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{Kslta_hort_deptSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Kslta_hort_dept/Kslta_hort_dept-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>

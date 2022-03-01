@@ -21,6 +21,9 @@ function Kslta_hort_dept() {
   const [Kslta_hort_deptEvergreenPhenology, setKslta_hort_deptEvergreenPhenology] = useState([]);
   const [Kslta_hort_deptDeciduousPhenology, setKslta_hort_deptDeciduousPhenology] = useState([]);
 
+  const [Kslta_hort_deptSemiDeciduousPhenology, setKslta_hort_deptSemiDeciduousPhenology] = useState([]);
+
+
   const arrKslta_hort_deptPhenology = [];
 
   const [Kslta_hort_deptLeastConcern, setKslta_hort_deptLeastConcern] = useState([]);
@@ -96,6 +99,11 @@ function Kslta_hort_dept() {
       console.log(res.data.length)
       setKslta_hort_deptConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=kslta_hort_dept").then((res) => {
+      console.log(res.data.length);
+      setKslta_hort_deptSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -111,6 +119,8 @@ function Kslta_hort_dept() {
   arrKslta_hort_deptPhenology.push(
     parseInt(Kslta_hort_deptEvergreenPhenology),
     parseInt(Kslta_hort_deptDeciduousPhenology),
+    parseInt(Kslta_hort_deptSemiDeciduousPhenology),
+
 
   )
 
@@ -147,6 +157,7 @@ function Kslta_hort_dept() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
