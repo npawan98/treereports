@@ -21,6 +21,9 @@ function Park_opp_workers_clubTable() {
     const[Park_opp_workers_clubExotic,setPark_opp_workers_clubExotic] = useState([]);
     const[Park_opp_workers_clubEndangered,setPark_opp_workers_clubEndangered] = useState([]);
 
+    const [Park_opp_workers_clubSemiDeciduousPhenology, setPark_opp_workers_clubSemiDeciduousPhenology] = useState([]);
+
+    
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Park_opp_workers_club_Evergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +50,10 @@ function Park_opp_workers_clubTable() {
         console.log(res.data)
         setPark_opp_workers_clubEndangered(res.data)
     })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_opp_workers_club").then((res) => {
+      console.log(res.data.length);
+      setPark_opp_workers_clubSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +70,10 @@ function Park_opp_workers_clubTable() {
         <TableRow onClick={()=>{window.location.assign("/Park_opp_workers_club/Park_opp_workers_club-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{Park_opp_workers_clubEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Park_opp_workers_club/Park_opp_workers_club-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{Park_opp_workers_clubSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Park_opp_workers_club/Park_opp_workers_club-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>

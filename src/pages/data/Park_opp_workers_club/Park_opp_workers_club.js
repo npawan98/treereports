@@ -20,6 +20,8 @@ function Park_opp_workers_club() {
 
   const [Park_opp_workers_clubEvergreenPhenology, setPark_opp_workers_clubEvergreenPhenology] = useState([]);
   const [Park_opp_workers_clubDeciduousPhenology, setPark_opp_workers_clubDeciduousPhenology] = useState([]);
+  const [Park_opp_workers_clubSemiDeciduousPhenology, setPark_opp_workers_clubSemiDeciduousPhenology] = useState([]);
+
 
   const arrPark_opp_workers_clubPhenology = [];
 
@@ -96,6 +98,11 @@ function Park_opp_workers_club() {
       console.log(res.data.length)
       setPark_opp_workers_clubConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_opp_workers_club").then((res) => {
+      console.log(res.data.length);
+      setPark_opp_workers_clubSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -111,6 +118,8 @@ function Park_opp_workers_club() {
   arrPark_opp_workers_clubPhenology.push(
     parseInt(Park_opp_workers_clubEvergreenPhenology),
     parseInt(Park_opp_workers_clubDeciduousPhenology),
+    parseInt(Park_opp_workers_clubSemiDeciduousPhenology),
+
 
   )
 
@@ -147,6 +156,7 @@ function Park_opp_workers_club() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
