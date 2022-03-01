@@ -20,6 +20,9 @@ function Wine_Board() {
 
   const [WineEvergreenPhenology, setWineEvergreenPhenology] = useState([]);
   const [WineDeciduousPhenology, setWineDeciduousPhenology] = useState([]);
+  
+  const [WineSemiDeciduousPhenology, setWineSemiDeciduousPhenology] = useState([]);
+
 
   const arrWinePhenology = [];
 
@@ -94,6 +97,11 @@ function Wine_Board() {
       console.log(res.data.length)
       setWineConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=wine_board").then((res) => {
+      console.log(res.data.length);
+      setWineSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -109,6 +117,8 @@ function Wine_Board() {
   arrWinePhenology.push(
     parseInt(WineEvergreenPhenology),
     parseInt(WineDeciduousPhenology),
+    parseInt(WineSemiDeciduousPhenology),
+
 
   )
   arrWineConservation.push(
@@ -144,6 +154,7 @@ function Wine_Board() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
