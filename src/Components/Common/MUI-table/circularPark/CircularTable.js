@@ -50,7 +50,7 @@ function CircularTable() {
         setCircularEndangered(res.data)
     })
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/CircularDeciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=circular_Park").then((res) => {
       console.log(res.data.length);
       setCircularSemiDeciduousPhenology(res.data);
     });
