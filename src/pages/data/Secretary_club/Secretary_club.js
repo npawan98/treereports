@@ -21,6 +21,9 @@ function Secretary_club() {
   const [SecretaryEvergreenPhenology, setSecretaryEvergreenPhenology] = useState([]);
   const [SecretaryDeciduousPhenology, setSecretaryDeciduousPhenology] = useState([]);
 
+  const [SecretarySemiDeciduousPhenology, setSecretarySemiDeciduousPhenology] = useState([]);
+
+
   const arrSecretaryPhenology = [];
 
   const [SecretaryLeastConcern, setSecretaryLeastConcern] = useState([]);
@@ -96,6 +99,11 @@ function Secretary_club() {
       console.log(res.data.length)
       setSecretaryConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=secretary_club").then((res) => {
+      console.log(res.data.length);
+      setSecretarySemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -111,6 +119,8 @@ function Secretary_club() {
   arrSecretaryPhenology.push(
     parseInt(SecretaryEvergreenPhenology),
     parseInt(SecretaryDeciduousPhenology),
+    parseInt(SecretarySemiDeciduousPhenology),
+
 
   )
 
@@ -147,6 +157,7 @@ function Secretary_club() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",

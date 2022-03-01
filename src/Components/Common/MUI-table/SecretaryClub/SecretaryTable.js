@@ -21,6 +21,9 @@ function SecretaryTable() {
     const[SecretaryExotic,setSecretaryExotic] = useState([]);
     const[SecretaryEndangered,setSecretaryEndangered] = useState([]);
 
+    const [SecretarySemiDeciduousPhenology, setSecretarySemiDeciduousPhenology] = useState([]);
+
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/secretary_club_Evergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +50,10 @@ function SecretaryTable() {
         console.log(res.data)
         setSecretaryEndangered(res.data)
     })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=secretary_club").then((res) => {
+      console.log(res.data.length);
+      setSecretarySemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +70,10 @@ function SecretaryTable() {
         <TableRow onClick={()=>{window.location.assign("/Secretary_club/Secretary_club-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{SecretaryEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Secretary_club/Secretary_club-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{SecretarySemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Secretary_club/Secretary_club-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
