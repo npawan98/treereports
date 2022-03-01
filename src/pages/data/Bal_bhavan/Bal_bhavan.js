@@ -99,7 +99,7 @@ function Bal_bhavan() {
       setBal_bhavanConservationDependent(res.data.length)
     })
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/bal_bhavan_Deciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=bal_bhavan").then((res) => {
       console.log(res.data.length);
       setBal_bhavanSemiDeciduousPhenology(res.data.length);
     });
