@@ -21,6 +21,8 @@ function Park_2Table() {
     const[Park_2Exotic,setPark_2Exotic] = useState([]);
     const[Park_2Endangered,setPark_2Endangered] = useState([]);
 
+    const [Park_2SemiDeciduousPhenology, setPark_2SemiDeciduousPhenology] = useState([]);
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Park_2Evergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +49,10 @@ function Park_2Table() {
         console.log(res.data)
         setPark_2Endangered(res.data)
     })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_2").then((res) => {
+      console.log(res.data.length);
+      setPark_2SemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +69,10 @@ function Park_2Table() {
         <TableRow onClick={()=>{window.location.assign("/Park_2_Park/Park_2_Park-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{Park_2Evergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Park_2_Park/Park_2_Park-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{Park_2SemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Park_2_Park/Park_2_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>

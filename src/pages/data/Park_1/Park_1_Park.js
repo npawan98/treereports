@@ -21,6 +21,9 @@ function Park_1_Park() {
   const [Park_1EvergreenPhenology, setPark_1EvergreenPhenology] = useState([]);
   const [Park_1DeciduousPhenology, setPark_1DeciduousPhenology] = useState([]);
 
+  const [Park_1SemiDeciduousPhenology, setPark_1SemiDeciduousPhenology] = useState([]);
+
+
   const arrPark_1Phenology = [];
 
   const [Park_1LeastConcern, setPark_1LeastConcern] = useState([]);
@@ -94,6 +97,11 @@ function Park_1_Park() {
       console.log(res.data.length)
       setPark_1ConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_1").then((res) => {
+      console.log(res.data.length);
+      setPark_1SemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -109,6 +117,7 @@ function Park_1_Park() {
   arrPark_1Phenology.push(
     parseInt(Park_1EvergreenPhenology),
     parseInt(Park_1DeciduousPhenology),
+    parseInt(Park_1SemiDeciduousPhenology),
 
   )
   arrPark_1Conservation.push(
@@ -144,6 +153,7 @@ function Park_1_Park() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
