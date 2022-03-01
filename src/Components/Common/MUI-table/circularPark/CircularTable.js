@@ -21,6 +21,8 @@ function CircularTable() {
     const[CircularExotic,setCircularExotic] = useState([]);
     const[CircularEndangered,setCircularEndangered] = useState([]);
 
+    const [CircularSemiDeciduousPhenology, setCircularSemiDeciduousPhenology] = useState([]);
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/CircularEvergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +49,11 @@ function CircularTable() {
         console.log(res.data)
         setCircularEndangered(res.data)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/CircularDeciduous").then((res) => {
+      console.log(res.data.length);
+      setCircularSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +70,10 @@ function CircularTable() {
         <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{CircularEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi Deciduous (Phenology)</TableCell>
+            <TableCell align="right">{CircularSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Circular_Park/Circular_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>

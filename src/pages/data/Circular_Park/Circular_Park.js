@@ -20,6 +20,7 @@ function Circular_Park() {
 
   const [CircularEvergreenPhenology, setCircularEvergreenPhenology] = useState([]);
   const [CircularDeciduousPhenology, setCircularDeciduousPhenology] = useState([]);
+  const [CircularSemiDeciduousPhenology, setCircularSemiDeciduousPhenology] = useState([]);
 
   const arrCircularPhenology = [];
 
@@ -94,6 +95,11 @@ function Circular_Park() {
       console.log(res.data.length)
       setCircularConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/CircularDeciduous").then((res) => {
+      console.log(res.data.length);
+      setCircularSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -109,6 +115,8 @@ function Circular_Park() {
   arrCircularPhenology.push(
     parseInt(CircularEvergreenPhenology),
     parseInt(CircularDeciduousPhenology),
+    parseInt(CircularSemiDeciduousPhenology),
+
 
   )
 
@@ -145,6 +153,7 @@ function Circular_Park() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
