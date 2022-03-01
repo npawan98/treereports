@@ -20,6 +20,9 @@ function VictoriaTable() {
     const[VictoriaIndigenous,setVictoriaIndigenous] = useState([]);
     const[VictoriaExotic,setVictoriaExotic] = useState([]);
     const[VictoriaEndangered,setVictoriaEndangered] = useState([]);
+
+    const [VictoriaSemiDeciduousPhenology, setVictoriaSemiDeciduousPhenology] = useState([]);
+
   
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Victoria_park_Evergreen").then(res=> {
@@ -47,6 +50,10 @@ function VictoriaTable() {
         console.log(res.data)
         setVictoriaEndangered(res.data)
     })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=victoria_park").then((res) => {
+      console.log(res.data.length);
+      setVictoriaSemiDeciduousPhenology(res.data);
+    });
       },[])
   
   
@@ -59,6 +66,10 @@ function VictoriaTable() {
             <TableCell align="right">{VictoriaDeciduous.length}</TableCell>
           </TableRow>
         </TableHead>
+        <TableRow onClick={()=>{window.location.assign("/Victoria_Park/Victoria_Park-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (phenology) </TableCell>
+            <TableCell align="right">{VictoriaSemiDeciduousPhenology.length}</TableCell>
+          </TableRow>
         <TableBody>
         <TableRow onClick={()=>{window.location.assign("/Victoria_Park/Victoria_Park-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen</TableCell>

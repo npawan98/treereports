@@ -21,6 +21,9 @@ function Victoria_Park() {
   const [VictoriaEvergreenPhenology, setVictoriaEvergreenPhenology] = useState([]);
   const [VictoriaDeciduousPhenology, setVictoriaDeciduousPhenology] = useState([]);
 
+  const [VictoriaSemiDeciduousPhenology, setVictoriaSemiDeciduousPhenology] = useState([]);
+
+
   const arrVictoriaPhenology = [];
 
   const [VictoriaLeastConcern, setVictoriaLeastConcern] = useState([]);
@@ -93,6 +96,11 @@ function Victoria_Park() {
       console.log(res.data.length)
       setVictoriaConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=victoria_park").then((res) => {
+      console.log(res.data.length);
+      setVictoriaSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -108,6 +116,8 @@ function Victoria_Park() {
   arrVictoriaPhenology.push(
     parseInt(VictoriaEvergreenPhenology),
     parseInt(VictoriaDeciduousPhenology),
+    parseInt(VictoriaSemiDeciduousPhenology),
+
 
   )
 
@@ -144,6 +154,7 @@ function Victoria_Park() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
