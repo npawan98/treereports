@@ -20,6 +20,7 @@ function Dog_Park() {
 
   const [dogEvergreenPhenology, setDogEvergreenPhenology] = useState([]);
   const [dogDeciduousPhenology, setDogDeciduousPhenology] = useState([]);
+  const [dogSemiDeciduousPhenology, setDogSemiDeciduousPhenology] = useState([]);
 
   const arrDogPhenology = [];
 
@@ -96,6 +97,11 @@ function Dog_Park() {
       console.log(res.data.length)
       setdogConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=dog_park").then((res) => {
+      console.log(res.data.length);
+      setDogSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -111,6 +117,7 @@ function Dog_Park() {
   arrDogPhenology.push(
     parseInt(dogEvergreenPhenology),
     parseInt(dogDeciduousPhenology),
+    parseInt(dogSemiDeciduousPhenology),
 
   )
 
@@ -147,6 +154,7 @@ function Dog_Park() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
