@@ -98,7 +98,7 @@ function Central_library() {
       setCentral_libraryConservationDependent(res.data.length)
     })
 
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Central_library_Deciduous").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=central_library").then((res) => {
       console.log(res.data.length);
       setCentral_librarySemiDeciduousPhenology(res.data.length);
     });
