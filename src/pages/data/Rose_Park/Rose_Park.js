@@ -21,6 +21,9 @@ function Rose_Park() {
   const [RoseEvergreenPhenology, setRoseEvergreenPhenology] = useState([]);
   const [RoseDeciduousPhenology, setRoseDeciduousPhenology] = useState([]);
 
+  const [RoseSemiDeciduousPhenology, setRoseSemiDeciduousPhenology] = useState([]);
+
+
   const arrRosePhenology = [];
 
   const [RoseLeastConcern, setRoseLeastConcern] = useState([]);
@@ -94,6 +97,11 @@ function Rose_Park() {
       console.log(res.data.length)
       setRoseConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=rose_park").then((res) => {
+      console.log(res.data.length);
+      setRoseSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -109,6 +117,8 @@ function Rose_Park() {
   arrRosePhenology.push(
     parseInt(RoseEvergreenPhenology),
     parseInt(RoseDeciduousPhenology),
+    parseInt(RoseSemiDeciduousPhenology),
+
 
   )
 
@@ -145,6 +155,7 @@ function Rose_Park() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",

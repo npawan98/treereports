@@ -21,6 +21,9 @@ function RoseTable() {
     const[RoseExotic,setRoseExotic] = useState([]);
     const[RoseEndangered,setRoseEndangered] = useState([]);
 
+    const [RoseSemiDeciduousPhenology, setRoseSemiDeciduousPhenology] = useState([]);
+
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/RoseEvergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +50,10 @@ function RoseTable() {
         console.log(res.data)
         setRoseEndangered(res.data)
     })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=rose_park").then((res) => {
+      console.log(res.data.length);
+      setRoseSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +70,10 @@ function RoseTable() {
         <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{RoseEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{RoseSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Rose_Park/Rose_Park-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
