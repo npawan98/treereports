@@ -20,6 +20,8 @@ function Park_opp_wine_board() {
 
   const [Park_opp_wine_boardEvergreenPhenology, setPark_opp_wine_boardEvergreenPhenology] = useState([]);
   const [Park_opp_wine_boardDeciduousPhenology, setPark_opp_wine_boardDeciduousPhenology] = useState([]);
+  const [Park_opp_wine_boardSemiDeciduousPhenology, setPark_opp_wine_boardSemiDeciduousPhenology] = useState([]);
+
 
   const arrPark_opp_wine_boardPhenology = [];
 
@@ -96,6 +98,11 @@ function Park_opp_wine_board() {
       console.log(res.data.length)
       setPark_opp_wine_boardConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_opp_wine_board").then((res) => {
+      console.log(res.data.length);
+      setPark_opp_wine_boardSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -111,6 +118,8 @@ function Park_opp_wine_board() {
   arrPark_opp_wine_boardPhenology.push(
     parseInt(Park_opp_wine_boardEvergreenPhenology),
     parseInt(Park_opp_wine_boardDeciduousPhenology),
+    parseInt(Park_opp_wine_boardSemiDeciduousPhenology),
+
 
   )
 
@@ -147,6 +156,7 @@ function Park_opp_wine_board() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",

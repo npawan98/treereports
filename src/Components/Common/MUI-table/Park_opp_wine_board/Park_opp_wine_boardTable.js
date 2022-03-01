@@ -21,6 +21,9 @@ function Park_opp_wine_boardTable() {
     const[Park_opp_wine_boardExotic,setPark_opp_wine_boardExotic] = useState([]);
     const[Park_opp_wine_boardEndangered,setPark_opp_wine_boardEndangered] = useState([]);
 
+    const [Park_opp_wine_boardSemiDeciduousPhenology, setPark_opp_wine_boardSemiDeciduousPhenology] = useState([]);
+
+    
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Park_opp_wine_board_Evergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +50,10 @@ function Park_opp_wine_boardTable() {
         console.log(res.data)
         setPark_opp_wine_boardEndangered(res.data)
     })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_opp_wine_board").then((res) => {
+      console.log(res.data.length);
+      setPark_opp_wine_boardSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +70,10 @@ function Park_opp_wine_boardTable() {
         <TableRow onClick={()=>{window.location.assign("/Park_opp_wine_board/Park_opp_wine_board-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{Park_opp_wine_boardEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Park_opp_wine_board/Park_opp_wine_board-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of deciduous (Phenology)</TableCell>
+            <TableCell align="right">{Park_opp_wine_boardSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Park_opp_wine_board/Park_opp_wine_board-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
