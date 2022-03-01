@@ -21,6 +21,8 @@ function Avenue_treesTable() {
     const[Avenue_treesExotic,setAvenue_treesExotic] = useState([]);
     const[Avenue_treesEndangered,setAvenue_treesEndangered] = useState([]);
 
+    const [Avenue_treesSemiDeciduousPhenology, setAvenue_treesSemiDeciduousPhenology] = useState([]);
+
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/Avenue_trees_Evergreen").then(res=> {
         console.log(res.data)
@@ -47,6 +49,10 @@ function Avenue_treesTable() {
         console.log(res.data)
         setAvenue_treesEndangered(res.data)
     })
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=avenue_trees").then((res) => {
+      console.log(res.data.length);
+      setAvenue_treesSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +69,10 @@ function Avenue_treesTable() {
         <TableRow onClick={()=>{window.location.assign("/Avenue_trees/Avenue_trees-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{Avenue_treesEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Avenue_trees/Avenue_trees-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi Deciduous (Phenology)</TableCell>
+            <TableCell align="right">{Avenue_treesSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Avenue_trees/Avenue_trees-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>

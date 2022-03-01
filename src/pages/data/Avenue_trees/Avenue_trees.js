@@ -21,6 +21,9 @@ function Avenue_trees() {
   const [Avenue_treesEvergreenPhenology, setAvenue_treesEvergreenPhenology] = useState([]);
   const [Avenue_treesDeciduousPhenology, setAvenue_treesDeciduousPhenology] = useState([]);
 
+  // semi deciduous
+  const [Avenue_treesSemiDeciduousPhenology, setAvenue_treesSemiDeciduousPhenology] = useState([]);
+
   const arrAvenue_treesPhenology = [];
 
   const [Avenue_treesLeastConcern, setAvenue_treesLeastConcern] = useState([]);
@@ -96,6 +99,12 @@ function Avenue_trees() {
       console.log(res.data.length)
       setAvenue_treesConservationDependent(res.data.length)
     })
+
+    // semi deciduous
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=avenue_trees").then((res) => {
+      console.log(res.data.length);
+      setAvenue_treesSemiDeciduousPhenology(res.data.length);
+    });
   }, []);
 
 
@@ -111,6 +120,8 @@ function Avenue_trees() {
   arrAvenue_treesPhenology.push(
     parseInt(Avenue_treesEvergreenPhenology),
     parseInt(Avenue_treesDeciduousPhenology),
+    parseInt(Avenue_treesSemiDeciduousPhenology),
+
 
   )
 
@@ -147,6 +158,7 @@ function Avenue_trees() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
