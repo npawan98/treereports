@@ -20,6 +20,7 @@ function BalBhavanTable() {
     const[BalBhavanIndigenous,setBalBhavanIndigenous] = useState([]);
     const[BalBhavanExotic,setBalBhavanExotic] = useState([]);
     const[BalBhavanEndangered,setBalBhavanEndangered] = useState([]);
+    const [Bal_bhavanSemiDeciduousPhenology, setBal_bhavanSemiDeciduousPhenology] = useState([]);
 
     useEffect(()=>{
         axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/bal_bhavan_Evergreen").then(res=> {
@@ -47,6 +48,11 @@ function BalBhavanTable() {
         console.log(res.data)
         setBalBhavanEndangered(res.data)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/bal_bhavan_Deciduous").then((res) => {
+      console.log(res.data.length);
+      setBal_bhavanSemiDeciduousPhenology(res.data);
+    });
       },[])
 
 
@@ -63,6 +69,10 @@ function BalBhavanTable() {
         <TableRow onClick={()=>{window.location.assign("/bal_bhavan/bal_bhavan-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{BalBhavanEvergreen.length}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/bal_bhavan/bal_bhavan-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi - Deciduous (Phenology)</TableCell>
+            <TableCell align="right">{Bal_bhavanSemiDeciduousPhenology.length}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/bal_bhavan/bal_bhavan-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>

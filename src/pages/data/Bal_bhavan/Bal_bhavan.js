@@ -21,6 +21,8 @@ function Bal_bhavan() {
   const [Bal_bhavanEvergreenPhenology, setBal_bhavanEvergreenPhenology] = useState([]);
   const [Bal_bhavanDeciduousPhenology, setBal_bhavanDeciduousPhenology] = useState([]);
 
+  const [Bal_bhavanSemiDeciduousPhenology, setBal_bhavanSemiDeciduousPhenology] = useState([]);
+
   const arrBal_bhavanPhenology = [];
 
   const [Bal_bhavanLeastConcern, setBal_bhavanLeastConcern] = useState([]);
@@ -96,6 +98,12 @@ function Bal_bhavan() {
       console.log(res.data.length)
       setBal_bhavanConservationDependent(res.data.length)
     })
+
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/bal_bhavan_Deciduous").then((res) => {
+      console.log(res.data.length);
+      setBal_bhavanSemiDeciduousPhenology(res.data.length);
+    });
+    
   }, []);
 
 
@@ -111,6 +119,7 @@ function Bal_bhavan() {
   arrBal_bhavanPhenology.push(
     parseInt(Bal_bhavanEvergreenPhenology),
     parseInt(Bal_bhavanDeciduousPhenology),
+    parseInt(Bal_bhavanSemiDeciduousPhenology),
 
   )
 
@@ -147,6 +156,7 @@ function Bal_bhavan() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
