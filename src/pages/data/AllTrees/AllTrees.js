@@ -11,6 +11,32 @@ function AllTrees() {
     const arrMaster = [];
     const arrMasterPhenology = [];
     const arrMasterConservation = [];
+
+// semi deciduous
+const [Avenue_treesSemiDeciduousPhenology, setAvenue_treesSemiDeciduousPhenology] = useState([]);
+const [bal_bhavanSemiDeciduousPhenology, setbal_bhavanSemiDeciduousPhenology] = useState([]);
+const [central_librarySemiDeciduousPhenology, setcentral_librarySemiDeciduousPhenology] = useState([]);
+const [circular_ParkSemiDeciduousPhenology, setcircular_ParkSemiDeciduousPhenology] = useState([]);
+const [dog_parkSemiDeciduousPhenology, setdog_parkSemiDeciduousPhenology] = useState([]);
+const [edward_parkSemiDeciduousPhenology, setedward_parkSemiDeciduousPhenology] = useState([]);
+const [high_court_parkSemiDeciduousPhenology, sethigh_court_parkSemiDeciduousPhenology] = useState([]);
+const [kslta_hort_deptSemiDeciduousPhenology, setkslta_hort_deptSemiDeciduousPhenology] = useState([]);
+const [lotus_pond_kargadhakunteSemiDeciduousPhenology, setlotus_pond_kargadhakunteSemiDeciduousPhenology] = useState([]);
+const [park_1SemiDeciduousPhenology, setpark_1SemiDeciduousPhenology] = useState([]);
+const [park_2SemiDeciduousPhenology, setpark_2SemiDeciduousPhenology] = useState([]);
+const [park_opp_snake_parkSemiDeciduousPhenology, setpark_opp_snake_parkSemiDeciduousPhenology] = useState([]);
+const [park_opp_wine_boardSemiDeciduousPhenology, setpark_opp_wine_boardSemiDeciduousPhenology] = useState([]);
+const [park_opp_workers_clubSemiDeciduousPhenology, setpark_opp_workers_clubSemiDeciduousPhenology] = useState([]);
+const [rose_parkSemiDeciduousPhenology, setrose_parkSemiDeciduousPhenology] = useState([]);
+const [secretary_clubSemiDeciduousPhenology, setsecretary_clubSemiDeciduousPhenology] = useState([]);
+const [snake_parkSemiDeciduousPhenology, setsnake_parkSemiDeciduousPhenology] = useState([]);
+const [triangular_ParkSemiDeciduousPhenology, settriangular_ParkSemiDeciduousPhenology] = useState([]);
+const [victoria_parkSemiDeciduousPhenology, setvictoria_parkSemiDeciduousPhenology] = useState([]);
+const [wine_boardSemiDeciduousPhenology, setwine_boardSemiDeciduousPhenology] = useState([]);
+const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology] = useState([]);
+
+
+
     // avenue trees
     const [Avenue_treesData, setAvenue_treesData] = useState([]);
     const [Avenue_treesEvergreen, setAvenue_treesEvergreen] = useState([]);
@@ -1798,6 +1824,94 @@ function AllTrees() {
       setCentral_libraryConservationDependent(res.data.length)
     })
 
+
+    // semi deciduous
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=avenue_trees").then((res) => {
+        console.log(res.data.length);
+        setAvenue_treesSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=bal_bhavan").then((res) => {
+        console.log(res.data.length);
+        setbal_bhavanSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=central_library").then((res) => {
+        console.log(res.data.length);
+        setcentral_librarySemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=circular_Park").then((res) => {
+        console.log(res.data.length);
+        setcircular_ParkSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=dog_park").then((res) => {
+        console.log(res.data.length);
+        setdog_parkSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=edward_park").then((res) => {
+        console.log(res.data.length);
+        setedward_parkSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=high_court_park").then((res) => {
+        console.log(res.data.length);
+        sethigh_court_parkSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=kslta_hort_dept").then((res) => {
+        console.log(res.data.length);
+        setkslta_hort_deptSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=lotus_pond_kargadhakunte").then((res) => {
+        console.log(res.data.length);
+        setlotus_pond_kargadhakunteSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_1").then((res) => {
+        console.log(res.data.length);
+        setpark_1SemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_2").then((res) => {
+        console.log(res.data.length);
+        setpark_2SemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_opp_snake_park").then((res) => {
+        console.log(res.data.length);
+        setpark_opp_snake_parkSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_opp_wine_board").then((res) => {
+        console.log(res.data.length);
+        setpark_opp_wine_boardSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=park_opp_workers_club").then((res) => {
+        console.log(res.data.length);
+        setpark_opp_workers_clubSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=rose_park").then((res) => {
+        console.log(res.data.length);
+        setrose_parkSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=secretary_club").then((res) => {
+        console.log(res.data.length);
+        setsecretary_clubSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=snake_park").then((res) => {
+        console.log(res.data.length);
+        setsnake_parkSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=triangular_Park").then((res) => {
+        console.log(res.data.length);
+        settriangular_ParkSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=victoria_park").then((res) => {
+        console.log(res.data.length);
+        setvictoria_parkSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=wine_board").then((res) => {
+        console.log(res.data.length);
+        setwine_boardSemiDeciduousPhenology(res.data.length);
+      });
+      axios.get("https://afternoon-mountain-93761.herokuapp.com/phenology/semiDeciduous?Park=workers_club").then((res) => {
+        console.log(res.data.length);
+        setworkers_clubSemiDeciduousPhenology(res.data.length);
+      });
+
+
     }, []);
 
     arrMaster.push(
@@ -1813,6 +1927,8 @@ function AllTrees() {
     arrMasterPhenology.push(
         parseInt(Avenue_treesEvergreenPhenology) + parseInt(Bal_bhavanEvergreenPhenology) + parseInt(CircularEvergreenPhenology) + parseInt(dogEvergreenPhenology) + parseInt(EdwardEvergreenPhenology) + parseInt(High_courtEvergreenPhenology) + parseInt(Kslta_hort_deptEvergreenPhenology) + parseInt(Park_1EvergreenPhenology) + parseInt(Park_2EvergreenPhenology) + parseInt(Park_opp_snake_parkEvergreenPhenology) + parseInt(Park_opp_wine_boardEvergreenPhenology) + parseInt(Park_opp_workers_clubEvergreenPhenology) + parseInt(RoseEvergreenPhenology) + parseInt(SecretaryEvergreenPhenology) + parseInt(SnakeEvergreenPhenology) + parseInt(TriangularEvergreenPhenology) + parseInt(VictoriaEvergreenPhenology) + parseInt(WineEvergreenPhenology) + parseInt(WorkersEvergreenPhenology) + parseInt(Central_libraryEvergreenPhenology),
         parseInt(Avenue_treesDeciduousPhenology) + parseInt(Bal_bhavanDeciduousPhenology) + parseInt(CircularDeciduousPhenology) + parseInt(dogDeciduousPhenology) + parseInt(EdwardDeciduousPhenology) + parseInt(High_courtDeciduousPhenology) + parseInt(Kslta_hort_deptDeciduousPhenology) + parseInt(Park_1DeciduousPhenology) + parseInt(Park_2DeciduousPhenology) + parseInt(Park_opp_snake_parkDeciduousPhenology) + parseInt(Park_opp_wine_boardDeciduousPhenology) + parseInt(Park_opp_workers_clubDeciduousPhenology) + parseInt(RoseDeciduousPhenology) + parseInt(SecretaryDeciduousPhenology) + parseInt(SnakeDeciduousPhenology) + parseInt(TriangularDeciduousPhenology) + parseInt(VictoriaDeciduousPhenology) + parseInt(WineDeciduousPhenology) + parseInt(WorkersDeciduousPhenology) + parseInt(Central_libraryDeciduousPhenology),
+        parseInt(Avenue_treesSemiDeciduousPhenology) + parseInt(bal_bhavanSemiDeciduousPhenology) + parseInt(circular_ParkSemiDeciduousPhenology) + parseInt(dog_parkSemiDeciduousPhenology) + parseInt(edward_parkSemiDeciduousPhenology) + parseInt(high_court_parkSemiDeciduousPhenology) + parseInt(kslta_hort_deptSemiDeciduousPhenology) + parseInt(park_1SemiDeciduousPhenology) + parseInt(park_2SemiDeciduousPhenology) + parseInt(park_opp_snake_parkSemiDeciduousPhenology) + parseInt(park_opp_wine_boardSemiDeciduousPhenology) + parseInt(park_opp_workers_clubSemiDeciduousPhenology) + parseInt(rose_parkSemiDeciduousPhenology) + parseInt(secretary_clubSemiDeciduousPhenology) + parseInt(snake_parkSemiDeciduousPhenology) + parseInt(triangular_ParkSemiDeciduousPhenology) + parseInt(victoria_parkSemiDeciduousPhenology) + parseInt(wine_boardSemiDeciduousPhenology) + parseInt(workers_clubSemiDeciduousPhenology) + parseInt(central_librarySemiDeciduousPhenology),
+
     )
 
     console.log("master phenology",arrMasterPhenology);
@@ -1853,6 +1969,7 @@ function AllTrees() {
           labels={[
             "Evergreen",
             "Deciduous",
+            "Semi Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
@@ -1869,6 +1986,8 @@ function AllTrees() {
             num4={parseInt(Avenue_treesIndigenous) + parseInt(Bal_bhavanIndigenous) + parseInt(CircularIndigenous) + parseInt(dogIndigenous) + parseInt(EdwardIndigenous) + parseInt(High_courtIndigenous) + parseInt(Kslta_hort_deptIndigenous) + parseInt(Park_1Indigenous) + parseInt(Park_2Indigenous) + parseInt(Park_opp_snake_parkIndigenous) + parseInt(Park_opp_wine_boardIndigenous) + parseInt(Park_opp_workers_clubIndigenous) + parseInt(RoseIndigenous) + parseInt(SecretaryIndigenous) + parseInt(SnakeIndigenous) + parseInt(TriangularIndigenous) + parseInt(VictoriaIndigenous) + parseInt(WineIndigenous) + parseInt(WorkersIndigenous)}
             num5={parseInt(Avenue_treesExotic) + parseInt(Bal_bhavanExotic) + parseInt(CircularExotic) + parseInt(dogExotic) + parseInt(EdwardExotic) + parseInt(High_courtExotic) + parseInt(Kslta_hort_deptExotic) + parseInt(Park_1Exotic) + parseInt(Park_2Exotic) + parseInt(Park_opp_snake_parkExotic) + parseInt(Park_opp_wine_boardExotic) + parseInt(Park_opp_workers_clubExotic) + parseInt(RoseExotic) + parseInt(SecretaryExotic) + parseInt(SnakeExotic) + parseInt(TriangularExotic) + parseInt(VictoriaExotic) + parseInt(WineExotic) + parseInt(WorkersExotic)}
             num6={parseInt(Avenue_treesEndangered) + parseInt(Bal_bhavanEndangered) + parseInt(CircularEndangered) + parseInt(dogEndangered) + parseInt(EdwardEndangered) + parseInt(High_courtEndangered) + parseInt(Kslta_hort_deptEndangered) + parseInt(Park_1Endangered) + parseInt(Park_2Endangered) + parseInt(Park_opp_snake_parkEndangered) + parseInt(Park_opp_wine_boardEndangered) + parseInt(Park_opp_workers_clubEndangered) + parseInt(RoseEndangered) + parseInt(SecretaryEndangered) + parseInt(SnakeEndangered) + parseInt(TriangularEndangered) + parseInt(VictoriaEndangered) + parseInt(WineEndangered) + parseInt(WorkersEndangered)} 
+            num7={parseInt(Avenue_treesSemiDeciduousPhenology) + parseInt(bal_bhavanSemiDeciduousPhenology) + parseInt(circular_ParkSemiDeciduousPhenology) + parseInt(dog_parkSemiDeciduousPhenology) + parseInt(edward_parkSemiDeciduousPhenology) + parseInt(high_court_parkSemiDeciduousPhenology) + parseInt(kslta_hort_deptSemiDeciduousPhenology) + parseInt(park_1SemiDeciduousPhenology) + parseInt(park_2SemiDeciduousPhenology) + parseInt(park_opp_snake_parkSemiDeciduousPhenology) + parseInt(park_opp_wine_boardSemiDeciduousPhenology) + parseInt(park_opp_workers_clubSemiDeciduousPhenology) + parseInt(rose_parkSemiDeciduousPhenology) + parseInt(secretary_clubSemiDeciduousPhenology) + parseInt(snake_parkSemiDeciduousPhenology) + parseInt(triangular_ParkSemiDeciduousPhenology) + parseInt(victoria_parkSemiDeciduousPhenology) + parseInt(wine_boardSemiDeciduousPhenology) + parseInt(workers_clubSemiDeciduousPhenology) + parseInt(central_librarySemiDeciduousPhenology)} 
+
         />
       </div>
 

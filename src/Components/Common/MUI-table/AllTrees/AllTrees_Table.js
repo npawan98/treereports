@@ -11,7 +11,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
-function AllTrees_Table({num1, num2, num3, num4, num5, num6}) {
+function AllTrees_Table({num1, num2, num3, num4, num5, num6,num7}) {
 
 
   return (
@@ -27,6 +27,10 @@ function AllTrees_Table({num1, num2, num3, num4, num5, num6}) {
         <TableRow onClick={()=>{window.location.assign("/Avenue_trees/Avenue_trees-evergreen")}} style={{cursor:"pointer"}}>
             <TableCell>Number of evergreen (Phenology)</TableCell>
             <TableCell align="right">{num2}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Avenue_trees/Avenue_trees-deciduous")}} style={{cursor:"pointer"}}>
+            <TableCell>Number of Semi deciduous (Phenology)</TableCell>
+            <TableCell align="right">{num7}</TableCell>
           </TableRow>
           <TableRow onClick={()=>{window.location.assign("/Avenue_trees/Avenue_trees-endemic")}} style={{cursor:"pointer"}}>
             <TableCell>Number of endemic </TableCell>
