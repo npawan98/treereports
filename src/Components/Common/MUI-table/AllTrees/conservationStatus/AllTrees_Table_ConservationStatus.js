@@ -11,7 +11,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
-function AllTrees_Table_ConservationStatus({num1, num2, num3, num4, num5, num6}) {
+function AllTrees_Table_ConservationStatus({num1, num2, num3, num4, num5, num6,num7}) {
 
   return (
     <TableContainer component={Paper} style={{maxWidth:'650px'}}>
@@ -42,6 +42,10 @@ function AllTrees_Table_ConservationStatus({num1, num2, num3, num4, num5, num6})
           <TableRow onClick={()=>{window.location.assign("/Avenue_trees/conservationstatus/Avenue_trees-ConservationDependent")}} style={{cursor:"pointer"}}>
             <TableCell>Conservation dependent</TableCell>
             <TableCell align="right">{num6}</TableCell>
+          </TableRow>
+          <TableRow onClick={()=>{window.location.assign("/Avenue_trees/Avenue_trees-endangered")}} style={{cursor:"pointer"}}>
+            <TableCell>endangered</TableCell>
+            <TableCell align="right">{num7}</TableCell>
           </TableRow>
         </TableBody>
       </Table>

@@ -44,10 +44,6 @@ function AllTrees_Table({num1, num2, num3, num4, num5, num6,num7}) {
             <TableCell>Number of exotic</TableCell>
             <TableCell align="right">{num5}</TableCell>
           </TableRow>
-          <TableRow onClick={()=>{window.location.assign("/Avenue_trees/Avenue_trees-endangered")}} style={{cursor:"pointer"}}>
-            <TableCell>endangered</TableCell>
-            <TableCell align="right">{num6}</TableCell>
-          </TableRow>
         </TableBody>
       </Table>
     </TableContainer>

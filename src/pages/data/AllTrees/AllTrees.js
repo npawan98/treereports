@@ -574,7 +574,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setAvenue_treesExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/Avenue_trees_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=avenue_trees").then((res) => {
             console.log(res.data.length);
             setAvenue_treesEndangered(res.data.length);
         });
@@ -639,7 +639,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setBal_bhavanExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/bal_bhavan_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=bal_bhavan").then((res) => {
             console.log(res.data.length);
             setBal_bhavanEndangered(res.data.length);
         });
@@ -702,7 +702,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setCircularExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/CircularEndangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=circular_Park").then((res) => {
             console.log(res.data.length);
             setCircularEndangered(res.data.length);
         });
@@ -765,7 +765,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setDogExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/dogEndangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=dog_park").then((res) => {
             console.log(res.data.length);
             setDogEndangered(res.data.length);
         });
@@ -829,7 +829,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setEdwardExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/edward_park_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=edward_park").then((res) => {
             console.log(res.data.length);
             setEdwardEndangered(res.data.length);
         });
@@ -892,7 +892,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setHigh_courtExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/high_court_park_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=high_court_park").then((res) => {
             console.log(res.data.length);
             setHigh_courtEndangered(res.data.length);
         });
@@ -957,7 +957,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setKslta_hort_deptExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/Kslta_hort_dept_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=kslta_hort_dept").then((res) => {
             console.log(res.data.length);
             setKslta_hort_deptEndangered(res.data.length);
         });
@@ -1020,7 +1020,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setPark_1Exotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/Park_1Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=park_1").then((res) => {
             console.log(res.data.length);
             setPark_1Endangered(res.data.length);
         });
@@ -1084,7 +1084,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setPark_2Exotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/Park_2Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=park_2").then((res) => {
             console.log(res.data.length);
             setPark_2Endangered(res.data.length);
         });
@@ -1148,7 +1148,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setPark_opp_snake_parkExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/Park_opp_snake_park_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=park_opp_snake_park").then((res) => {
             console.log(res.data.length);
             setPark_opp_snake_parkEndangered(res.data.length);
         });
@@ -1210,7 +1210,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setPark_opp_wine_boardExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/Park_opp_wine_board_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=park_opp_wine_board").then((res) => {
             console.log(res.data.length);
             setPark_opp_wine_boardEndangered(res.data.length);
         });
@@ -1274,7 +1274,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setPark_opp_workers_clubExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/Park_opp_workers_club_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=park_opp_workers_club").then((res) => {
             console.log(res.data.length);
             setPark_opp_workers_clubEndangered(res.data.length);
         });
@@ -1338,7 +1338,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setRoseExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/RoseEndangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=rose_park").then((res) => {
             console.log(res.data.length);
             setRoseEndangered(res.data.length);
         });
@@ -1400,7 +1400,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setSecretaryExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/secretary_club_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=secretary_club").then((res) => {
             console.log(res.data.length);
             setSecretaryEndangered(res.data.length);
         });
@@ -1464,7 +1464,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setSnakeExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/SnakeEndangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=snake_park").then((res) => {
             console.log(res.data.length);
             setSnakeEndangered(res.data.length);
         });
@@ -1529,7 +1529,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setTriangularExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/TriangularEndangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=triangular_Park").then((res) => {
             console.log(res.data.length);
             setTriangularEndangered(res.data.length);
         });
@@ -1593,7 +1593,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setVictoriaExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/Victoria_park_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=victoria_park").then((res) => {
             console.log(res.data.length);
             setVictoriaEndangered(res.data.length);
         });
@@ -1656,7 +1656,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setWineExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/wine_board_Endangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=wine_board").then((res) => {
             console.log(res.data.length);
             setWineEndangered(res.data.length);
         });
@@ -1719,7 +1719,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             console.log(res.data.length);
             setWorkersExotic(res.data.length);
         });
-        axios.get("https://afternoon-mountain-93761.herokuapp.com/WorkersEndangered").then((res) => {
+        axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=workers_club").then((res) => {
             console.log(res.data.length);
             setWorkersEndangered(res.data.length);
         });
@@ -1782,7 +1782,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
       console.log(res.data.length);
       setCentral_libraryExotic(res.data.length);
     });
-    axios.get("https://afternoon-mountain-93761.herokuapp.com/Central_library_Endangered").then((res) => {
+    axios.get("https://afternoon-mountain-93761.herokuapp.com/conservationStatus/endangeredSpecies?Park=central_library").then((res) => {
       console.log(res.data.length);
       setCentral_libraryEndangered(res.data.length);
     });
@@ -1940,6 +1940,8 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
         parseInt(Avenue_treesVulnerable) + parseInt(Bal_bhavanVulnerable) + parseInt(CircularVulnerable) + parseInt(dogVulnerable) + parseInt(EdwardVulnerable) + parseInt(High_courtVulnerable) + parseInt(Kslta_hort_deptVulnerable) + parseInt(Park_1Vulnerable) + parseInt(Park_2Vulnerable) + parseInt(Park_opp_snake_parkVulnerable) + parseInt(Park_opp_wine_boardVulnerable) + parseInt(Park_opp_workers_clubVulnerable) + parseInt(RoseVulnerable) + parseInt(SecretaryVulnerable) + parseInt(SnakeVulnerable) + parseInt(TriangularVulnerable) + parseInt(VictoriaVulnerable) + parseInt(WineVulnerable) + parseInt(WorkersVulnerable) + parseInt(Central_libraryVulnerable),
         parseInt(Avenue_treesCriticallyEndangered) + parseInt(Bal_bhavanCriticallyEndangered) + parseInt(CircularCriticallyEndangered) + parseInt(dogCriticallyEndangered) + parseInt(EdwardCriticallyEndangered) + parseInt(High_courtCriticallyEndangered) + parseInt(Kslta_hort_deptCriticallyEndangered) + parseInt(Park_1CriticallyEndangered) + parseInt(Park_2CriticallyEndangered) + parseInt(Park_opp_snake_parkCriticallyEndangered) + parseInt(Park_opp_wine_boardCriticallyEndangered) + parseInt(Park_opp_workers_clubCriticallyEndangered) + parseInt(RoseCriticallyEndangered) + parseInt(SecretaryCriticallyEndangered) + parseInt(SnakeCriticallyEndangered) + parseInt(TriangularCriticallyEndangered) + parseInt(VictoriaCriticallyEndangered) + parseInt(WineCriticallyEndangered) + parseInt(WorkersCriticallyEndangered) + parseInt(Central_libraryCriticallyEndangered),
         parseInt(Avenue_treesConservationDependent) + parseInt(Bal_bhavanConservationDependent) + parseInt(CircularConservationDependent) + parseInt(dogConservationDependent) + parseInt(EdwardConservationDependent) + parseInt(High_courtConservationDependent) + parseInt(Kslta_hort_deptConservationDependent) + parseInt(Park_1ConservationDependent) + parseInt(Park_2ConservationDependent) + parseInt(Park_opp_snake_parkConservationDependent) + parseInt(Park_opp_wine_boardConservationDependent) + parseInt(Park_opp_workers_clubConservationDependent) + parseInt(RoseConservationDependent) + parseInt(SecretaryConservationDependent) + parseInt(SnakeConservationDependent) + parseInt(TriangularConservationDependent) + parseInt(VictoriaConservationDependent) + parseInt(WineConservationDependent) + parseInt(WorkersConservationDependent) + parseInt(Central_libraryConservationDependent),
+        parseInt(Avenue_treesEndangered) + parseInt(Bal_bhavanEndangered) + parseInt(CircularEndangered) + parseInt(dogEndangered) + parseInt(EdwardEndangered) + parseInt(High_courtEndangered) + parseInt(Kslta_hort_deptEndangered) + parseInt(Park_1Endangered) + parseInt(Park_2Endangered) + parseInt(Park_opp_snake_parkEndangered) + parseInt(Park_opp_wine_boardEndangered) + parseInt(Park_opp_workers_clubEndangered) + parseInt(RoseEndangered) + parseInt(SecretaryEndangered) + parseInt(SnakeEndangered) + parseInt(TriangularEndangered) + parseInt(VictoriaEndangered) + parseInt(WineEndangered) + parseInt(WorkersEndangered) + parseInt(Central_libraryEndangered),
+
     )
 
     console.log("master conservation",arrMasterConservation);
@@ -1985,7 +1987,6 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             num3={parseInt(Avenue_treesEndemic) + parseInt(Bal_bhavanEndemic) + parseInt(CircularEndemic) + parseInt(dogEndemic) + parseInt(EdwardEndemic) + parseInt(High_courtEndemic) + parseInt(Kslta_hort_deptEndemic) + parseInt(Park_1Endemic) + parseInt(Park_2Endemic) + parseInt(Park_opp_snake_parkEndemic) + parseInt(Park_opp_wine_boardEndemic) + parseInt(Park_opp_workers_clubEndemic) + parseInt(RoseEndemic) + parseInt(SecretaryEndemic) + parseInt(SnakeEndemic) + parseInt(TriangularEndemic) + parseInt(VictoriaEndemic) + parseInt(WineEndemic) + parseInt(WorkersEndemic)}
             num4={parseInt(Avenue_treesIndigenous) + parseInt(Bal_bhavanIndigenous) + parseInt(CircularIndigenous) + parseInt(dogIndigenous) + parseInt(EdwardIndigenous) + parseInt(High_courtIndigenous) + parseInt(Kslta_hort_deptIndigenous) + parseInt(Park_1Indigenous) + parseInt(Park_2Indigenous) + parseInt(Park_opp_snake_parkIndigenous) + parseInt(Park_opp_wine_boardIndigenous) + parseInt(Park_opp_workers_clubIndigenous) + parseInt(RoseIndigenous) + parseInt(SecretaryIndigenous) + parseInt(SnakeIndigenous) + parseInt(TriangularIndigenous) + parseInt(VictoriaIndigenous) + parseInt(WineIndigenous) + parseInt(WorkersIndigenous)}
             num5={parseInt(Avenue_treesExotic) + parseInt(Bal_bhavanExotic) + parseInt(CircularExotic) + parseInt(dogExotic) + parseInt(EdwardExotic) + parseInt(High_courtExotic) + parseInt(Kslta_hort_deptExotic) + parseInt(Park_1Exotic) + parseInt(Park_2Exotic) + parseInt(Park_opp_snake_parkExotic) + parseInt(Park_opp_wine_boardExotic) + parseInt(Park_opp_workers_clubExotic) + parseInt(RoseExotic) + parseInt(SecretaryExotic) + parseInt(SnakeExotic) + parseInt(TriangularExotic) + parseInt(VictoriaExotic) + parseInt(WineExotic) + parseInt(WorkersExotic)}
-            num6={parseInt(Avenue_treesEndangered) + parseInt(Bal_bhavanEndangered) + parseInt(CircularEndangered) + parseInt(dogEndangered) + parseInt(EdwardEndangered) + parseInt(High_courtEndangered) + parseInt(Kslta_hort_deptEndangered) + parseInt(Park_1Endangered) + parseInt(Park_2Endangered) + parseInt(Park_opp_snake_parkEndangered) + parseInt(Park_opp_wine_boardEndangered) + parseInt(Park_opp_workers_clubEndangered) + parseInt(RoseEndangered) + parseInt(SecretaryEndangered) + parseInt(SnakeEndangered) + parseInt(TriangularEndangered) + parseInt(VictoriaEndangered) + parseInt(WineEndangered) + parseInt(WorkersEndangered)} 
             num7={parseInt(Avenue_treesSemiDeciduousPhenology) + parseInt(bal_bhavanSemiDeciduousPhenology) + parseInt(circular_ParkSemiDeciduousPhenology) + parseInt(dog_parkSemiDeciduousPhenology) + parseInt(edward_parkSemiDeciduousPhenology) + parseInt(high_court_parkSemiDeciduousPhenology) + parseInt(kslta_hort_deptSemiDeciduousPhenology) + parseInt(park_1SemiDeciduousPhenology) + parseInt(park_2SemiDeciduousPhenology) + parseInt(park_opp_snake_parkSemiDeciduousPhenology) + parseInt(park_opp_wine_boardSemiDeciduousPhenology) + parseInt(park_opp_workers_clubSemiDeciduousPhenology) + parseInt(rose_parkSemiDeciduousPhenology) + parseInt(secretary_clubSemiDeciduousPhenology) + parseInt(snake_parkSemiDeciduousPhenology) + parseInt(triangular_ParkSemiDeciduousPhenology) + parseInt(victoria_parkSemiDeciduousPhenology) + parseInt(wine_boardSemiDeciduousPhenology) + parseInt(workers_clubSemiDeciduousPhenology) + parseInt(central_librarySemiDeciduousPhenology)} 
 
         />
@@ -2004,6 +2005,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
               "Vulnerable",
               "Critically endangered",
               "Conservation dependent",
+              "Endangered",
             ]}
           />
           <AllTrees_Table_ConservationStatus 
@@ -2013,7 +2015,7 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             num4={parseInt(Avenue_treesVulnerable) + parseInt(Bal_bhavanVulnerable) + parseInt(CircularVulnerable) + parseInt(dogVulnerable) + parseInt(EdwardVulnerable) + parseInt(High_courtVulnerable) + parseInt(Kslta_hort_deptVulnerable) + parseInt(Park_1Vulnerable) + parseInt(Park_2Vulnerable) + parseInt(Park_opp_snake_parkVulnerable) + parseInt(Park_opp_wine_boardVulnerable) + parseInt(Park_opp_workers_clubVulnerable) + parseInt(RoseVulnerable) + parseInt(SecretaryVulnerable) + parseInt(SnakeVulnerable) + parseInt(TriangularVulnerable) + parseInt(VictoriaVulnerable) + parseInt(WineVulnerable) + parseInt(WorkersVulnerable)}
             num5={parseInt(Avenue_treesCriticallyEndangered) + parseInt(Bal_bhavanCriticallyEndangered) + parseInt(CircularCriticallyEndangered) + parseInt(dogCriticallyEndangered) + parseInt(EdwardCriticallyEndangered) + parseInt(High_courtCriticallyEndangered) + parseInt(Kslta_hort_deptCriticallyEndangered) + parseInt(Park_1CriticallyEndangered) + parseInt(Park_2CriticallyEndangered) + parseInt(Park_opp_snake_parkCriticallyEndangered) + parseInt(Park_opp_wine_boardCriticallyEndangered) + parseInt(Park_opp_workers_clubCriticallyEndangered) + parseInt(RoseCriticallyEndangered) + parseInt(SecretaryCriticallyEndangered) + parseInt(SnakeCriticallyEndangered) + parseInt(TriangularCriticallyEndangered) + parseInt(VictoriaCriticallyEndangered) + parseInt(WineCriticallyEndangered) + parseInt(WorkersCriticallyEndangered)}
             num6={parseInt(Avenue_treesConservationDependent) + parseInt(Bal_bhavanConservationDependent) + parseInt(CircularConservationDependent) + parseInt(dogConservationDependent) + parseInt(EdwardConservationDependent) + parseInt(High_courtConservationDependent) + parseInt(Kslta_hort_deptConservationDependent) + parseInt(Park_1ConservationDependent) + parseInt(Park_2ConservationDependent) + parseInt(Park_opp_snake_parkConservationDependent) + parseInt(Park_opp_wine_boardConservationDependent) + parseInt(Park_opp_workers_clubConservationDependent) + parseInt(RoseConservationDependent) + parseInt(SecretaryConservationDependent) + parseInt(SnakeConservationDependent) + parseInt(TriangularConservationDependent) + parseInt(VictoriaConservationDependent) + parseInt(WineConservationDependent) + parseInt(WorkersConservationDependent)}
-          
+            num7={parseInt(Avenue_treesEndangered) + parseInt(Bal_bhavanEndangered) + parseInt(CircularEndangered) + parseInt(dogEndangered) + parseInt(EdwardEndangered) + parseInt(High_courtEndangered) + parseInt(Kslta_hort_deptEndangered) + parseInt(Park_1Endangered) + parseInt(Park_2Endangered) + parseInt(Park_opp_snake_parkEndangered) + parseInt(Park_opp_wine_boardEndangered) + parseInt(Park_opp_workers_clubEndangered) + parseInt(RoseEndangered) + parseInt(SecretaryEndangered) + parseInt(SnakeEndangered) + parseInt(TriangularEndangered) + parseInt(VictoriaEndangered) + parseInt(WineEndangered) + parseInt(WorkersEndangered) + parseInt(Central_libraryEndangered)}
           />
         </div>
 
