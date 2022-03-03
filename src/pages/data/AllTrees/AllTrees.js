@@ -1915,12 +1915,12 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
     }, []);
 
     arrMaster.push(
-        parseInt(Avenue_treesEvergreen) + parseInt(Bal_bhavanEvergreen) + parseInt(CircularEvergreen) + parseInt(dogEvergreen) + parseInt(EdwardEvergreen) + parseInt(High_courtEvergreen) + parseInt(Kslta_hort_deptEvergreen) + parseInt(Park_1Evergreen) + parseInt(Park_2Evergreen) + parseInt(Park_opp_snake_parkEvergreen) + parseInt(Park_opp_wine_boardEvergreen) + parseInt(Park_opp_workers_clubEvergreen) + parseInt(RoseEvergreen) + parseInt(SecretaryEvergreen) + parseInt(SnakeEvergreen) + parseInt(TriangularEvergreen) + parseInt(VictoriaEvergreen) + parseInt(WineEvergreen) + parseInt(WorkersEvergreen) + parseInt(Central_libraryEvergreen),
-        parseInt(Avenue_treesDeciduous) + parseInt(Bal_bhavanDeciduous) + parseInt(CircularDeciduous) + parseInt(dogDeciduous) + parseInt(EdwardDeciduous) + parseInt(High_courtDeciduous) + parseInt(Kslta_hort_deptDeciduous) + parseInt(Park_1Deciduous) + parseInt(Park_2Deciduous) + parseInt(Park_opp_snake_parkDeciduous) + parseInt(Park_opp_wine_boardDeciduous) + parseInt(Park_opp_workers_clubDeciduous) + parseInt(RoseDeciduous) + parseInt(SecretaryDeciduous) + parseInt(SnakeDeciduous) + parseInt(TriangularDeciduous) + parseInt(VictoriaDeciduous) + parseInt(WineDeciduous) + parseInt(WorkersDeciduous) + parseInt(Central_libraryDeciduous),
+        // parseInt(Avenue_treesEvergreen) + parseInt(Bal_bhavanEvergreen) + parseInt(CircularEvergreen) + parseInt(dogEvergreen) + parseInt(EdwardEvergreen) + parseInt(High_courtEvergreen) + parseInt(Kslta_hort_deptEvergreen) + parseInt(Park_1Evergreen) + parseInt(Park_2Evergreen) + parseInt(Park_opp_snake_parkEvergreen) + parseInt(Park_opp_wine_boardEvergreen) + parseInt(Park_opp_workers_clubEvergreen) + parseInt(RoseEvergreen) + parseInt(SecretaryEvergreen) + parseInt(SnakeEvergreen) + parseInt(TriangularEvergreen) + parseInt(VictoriaEvergreen) + parseInt(WineEvergreen) + parseInt(WorkersEvergreen) + parseInt(Central_libraryEvergreen),
+        // parseInt(Avenue_treesDeciduous) + parseInt(Bal_bhavanDeciduous) + parseInt(CircularDeciduous) + parseInt(dogDeciduous) + parseInt(EdwardDeciduous) + parseInt(High_courtDeciduous) + parseInt(Kslta_hort_deptDeciduous) + parseInt(Park_1Deciduous) + parseInt(Park_2Deciduous) + parseInt(Park_opp_snake_parkDeciduous) + parseInt(Park_opp_wine_boardDeciduous) + parseInt(Park_opp_workers_clubDeciduous) + parseInt(RoseDeciduous) + parseInt(SecretaryDeciduous) + parseInt(SnakeDeciduous) + parseInt(TriangularDeciduous) + parseInt(VictoriaDeciduous) + parseInt(WineDeciduous) + parseInt(WorkersDeciduous) + parseInt(Central_libraryDeciduous),
         parseInt(Avenue_treesEndemic) + parseInt(Bal_bhavanEndemic) + parseInt(CircularEndemic) + parseInt(dogEndemic) + parseInt(EdwardEndemic) + parseInt(High_courtEndemic) + parseInt(Kslta_hort_deptEndemic) + parseInt(Park_1Endemic) + parseInt(Park_2Endemic) + parseInt(Park_opp_snake_parkEndemic) + parseInt(Park_opp_wine_boardEndemic) + parseInt(Park_opp_workers_clubEndemic) + parseInt(RoseEndemic) + parseInt(SecretaryEndemic) + parseInt(SnakeEndemic) + parseInt(TriangularEndemic) + parseInt(VictoriaEndemic) + parseInt(WineEndemic) + parseInt(WorkersEndemic) + parseInt(Central_libraryEndemic),
         parseInt(Avenue_treesIndigenous) + parseInt(Bal_bhavanIndigenous) + parseInt(CircularIndigenous) + parseInt(dogIndigenous) + parseInt(EdwardIndigenous) + parseInt(High_courtIndigenous) + parseInt(Kslta_hort_deptIndigenous) + parseInt(Park_1Indigenous) + parseInt(Park_2Indigenous) + parseInt(Park_opp_snake_parkIndigenous) + parseInt(Park_opp_wine_boardIndigenous) + parseInt(Park_opp_workers_clubIndigenous) + parseInt(RoseIndigenous) + parseInt(SecretaryIndigenous) + parseInt(SnakeIndigenous) + parseInt(TriangularIndigenous) + parseInt(VictoriaIndigenous) + parseInt(WineIndigenous) + parseInt(WorkersIndigenous) + parseInt(Central_libraryIndigenous),
         parseInt(Avenue_treesExotic) + parseInt(Bal_bhavanExotic) + parseInt(CircularExotic) + parseInt(dogExotic) + parseInt(EdwardExotic) + parseInt(High_courtExotic) + parseInt(Kslta_hort_deptExotic) + parseInt(Park_1Exotic) + parseInt(Park_2Exotic) + parseInt(Park_opp_snake_parkExotic) + parseInt(Park_opp_wine_boardExotic) + parseInt(Park_opp_workers_clubExotic) + parseInt(RoseExotic) + parseInt(SecretaryExotic) + parseInt(SnakeExotic) + parseInt(TriangularExotic) + parseInt(VictoriaExotic) + parseInt(WineExotic) + parseInt(WorkersExotic) + parseInt(Central_libraryExotic),
-        parseInt(Avenue_treesEndangered) + parseInt(Bal_bhavanEndangered) + parseInt(CircularEndangered) + parseInt(dogEndangered) + parseInt(EdwardEndangered) + parseInt(High_courtEndangered) + parseInt(Kslta_hort_deptEndangered) + parseInt(Park_1Endangered) + parseInt(Park_2Endangered) + parseInt(Park_opp_snake_parkEndangered) + parseInt(Park_opp_wine_boardEndangered) + parseInt(Park_opp_workers_clubEndangered) + parseInt(RoseEndangered) + parseInt(SecretaryEndangered) + parseInt(SnakeEndangered) + parseInt(TriangularEndangered) + parseInt(VictoriaEndangered) + parseInt(WineEndangered) + parseInt(WorkersEndangered) + parseInt(Central_libraryEndangered),
+        // parseInt(Avenue_treesEndangered) + parseInt(Bal_bhavanEndangered) + parseInt(CircularEndangered) + parseInt(dogEndangered) + parseInt(EdwardEndangered) + parseInt(High_courtEndangered) + parseInt(Kslta_hort_deptEndangered) + parseInt(Park_1Endangered) + parseInt(Park_2Endangered) + parseInt(Park_opp_snake_parkEndangered) + parseInt(Park_opp_wine_boardEndangered) + parseInt(Park_opp_workers_clubEndangered) + parseInt(RoseEndangered) + parseInt(SecretaryEndangered) + parseInt(SnakeEndangered) + parseInt(TriangularEndangered) + parseInt(VictoriaEndangered) + parseInt(WineEndangered) + parseInt(WorkersEndangered) + parseInt(Central_libraryEndangered),
     )
     console.log("master",arrMaster);
 
@@ -1952,15 +1952,15 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
 
       <div className="Avenue_trees__Park-main" style={{ display: 'flex', placeItems: 'center', justifyContent: "space-around" }}>
         <DonutChart
-          title="Trees"
+          title="Trees (Species Type)"
           values={arrMaster}
           labels={[
-            "Evergreen",
-            "Deciduous",
+            // "Evergreen",
+            // "Deciduous",
             "Endemic",
             "Indigenous",
             "Exotic",
-            "Endangered",
+            // "Endangered",
           ]}
         />
         <DonutChart
@@ -1970,10 +1970,10 @@ const [workers_clubSemiDeciduousPhenology, setworkers_clubSemiDeciduousPhenology
             "Evergreen",
             "Deciduous",
             "Semi Deciduous",
-            "Endemic",
-            "Indigenous",
-            "Exotic",
-            "Endangered",
+            // "Endemic",
+            // "Indigenous",
+            // "Exotic",
+            // "Endangered",
           ]}
         />
 
